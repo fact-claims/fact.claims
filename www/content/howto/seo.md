@@ -61,7 +61,7 @@ However, to be considered grounded [fact.claims](./fact.claims.md) they must be 
    ```
 
 3. **Product Markup:**
-   ```turtle
+```turtle
    @prefix schema: <http://schema.org/> .
    
    <https://www.example.com/product> a schema:Product ;
@@ -82,10 +82,10 @@ However, to be considered grounded [fact.claims](./fact.claims.md) they must be 
                schema:name "Example Seller"
            ]
        ] .
-   ```
+```
 
 4. **Potential Action:**
-   ```turtle
+```turtle
 
 @prefix schema: <http://schema.org/> .
 
@@ -101,4 +101,4 @@ However, to be considered grounded [fact.claims](./fact.claims.md) they must be 
             schema:name "Example Offer"
         ]
     ] .
-   ```
+```

@@ -84,7 +84,7 @@ flowchart TB
             partner1[(Partner)]
             SC <-->|Collaboration| agent1
             SC <-->|Activities| agent1
-            SC -->|Observations| agent2
+            SC <-->|Observations| agent2
             SC <-->|Search| trustee1
             SC <-->|Collaboration| partner1
             agent1 <--> IPFS

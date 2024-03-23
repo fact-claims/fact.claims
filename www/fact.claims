@@ -32,7 +32,7 @@
     schema:license <http://creativecommons.org/licenses/by-sa/4.0/>;
     skos:member self:TrustworthyAI, self:ReliableAI, self:TransparentAI, self:AccountableAI;
     skos:member self:IPFS, self:LinkedData, self:Claim;
-    skos:member self:DAO, self:Notarization;
+    skos:member self:DAO, self: Notarized;
 
     prov:wasAssociatedWith self:;
     prov:wasGeneratedBy self:;
@@ -102,17 +102,17 @@ self:DAO a skos:Concept ;
     skos:definition "An organization operated by and on behalf of a smart contract."@en ;
     skos:related self:TrustworthyAI .
 
-self:Notarization a skos:Concept ;
+self: Notarized a skos:Concept ;
     prov:wasGeneratedBy self:;
-    skos:prefLabel "Notarization"@en ;
-    skos:definition "A document or transaction, involving verification by a trusted third party."@en ;
+    skos:prefLabel " Notarized"@en ;
+    skos:definition "A document or transaction, verified and signed by a trusted third party."@en ;
     skos:related self:DAO .
 
 self:Claim a skos:Concept ;
     prov:wasGeneratedBy self:;
     skos:prefLabel "Claim"@en ;
     skos:definition "A statement asserting something is true."@en ;
-    skos:related self:Notarization .
+    skos:related self: Notarized .
 
 # licence claims
 

@@ -1,4 +1,4 @@
-## Fact Claims - Trustworthy AI
+## Fact Claims - Is your AI trustworthy?
 
 Ensuring the integrity and trustworthiness of our AI systems is important. 
 

@@ -105,7 +105,7 @@ self:DAO a skos:Concept ;
 self:Notarized a skos:Concept ;
     prov:wasGeneratedBy self:;
     skos:prefLabel " Notarized"@en ;
-    skos:definition "A document or transaction, verified and signed by a trusted third party."@en ;
+    skos:definition "A fact graph that is verified and signed by a trusted third party."@en ;
     skos:related self:DAO .
 
 self:Claim a skos:Concept ;

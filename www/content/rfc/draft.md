@@ -66,8 +66,7 @@ flowchart TB
             agent2[(Human Agent)]
             trustee1[(Trustee)]
             partner1[(Partner)]
-            Regulatory((Compliance)) <-.-> Auditing((Auditing))
-            SC <-->|Innovation| agent1
+            SC <-->|Collaboration| agent1
             SC <-->|Activities| agent1
             SC -->|Observations| agent2
             SC <-->|Search| trustee1

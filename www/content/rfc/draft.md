@@ -32,24 +32,36 @@ Given rapidly evolving artificial intelligence (AI), the need for trustworthy an
 
 Decentralized ecosystems, built upon principles of transparency, auditability, and reliability, require robust mechanisms for managing and verifying information exchange. In this context, the establishment of fact claims - assertions of truth or validity regarding specific entities, relationships, or events - plays a crucial role in facilitating trustful collaboration across autonomous decentralized ecosystems.
 
-The fact claims ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. It encompasses a wide range of activities, from asserting research findings and coordinating project activities to managing legal contracts and tracking supply chain transactions. However, ensuring transparency, accountability, and interoperability within such a trustful ecosystem requires a standardized approach for representing facts - a knowledge graph.
+It encompasses a wide range of activities, from asserting research findings and coordinating project activities to managing legal contracts and tracking supply chain transactions. 
+
+However, ensuring transparency, accountability, and interoperability within such a trustful ecosystem requires a standardized approach for representing facts - a knowledge graph.
 
 ```mermaid
-flowchart TB
-        subgraph "Example Fact Graph"
-            Regulatory[Regulatory Compliance] --> Supply_Chain[Supply Chain]
-            Supply_Chain --> Products[Product Development]
-            RnD[R&D Efforts] --> Research[Market Research]
-            Research --> Innovation[Product Innovation]
-            Innovation --> Sustainability[Sustainability Practices]
-            Innovation --> Products
-            Innovation --> Regulatory
-            Innovation --> Supply_Chain
-            Innovation --> Tokenomics[Subscription Models]
-            Legal[Legal Framework] --> RnD
-            Compliance[Compliance Auditing] --> Auditing[Auditing Processes]
-            Tokenomics <--> Auditing
-        end
+graph TB;
+    subgraph "Example Fact Graph"
+      Organization[Organization] -->|Sells| Products[Products]
+      Organization -->|Publishes| Website[Website]
+      Website --> |Describes| Services
+      Website --> |Describes| Products
+      Website --> |Describes| Organization
+    end
+```
+
+The fact claims ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. 
+
+
+```mermaid
+graph TB;
+      Organization -->|Offers| Services[Services]
+      Products -->|Described by| Features[Features]
+      Services -->|Described by| Features[Features]
+      Products -->|Depend On| SupplyChain
+      Services -->|Delivered By| SupplyChain
+      Features -->|Delivers| Benefits
+      Benefits -->|Accrues| Customer[Customer]
+      Organization -->|Partners| SupplyChain[Supply Chain]
+      Organization -->|Serves| Demographic
+      Customer -->|Matches |Demographic
 ```
 
 Traditional centralized storage solutions, while effective in some contexts, pose several challenges in decentralized environments. These challenges include single points of failure, data manipulation risks, and vulnerabilities to censorship and tampering. In contrast, decentralized technologies offer innovative solutions to address these challenges and enhance the integrity and auditability of fact claims.
@@ -60,7 +72,7 @@ The technical architecture outlined in this RFC provides a blueprint for integra
 
 ```mermaid
 flowchart TB
-        subgraph "Decentralized Ecosystem"
+        subgraph "Example AI Ecosystem"
             SC[(Smart Contracts)]
             agent1[(Smart Agent)]
             agent2[(Human Agent)]

@@ -1,10 +1,10 @@
 ## Introducing Trustworthy AI
 
-Ensuring the integrity and trustworthiness of our AI systems necessitates a network of dependable facts. 
+Ensuring the integrity and trustworthiness of our AI systems is very important. 
 
-Recently, mediocre web content has experienced exponential growth - automated by generative AI. 
+Automated by generative AI, mediocre web content is undergoing exponential growth. 
 
-Now, if our future AI is trained on this - we will see increasingly lower-quality halluciations.
+Now, if our future AI is trained on this - we anticipate increasingly lower-quality answers and halluciations.
 
 ## Learn more ...
 
@@ -14,7 +14,7 @@ Now, if our future AI is trained on this - we will see increasingly lower-qualit
 
 ### [RFC v0.4 DRAFT](./rfc/draft.md)
 
-### [How-to Guides](./howto/index.md)
+## [How-to guides](./howto/index.md)
 
 ### [Learn the basics](./howto/begin.md)
 

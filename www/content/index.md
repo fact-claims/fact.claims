@@ -33,5 +33,6 @@ Now, if our future AI is trained on this - we anticipate increasingly lower-qual
 
 ### [SEO for AI](./howto/seo.md)
 
+### [Querying facts with SPARQL](./howto/sparql.md)
 
 

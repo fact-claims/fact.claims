@@ -21,7 +21,7 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 ### Explore Further:
 
 - #### [Trustworthy AI](./www/content/trust/index.md)
-  Learn about building AI systems based on trust and integrity.
+  Learn about building AI based on facts, trust and integrity.
 
 - #### [White Paper](./www/content/paper/index.md)
   Access our comprehensive white paper on trustworthy AI and fact claims.

@@ -82,7 +82,6 @@ graph TB;
   Services -->|hasPart| Features
   Products -->|requiresComponent| SupplyChain["schema:Product"]
   Services -->|provider| Organization2
-  Features -->|hasOutput| Benefits["skos:Concept"]
   Benefits -->|receivedBy| Customer["schema:Person"]
   Organization -->|hasPartners| Organization2
   Organization2 -->|serves| Organization["schema:Organization"]

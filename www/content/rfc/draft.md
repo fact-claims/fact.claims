@@ -130,8 +130,8 @@ sequenceDiagram
     Client->>Client: Create RDF Claims
     Client->>IPFS: Publish RDF Claims
     IPFS-->>Client: Return IPFS URL
-    Client->>SmartContract: Facts Claimed
-    SmartContract->>Oracle: New Fact Event
+    Client->>SmartContract: Claim Facts 
+    SmartContract->>Oracle: FactClaims Event
     Oracle->>IPFS: Retrieve Claims
     IPFS-->>Oracle: Validate Claims
     Oracle-->>Client: Notarized Claims

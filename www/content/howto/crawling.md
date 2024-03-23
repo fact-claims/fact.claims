@@ -95,6 +95,5 @@ graph TD;
     L -->|Yes| M[Report];
     L -->|No| N[Repair];
     M --> O[End];
-    N --> B;
-    O --> O1[End];
+    N --> O[End];
 ```

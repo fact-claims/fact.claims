@@ -84,7 +84,6 @@ graph TB;
   Services -->|provider| Organization2
   Organization -->|hasPartners| Organization2
   Organization2 -->|serves| Organization["schema:Organization"]
-  my:Customer -->|memberOf| my:Demographic
 ```
 
 ## 4. Solution Domains

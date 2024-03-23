@@ -127,17 +127,15 @@ sequenceDiagram
     participant Ethereum
     participant Oracle
 
-    Client->>SmartContract: Create RDF Claims
-    SmartContract->>SmartContract: Embed attributions
-    SmartContract->>IPFS: Publish RDF Claims
-    IPFS->>IPFS: Store claims
-    IPFS-->>SmartContract: Return IPFS URL
-    SmartContract->>Ethereum: Emit FactClaims Event(IPFS URL)
+    Client->>Client: Create RDF Claims
+    Client->>IPFS: Publish RDF Claims
+    IPFS->>Oracle: Store claims
+    IPFS-->>Oracle: Return IPFS URL
+    Oracle->>Ethereum: Emit FactClaims Event(IPFS URL)
     Ethereum-->>Oracle: FactClaims Event
-    Oracle->>IPFS: Retrieve Claims
-    IPFS-->>Oracle: Claims
-    Oracle-->>SmartContract: Validate Claims
-    SmartContract-->>Client: Confirmation
+    Client->>IPFS: Retrieve Claims
+    IPFS-->>Client: Claims
+    Client-->>Client: Validate Claims
 ```
 
 ### 3.2. **Create Factual Claims in RDF Format**

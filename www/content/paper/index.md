@@ -144,6 +144,6 @@ By adhering to semantic standards, ontologies, and validation mechanisms, we can
 
 We hope our  methodology paves the way for a future where collaboration thrives securely and reliably.
 
-- [Smart Trust](./SmartTrust.md)
-- [Case Studies](./usecase/)
-- [RFC](./rfc/)
+- [Smart Trust](../trust/)
+- [Case Studies](..`/usecase/)
+- [RFC](../rfc/)

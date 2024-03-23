@@ -16,9 +16,9 @@ In 2024, the Internet started buzzing with AI agents, crawlers and language mode
 
 We've learned that they can be clever, creative, productive and resourceful, but also lacking in integrity, factual grounding and attribution.
 
-As with all new technologies, new challenges also emerged. Crawlers struggle to knowing what content is available, whether it has permissive licensing and so on.
+As with all new technologies, new challenges also emerged- AI builders struggle to knowing what content is fair use, whether it has restrictive licensing and so on. Content creators need a way to verify and demonstrate ownership, receive attribution even negotiate automatic compensation.
 
-These considerations apply to AI development and deployment processes so that society benefits as a whole.
+We consider the following challenges with respect to AI so that society benefits as a whole.
 
 1. **Data Integrity and Reliability**: Without proper mechanisms in place to ensure data integrity, AI systems may encounter inaccuracies, inconsistencies, or even deliberate misinformation in the raw data they process. This can lead to flawed outputs and unreliable decision-making processes.
 

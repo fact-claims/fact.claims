@@ -15,12 +15,12 @@
 
 - **Inclusive Collaboration:** Foster a culture of collaboration and inclusivity to drive success in your ventures, ensuring that diverse perspectives are valued and integrated into decision-making processes.
 
-## Smart Trust: AI Maturity Model
+## Smart Trust: An AI Maturity Model
 
 | Stage | Level            | Broad Capabilities                |
 |-------|------------------|-----------------------------------|
 | 0     | Generic AI       | Generative Intelligence           |
-| 1     | Controlled AI    | Human Directed Agents             |
+| 1     | Directed AI    | Human Controlled Agents             |
 | 2	    | Aligned AI       | Ethical and Societally Aware      |
 | 3     | Autonomous AI    | Autonomous Adaptive Agents        |
 | 4     | Decentralized AI | DAO Governance                    |

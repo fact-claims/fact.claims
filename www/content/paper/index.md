@@ -71,6 +71,10 @@ The technical architecture for fact claims consists of several key components:
 - **Trust Chains:** Blockchain smart contracts manage governance of an immutable custody chain of fact graphs.
 - **Smart Agents:** Interface with the IPFS network and Internet for storage, retrieval, curation, inference, visualization and publication of fact graphs.
 
+### Simplified Fact Graph
+
+With Linked Data, concepts and documents can be inter-related to describe almost anything.
+
 ```mermaid
 graph TB;
   Organization -->|Offers| Services[Services]

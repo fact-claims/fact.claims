@@ -18,20 +18,28 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 
 - **Notarized Facts:** Notarized facts are verified and trusted, backed by a smart contract, or digital trustee.
 
-## Learn more ...
+### Explore Further:
 
-### [Trustworthy AI](./www/content/trust/index.md)
+- #### [Trustworthy AI](./www/content/trust/index.md)
+  Learn about building AI systems based on trust and integrity.
 
-### [White Paper](./www/content/paper/index.md)
+- #### [White Paper](./www/content/paper/index.md)
+  Access our comprehensive white paper on trustworthy AI and fact claims.
 
-### [RFC v0.4 DRAFT](./www/content/rfc/draft.md)
+- #### [RFC v0.4 DRAFT](./www/content/rfc/draft.md)
+  Review the latest version of the Request for Comments (RFC) for our project.
 
-### [How-to Guides](./www/content/howto/index.md)
+- #### [How-to Guides](./www/content/howto/index.md)
+  Dive into practical guides for managing and publishing fact claims.
 
-### [Learn the basics](./www/content/howto/begin.md)
+- #### [Learn the basics](./www/content/howto/begin.md)
+  Get started with the basics of fact claims and their importance.
 
-### [Publish your first facts](./www/content/howto/fact.claims.md)
+- #### [Publish your first facts](./www/content/howto/fact.claims.md)
+  Step-by-step instructions to publish your own fact claims.
 
-### [Curating and crawling](./www/content/howto/crawling.md)
+- #### [Curating and crawling](./www/content/howto/crawling.md)
+  Learn about curating and crawling data to ensure trustworthy fact claims.
 
-### [Worked Example](./www/fact.claims)
+- #### [Worked Example](./www/fact.claims)
+  Explore a worked example to better understand fact claims in action.

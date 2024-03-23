@@ -6,7 +6,9 @@ Recently, mediocre web content has experienced exponential growth - bulk-automat
 
 Now, if our future AI are trained on this - we can expect increasingly lower-quality halluciations.
 
-Publishing [fact claims](./www/content/howto/fact.claims.md) - creates discoverable facts that are licensed, attributable, and trustable at planetary-scale.
+Publishing [fact claims](./www/content/howto/fact.claims.md) allow humans, AI and other intelligent systems to discover, learn and engage with your content, organization in new ways. All using your data that is clearly licensed, attributable, and trustable at planetary-scale.
+
+In term, your facts are available for.
 
 - **To learn more:** start with our [white paper](./www/content/paper/index.md) then [learn the basics](./www/content/howto/begin.md).
 

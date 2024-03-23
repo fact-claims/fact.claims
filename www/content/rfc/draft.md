@@ -6,7 +6,7 @@ This document is a draft (`v0.4`) and has not yet been finalized. Feedback and c
 
 Feedback and comments on this specification are welcomed at any time. However, readers should note that the comment period for this specific version of the document has concluded, and the Working Group will not be making substantive modifications to this version of the specification at this stage. 
 
-Any issues or concerns can be reported directly on GitHub, for  more information visit [fact.claims](https://fact.claims/about/contact).
+Any issues or concerns can be reported directly on GitHub, for  more information visit [fact.claims](https://fact.claims/).
 
 The Working Group has received valuable implementation feedback, demonstrating that there are at least two implementations for each normative feature outlined in the specification. 
 

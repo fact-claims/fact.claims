@@ -1,30 +1,40 @@
 # Fact Claims: Towards Trustworthy AI
 
-GivenThe need for trustworthy and immutable data has become paramount. 
 
-We need principles of transparency, auditability, and reliability. 
+We need a simple solution that is easy to implement, based on existing standards, best practices, is future-ready and trustworthy.
 
-In this context, the establishment of `fact claims` - assertions of truth or validity regarding specific entities, relationships, or events - plays a crucial role.
-
-The `fact claims` ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. 
-
-It encompasses a wide range of activities, from asserting research findings and coordinating project activities to managing legal contracts and tracking supply chain transactions. 
-
-However, ensuring transparency, accountability, and interoperability within such a trustful ecosystem requires a standardized approach for representing facts - a knowledge graph.
-
-Traditional centralized storage solutions, while effective in some contexts, pose several challenges. 
-
-These challenges include single points of failure, data manipulation risks, lack of attribution, weak licensing, provenance and is vulnerable to censorship and tampering. 
-
-We seek a simple innovative solution to address these challenges that enhances the integrity and auditability of our AI and answer engines.
-
-The [Fact Claims RFC](../rfc/draft.md) proposes a methodology for leveraging the [InterPlanetary File System (IPFS)](https://ipfs.io/), [Linked Data (JSON-LD)](https://json-ld.org/), and [Smart Contracts](https://ethereum.org/) to construct a trusted network of fact graphs..
+The [fact claims RFC](../rfc/draft.md) proposes a methodology for leveraging the [InterPlanetary File System (IPFS)](https://ipfs.io/), [Linked Data (JSON-LD)](https://json-ld.org/), and [Smart Contracts](https://ethereum.org/) into a trusted web of fact graphs.
 
 ---
 
-## Objective
+## 1. Problem Statement
 
-This section defines the objectives of the proposal, including the goals, scope, and intended outcomes.
+
+Addressing the challenges associated with untrusted, raw data lacking ethical or commercial context requires comprehensive approaches that encompass data integrity, attribution, ethical considerations, legal compliance, contextual understanding, bias mitigation, and transparency. 
+
+In 2024, the Internet started buzzing with AI agents, crawlers and language models all vying for their moment of glory. 
+
+We've learned that they can be clever, creative, productive and resourceful, but also lacking in integrity, factual grounding and attribution.
+
+As with all new technologies, new challenges also emerged. Crawlers struggle to knowing what content is available, whether it has permissive licensing and so on.
+
+These considerations apply to AI development and deployment processes so that society benefits as a whole.
+
+1. **Data Integrity and Reliability**: Without proper mechanisms in place to ensure data integrity, AI systems may encounter inaccuracies, inconsistencies, or even deliberate misinformation in the raw data they process. This can lead to flawed outputs and unreliable decision-making processes.
+
+2. **Attribution and Trustworthiness**: Raw data often lacks clear attribution, making it difficult for AI systems to determine the source or credibility of the information. This lack of trustworthiness can result in AI systems incorporating unreliable or biased data into their models, leading to skewed outcomes.
+
+3. **Ethical Considerations**: Raw data may contain sensitive or controversial content that raises ethical concerns. AI systems need to be equipped with ethical frameworks and guidelines to handle such data responsibly, ensuring that they do not perpetuate harmful biases or stereotypes.
+
+4. **Legal and Regulatory Compliance**: Data lacking ethical or commercial context may also raise legal and regulatory issues, particularly in terms of data privacy, intellectual property rights, and content licensing. AI systems must navigate these complexities to ensure compliance with relevant laws and regulations.
+
+5. **Contextual Understanding**: Without proper contextual information, AI systems may struggle to interpret and analyze raw data accurately. Ethical and commercial context provides valuable insights into the intended meaning, relevance, and implications of the data, enabling more informed decision-making.
+
+6. **Bias and Fairness**: Raw data, especially when unfiltered, may inadvertently reflect societal biases or prejudices. AI systems trained on such data risk perpetuating or exacerbating these biases in their outputs, leading to unfair or discriminatory outcomes.
+
+7. **Transparency and Explainability**: Understanding the ethical and commercial context of data is essential for ensuring transparency and explainability in AI systems. Stakeholders need to understand how decisions are made and what factors influence AI-generated outputs to trust and effectively use these systems.
+
+## 2. Project Objectives
 
 2.1. **Ensure Trustworthiness**: Ensure that the facts are trustworthy and immutable - fostering trust among stakeholders.
 

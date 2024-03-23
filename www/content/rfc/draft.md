@@ -133,7 +133,7 @@ sequenceDiagram
     Client->>SmartContract: Claim Facts 
     SmartContract->>Oracle: FactClaims Event
     Oracle->>IPFS: Retrieve Claims
-    IPFS-->>Oracle: Validate Claims
+    Oracle-->>Oracle: Validate Claims
     Oracle-->>Client: Notarized Claims
 ```
 

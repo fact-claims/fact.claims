@@ -55,16 +55,15 @@ Let's us describe our subject by adding `tags` that can refer to both links and 
 
 A short tag uses a `prefix` that stands in for the URI namespace, and a local `name` that is appended to it.
 
+```
+  @prefix trust: <https://fact.claims/v0/trust#> .
+```
+
 In our example, `trust` is expanded into a full URI when the RDF is parsed, and we define in our RDF document.
 
 The simplest vocabulary is really just a URI namespace that ensure terms are globally unique.
 
-It's best practice to define a formal vocabulary using RDFS notation ([W3C standard](https://www.w3.org/TR/rdf12-schema/)).
-
-
-```
-@prefix trust: <https://fact.claims/v0/trust#> .
-```
+For production use cases, it's best practice to define a formal vocabulary using RDFS notation ([W3C standard](https://www.w3.org/TR/rdf12-schema/)).
 
 So our `trust:Claim` becomes `<https://fact.claims/v0/trust#Claim>`, a fully qualified URI that can, but need not, be resolvable.
 

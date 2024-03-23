@@ -41,7 +41,7 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 - #### [Curating and crawling](./www/content/howto/crawling.md)
   Learn about curating and crawling data to ensure trustworthy fact claims.
 
-- #### [SEO for AI beats AI for SEO](./www/content/howto/seo.md)
+- #### [`SEO for AI` vs AI for SEO](./www/content/howto/seo.md)
   Learn how to repurpose existing SEO rich snippets as `fact.claims`.
 
 - #### [Worked Example](./www/fact.claims)

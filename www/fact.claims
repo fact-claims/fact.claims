@@ -7,7 +7,8 @@
 @prefix schema: <http://schema.org/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 
-# fact.claims - Towards trustworthy AI
+# fact.claims - towards trustworthy AI
+
 # A web of facts stored on InterPlanetary File System (IPFS) as Linked Data (JSON-LD), and truted by DAO Smart Contracts
 # All valid claims must include `prov:wasAssociatedWith` and `prov:wasGeneratedBy`. 
 # A grounded fact must have (`prov:wasGeneratedBy`) to an immutable source, either <ipfs://> or <ethereum://>.
@@ -16,7 +17,7 @@
 @prefix trust: <https://fact.claims/v0/trust#> .
 @prefix self: <https://smarttrust.ai/> .
 
-# principle claims
+# grounded claims
 
 <https://fact.claims/> 
     a skos:ConceptScheme;
@@ -36,7 +37,15 @@
     prov:wasAssociatedWith self:;
     prov:wasGeneratedBy self:;
 
-# grounded claims
+# claims for related assets
+
+<https://fact.claims/logo.png> 
+    rdf:label "fact.claims logo";
+    prov:wasAssociatedWith <https://fact.claims/>;
+    prov:wasGeneratedBy self:;
+.
+
+# notarized claims
 
 self:
     a schema:Organization, prov:Organization ;
@@ -50,34 +59,7 @@ self:
     prov:wasGeneratedBy self:;
     prov:wasAssociatedWith <ethereum://0x0000000000000000000000000000000000000000>.
 
-# asset claims
-
-<https://fact.claims/logo.png> 
-    rdf:label "fact.claims logo";
-    prov:wasAssociatedWith <https://fact.claims/>;
-    prov:wasGeneratedBy self:;
-.
-
-# licence claims
-
-<http://creativecommons.org/licenses/by-sa/4.0/>
-    prov:wasAssociatedWith <http://creativecommons.org/>;
-    prov:wasGeneratedBy self:;
-.
-
-<http://creativecommons.org/licenses/by-sa/4.0/>
-  a cc:License ;
-  cc:licenseClass <http://creativecommons.org/license/> ;
-  cc:permits cc:DerivativeWorks, cc:Distribution, cc:Reproduction ;
-  cc:requires cc:Attribution, cc:Notice, cc:ShareAlike ;
-  dc:creator <http://creativecommons.org> ;
-  dc:hasVersion "4.0" ;
-  dc:identifier "by-sa" ;
-  dc:source "http://creativecommons.org/licenses/by-sa/3.0/" ;
-  foaf:logo <http://licensebuttons.net/l/by-sa/4.0/80x15.png>, <http://licensebuttons.net/l/by-sa/4.0/88x31.png> ;
-  owl:sameAs <https://creativecommons.org/licenses/by-sa/4.0/> .
-
-# helpful related concepts
+#  related concepts for context
 
 self:TrustworthyAI a skos:Concept ;
     prov:wasGeneratedBy self:;
@@ -131,3 +113,23 @@ self:Claim a skos:Concept ;
     skos:prefLabel "Claim"@en ;
     skos:definition "A statement asserting something is true."@en ;
     skos:related self:Notarization .
+
+# licence claims
+
+<http://creativecommons.org/licenses/by-sa/4.0/>
+    prov:wasAssociatedWith <http://creativecommons.org/>;
+    prov:wasGeneratedBy self:;
+.
+
+<http://creativecommons.org/licenses/by-sa/4.0/>
+  a cc:License ;
+  cc:licenseClass <http://creativecommons.org/license/> ;
+  cc:permits cc:DerivativeWorks, cc:Distribution, cc:Reproduction ;
+  cc:requires cc:Attribution, cc:Notice, cc:ShareAlike ;
+  dc:creator <http://creativecommons.org> ;
+  dc:hasVersion "4.0" ;
+  dc:identifier "by-sa" ;
+  dc:source "http://creativecommons.org/licenses/by-sa/3.0/" ;
+  foaf:logo <http://licensebuttons.net/l/by-sa/4.0/80x15.png>, <http://licensebuttons.net/l/by-sa/4.0/88x31.png> ;
+  owl:sameAs <https://creativecommons.org/licenses/by-sa/4.0/> .
+

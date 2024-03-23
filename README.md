@@ -14,7 +14,7 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 
 - **Grounded Facts:** Grounded facts are securely stored in an unchangeable document, ensuring their reliability.
 
-- **Published Facts:** Published facts are online for reference and verification, always maintaining their integrity and reliability.
+- **Published Facts:** Published facts are online for reference and verification, not immutable so may be real time.
 
 - **Notarized Facts:** Notarized facts are verified and trusted, backed by a smart contract, or digital trustee.
 

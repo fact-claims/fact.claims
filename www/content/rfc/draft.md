@@ -134,7 +134,7 @@ sequenceDiagram
     SmartContract-->>Oracle: Receive Event
     Oracle->>IPFS: Retrieve Claims
     IPFS-->>Oracle: Validate Claims
-    Oracle-->>Client: Notarized Claims
+    SmartContract-->>Client: Notarized Claims
 ```
 
 ### 3.2. **Create Factual Claims in RDF Format**

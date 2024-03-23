@@ -85,7 +85,6 @@ graph TB;
   Features -->|hasOutput| Benefits["skos:Concept"]
   Benefits -->|receivedBy| Customer["schema:Person"]
   Organization -->|hasPartners| Organization2
-  Organization -->|serves| Demographic["schema:Demographic"]
   Organization2 -->|serves| Organization["schema:Organization"]
   Customer -->|memberOf| Demographic
 ```

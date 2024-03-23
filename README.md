@@ -9,8 +9,9 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 ### Featured Examples:
 
 - [fact.claims website](https://fact.claims/)
-- [fact.claims creator](https://fact.claims/creator/)
-- [our fact.claims](./www/fact.claims)
+- [fact.claims builder](https://fact.claims/build/)
+- [fact.claims viewer](https://fact.claims/view/)
+- [ourfact.claims](./www/fact.claims)
 
 ### Fact Architecture:
 

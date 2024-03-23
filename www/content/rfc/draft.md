@@ -36,7 +36,7 @@ It encompasses a wide range of activities, from asserting research findings and 
 
 However, ensuring transparency, accountability, and interoperability within such a trustful ecosystem requires a standardized approach for representing facts - a knowledge graph.
 
-## 1.1 Example: Ecommerce Supply Chain 
+## 1.1 Use Case: Ecommerce Supply Chain 
 
 The fact claims ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. 
 
@@ -55,7 +55,7 @@ By adopting standard ontologies such as PROV-O, SKOS, and VOID, we enhance inter
 
 Facts from multiple sources can be crawled, combined and curated into a custom fact graph, rich in contextual understanding for each use case.
 
-## 1.2 Example: Financial Industry 
+## 1.2 Use Case: Financial Industry 
 
 ```mermaid
 graph TD;
@@ -73,31 +73,13 @@ graph TD;
     Transaction -- has --> Status["fib-tran:TransactionStatus"];
 ```
 
-This RFC proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted network of fact graphs. By harnessing the distributed, immutable, and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. Through the use of JSON-LD, we ensure semantic interoperability and compatibility, enabling machine-readable representation and interpretation of fact claims. Additionally, Smart Contracts provide governance mechanisms for managing the lifecycle of fact claims, ensuring transparency, and enforcing trust among participants.
+## 1.3 Metholody
 
-The technical architecture outlined in this RFC provides a blueprint for integrating IPFS into existing systems to establish a tamper-resistant repository for storing and accessing fact claims. 
-Furthermore, the validation mechanisms outlined in this RFC ensure compliance with predefined constraints and rules, ensuring data integrity and consistency across fact graphs.
+This RFC proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted network of fact graphs. 
 
-```mermaid
-flowchart TB
-  subgraph "Example AI Ecosystem"
-  SC[(Smart Contracts)]
-  agent1[(Smart Agent)]
-  agent2[(Human Agent)]
-  trustee1[(Trustee)]
-  partner1[(Partner)]
-  SC <-->|Collaboration| agent1
-  SC <-->|Activities| agent1
-  SC <-->|Observations| agent2
-  SC <-->|Search| trustee1
-  SC <-->|Collaboration| partner1
-  agent1 <--> IPFS
-  agent2 <--> IPFS
-  trustee1 <--> IPFS
-  partner1 <--> IPFS
-  end
+Through the use of JSON-LD, we ensure semantic interoperability and compatibility, enabling machine-readable representation and interpretation of fact claims. Additionally, Smart Contracts provide governance mechanisms for managing the lifecycle of fact claims, ensuring transparency, and enforcing trust among participants.
 
-```
+The distributed, immutable, and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. 
 
 
 In the following sections, we delve deeper into the objectives, technical details, use cases, security considerations, and implementation strategies for constructing trusted fact claims. 
@@ -134,6 +116,30 @@ JSON-LD provides a lightweight and flexible means to express semantic informatio
 
 By following these steps, the Fact Claim protocol ensures the integrity, transparency, and traceability of asserted claims.
 
+The technical architecture outlined in this RFC provides a blueprint for integrating IPFS into existing systems to establish a tamper-resistant repository for storing and accessing fact claims. 
+
+Furthermore, the validation mechanisms outlined in this RFC ensure compliance with predefined constraints and rules, ensuring data integrity and consistency across fact graphs.
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant SmartContract
+    participant IPFS
+    participant Ethereum
+    participant Oracle
+
+    Client->>SmartContract: Create RDF Claims
+    SmartContract->>SmartContract: Embed attributions
+    SmartContract->>IPFS: Publish RDF Claims
+    IPFS->>IPFS: Store claims
+    IPFS-->>SmartContract: Return IPFS URL
+    SmartContract->>Ethereum: Emit FactClaims Event(IPFS URL)
+    Ethereum-->>Oracle: FactClaims Event
+    Oracle->>IPFS: Retrieve Claims
+    IPFS-->>Oracle: Claims
+    Oracle-->>SmartContract: Validate Claims
+    SmartContract-->>Client: Confirmation
+```
 
 ### 3.1. **Create Factual Claims in RDF Format**
 

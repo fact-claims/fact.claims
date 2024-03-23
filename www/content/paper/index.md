@@ -73,7 +73,6 @@ The technical architecture for fact claims consists of several key components:
 
 ```mermaid
 flowchart TB
-    subgraph "Fact Claims Architecture"
         subgraph "Example Fact Graph"
             Regulatory[Regulatory Compliance] --> Supply_Chain[Supply Chain]
             Supply_Chain --> Products[Product Development]
@@ -88,28 +87,7 @@ flowchart TB
             Compliance[Compliance Auditing] --> Auditing[Auditing Processes]
             Tokenomics <--> Auditing
         end
-
-        subgraph "Decentralized Ecosystem"
-            SC[(Smart Contracts)]
-            agent1[(Smart Agent)]
-            agent2[(Human Agent)]
-            trustee1[(Trustee)]
-            partner1[(Partner)]
-            Regulatory((Compliance)) <-.-> Auditing((Auditing))
-            SC <-->|Innovation| agent1
-            SC <-->|Activities| agent1
-            SC -->|Observations| agent2
-            SC <-->|Search| trustee1
-            SC <-->|Collaboration| partner1
-            agent1 <--> IPFS
-            agent2 <--> IPFS
-            trustee1 <--> IPFS
-            partner1 <--> IPFS
-        end
-
-    end
 ```
-
 ## 4. Problem Domains
 
 - AI Answer Engines require a new model for finding trusted facts.

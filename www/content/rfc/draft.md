@@ -34,11 +34,52 @@ Decentralized ecosystems, built upon principles of transparency, auditability, a
 
 The fact claims ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. It encompasses a wide range of activities, from asserting research findings and coordinating project activities to managing legal contracts and tracking supply chain transactions. However, ensuring transparency, accountability, and interoperability within such a trustful ecosystem requires a standardized approach for representing facts - a knowledge graph.
 
+```mermaid
+flowchart TB
+        subgraph "Example Fact Graph"
+            Regulatory[Regulatory Compliance] --> Supply_Chain[Supply Chain]
+            Supply_Chain --> Products[Product Development]
+            RnD[R&D Efforts] --> Research[Market Research]
+            Research --> Innovation[Product Innovation]
+            Innovation --> Sustainability[Sustainability Practices]
+            Innovation --> Products
+            Innovation --> Regulatory
+            Innovation --> Supply_Chain
+            Innovation --> Tokenomics[Subscription Models]
+            Legal[Legal Framework] --> RnD
+            Compliance[Compliance Auditing] --> Auditing[Auditing Processes]
+            Tokenomics <--> Auditing
+        end
+```
+
 Traditional centralized storage solutions, while effective in some contexts, pose several challenges in decentralized environments. These challenges include single points of failure, data manipulation risks, and vulnerabilities to censorship and tampering. In contrast, decentralized technologies offer innovative solutions to address these challenges and enhance the integrity and auditability of fact claims.
 
 This RFC proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted network of fact graphs. By harnessing the distributed, immutable, and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. Through the use of JSON-LD, we ensure semantic interoperability and compatibility, enabling machine-readable representation and interpretation of fact claims. Additionally, Smart Contracts provide governance mechanisms for managing the lifecycle of fact claims, ensuring transparency, and enforcing trust among participants.
 
 The technical architecture outlined in this RFC provides a blueprint for integrating IPFS into existing systems to establish a tamper-resistant repository for storing and accessing fact claims. By adopting standard ontologies such as PROV-O, SKOS, and VOID, we enhance interoperability and facilitate knowledge organization within the ecosystem. Furthermore, the validation mechanisms outlined in this RFC ensure compliance with predefined constraints and rules, ensuring data integrity and consistency across fact graphs.
+
+```mermaid
+flowchart TB
+        subgraph "Decentralized Ecosystem"
+            SC[(Smart Contracts)]
+            agent1[(Smart Agent)]
+            agent2[(Human Agent)]
+            trustee1[(Trustee)]
+            partner1[(Partner)]
+            Regulatory((Compliance)) <-.-> Auditing((Auditing))
+            SC <-->|Innovation| agent1
+            SC <-->|Activities| agent1
+            SC -->|Observations| agent2
+            SC <-->|Search| trustee1
+            SC <-->|Collaboration| partner1
+            agent1 <--> IPFS
+            agent2 <--> IPFS
+            trustee1 <--> IPFS
+            partner1 <--> IPFS
+        end
+
+```
+
 
 In the following sections, we delve deeper into the objectives, technical details, use cases, security considerations, and implementation strategies for constructing trusted fact claims. 
 
@@ -73,6 +114,7 @@ The `fact graph` describes how fact claims are represented as linked data serial
 JSON-LD provides a lightweight and flexible means to express semantic information in a structured and easily understandable manner. 
 
 By following these steps, the Fact Claim protocol ensures the integrity, transparency, and traceability of asserted claims.
+
 
 ### 3.1. **Create Factual Claims in RDF Format**
 

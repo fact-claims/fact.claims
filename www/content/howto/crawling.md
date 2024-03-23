@@ -21,17 +21,17 @@ sequenceDiagram
     IPFS -->> FactCrawler: Send root node data
     FactCrawler ->> FactCrawler: Load grounded facts from IPFS
     FactCrawler ->> FactCrawler: Follow chain of trust
-    Note over FactCrawler: Iterate through\nassociated and\ngenerated facts
+    Note over FactCrawler: Iterate through associated and generated facts
     FactCrawler ->> IPFS: Request grounded facts
     IPFS -->> FactCrawler: Send grounded facts
     FactCrawler ->> FactCrawler: Merge facts into graph
     FactCrawler ->> FactCrawler: Traverse to secondary facts
-    Note over FactCrawler: Optionally fetch\nfacts from public URLs
+    Note over FactCrawler: Optionally fetch facts from public URLs
     FactCrawler ->> IPFS: Request secondary facts
     IPFS -->> FactCrawler: Send secondary facts
     FactCrawler ->> FactCrawler: Merge secondary facts into graph
     FactCrawler ->> FactCrawler: Validate claims using SHACL
-    Note over FactCrawler: Ensure facts conform\nto fact.claims SHACL
+    Note over FactCrawler: Ensure facts conform to fact.claims SHACL
 ```
 
 ### 1. Choosing a Starting Point:

@@ -77,16 +77,16 @@ With Linked Data, concepts and documents can be inter-related to describe almost
 
 ```mermaid
 graph TB;
-  Organization -->|offers| Services["schema:Service"]
-  Products -->|describedBy| Features["schema:ProductFeature"]
-  Services -->|describedBy| Features
-  Products -->|dependentOn| SupplyChain["schema:SupplyChain"]
-  Services -->|deliveredBy| SupplyChain
-  Features -->|delivers| Benefits["schema:Benefit"]
-  Benefits -->|accrues| Customer["schema:Person"]
+  Organization["schema:Organization"] -->|offers| Services["schema:Service"]
+  Products["schema:Product"] -->|hasPart| Features["schema:ProductFeature"]
+  Services -->|hasPart| Features
+  Products -->|requiresComponent| SupplyChain["schema:Product"]
+  Services -->|provider| SupplyChain
+  Features -->|hasOutput| Benefits["schema:Text"]
+  Benefits -->|receivedBy| Customer["schema:Person"]
   Organization -->|hasPartners| SupplyChain
   Organization -->|serves| Demographic["schema:Demographic"]
-  Customer -->|matches| Demographic
+  Customer -->|memberOf| Demographic
 ```
 
 ## 4. Solution Domains

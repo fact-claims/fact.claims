@@ -1,6 +1,6 @@
 ## Fact Claims - is your AI trustworthy?
 
-Our goal is to enrich the world with data that is relevant, licensed, attributable, and trustable at planetary-scale.
+Our goal is to enrich the world with data that is relevant, licensed, and trustable at planetary-scale.
 
 Recently, mediocre web content has experienced exponential growth - bulk-automated by generative AI. 
 

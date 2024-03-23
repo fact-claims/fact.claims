@@ -6,7 +6,7 @@ Recently, mediocre web content has experienced exponential growth - bulk-automat
 
 Now, if our future AI are trained on this - we can expect increasingly lower-quality halluciations.
 
-Introducing **fact claims** - a simple technique for creating discoverable facts that are licensed, attributable, and trustable at planetary-scale.
+Introducing [fact claims](./www/content/howto/fact.claims.md) - a simple technique for creating discoverable facts that are licensed, attributable, and trustable at planetary-scale.
 
 - **To learn more:** start with our [white paper](./www/content/paper/index.md) then [learn the basics](./www/content/howto/begin.md).
 

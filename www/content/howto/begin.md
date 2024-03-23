@@ -74,3 +74,13 @@ This allows an agent to make sense of facts by following the links and self-disc
 
 ### And that's it (mostly)! 
 
+- [Publish your fact.claims](./fact.claims.md)
+
+- [Curating and crawling](./crawling.md)
+
+- [Curating and crawling](./crawling.md)
+
+- [White Paper](../paper/index.md)
+
+- [RFC v0.4 DRAFT](../rfc/draft.md)
+

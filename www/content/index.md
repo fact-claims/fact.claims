@@ -31,4 +31,7 @@ Now, if our future AI is trained on this - we anticipate increasingly lower-qual
 
 ### [Curating and crawling](./howto/crawling.md)
 
-### [Worked Example](../fact.claims)
+### [SEO for AI](./howto/seo.md)
+
+
+

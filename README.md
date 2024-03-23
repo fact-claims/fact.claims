@@ -1,4 +1,4 @@
-## Fact Claims - Trustworthy AI in Autonomous Decentralized Ecosystems
+## Fact Claims - Trustworthy AI
 
 Ensuring the integrity and trustworthiness of our AI systems is important. 
 

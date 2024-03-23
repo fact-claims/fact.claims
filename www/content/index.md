@@ -30,3 +30,5 @@ Now, if our future AI is trained on this - we anticipate increasingly lower-qual
 ### [Publish your first facts](./howto/fact.claims.md)
 
 ### [Curating and crawling](./howto/crawling.md)
+
+### [Worked Example](../fact.claims)

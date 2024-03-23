@@ -104,7 +104,7 @@ The `fact graph` describes how fact claims are represented as linked data serial
 
 JSON-LD provides a lightweight and flexible means to express semantic information in a structured and easily understandable manner. 
 
-## 3.1 Metholody
+### 3.1 Metholody
 
 This RFC proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted network of fact graphs. 
 
@@ -117,7 +117,7 @@ The technical architecture outlined in this RFC provides a blueprint for integra
 
 Furthermore, the validation mechanisms outlined in this RFC ensure compliance with predefined constraints and rules, ensuring data integrity and consistency across fact graphs.
 
-### 3.1.1 Fact Claims Workflow
+#### 3.1.1 Fact Claims Workflow
 
 ```mermaid
 sequenceDiagram

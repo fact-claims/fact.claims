@@ -83,7 +83,7 @@ graph TB;
   Services -->|hasPart| Outcomes
   Products -->|requiresComponent| SupplyChain["schema:Product"]
   Services -->|provider| Organization2
-  Organization -->|hasPartners| Organization2
+  Organization -->|hasPartners| Organization2["schema:Organization"]
 ```
 
 ## 4. Solution Domains

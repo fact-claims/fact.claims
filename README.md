@@ -14,7 +14,7 @@ Our goal is to enrich the world with data that is relevant, licensed, attributab
 
 ### For content owners
 
-- Publishing your own [fact claims](./www/content/howto/fact.claims.md) allows intelligent systems to discover your expertise and offerings. 
+- Publishing your own [fact claims](./www/content/howto/fact.claims.md) allows intelligent systems to discover your expertise, offerings and license terms. 
 
 
 ### For developers, researchers and crawlers

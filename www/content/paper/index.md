@@ -146,4 +146,4 @@ We hope our  methodology paves the way for a future where collaboration thrives 
 
 - [Smart Trust](./SmartTrust.md)
 - [Case Studies](./usecase/)
-- [RFC](./RFC.md)
+- [RFC](./rfc/)

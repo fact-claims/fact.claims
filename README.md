@@ -16,7 +16,7 @@ Now, if our future AI is trained on this - we will see increasingly lower-qualit
 
 - **Published Facts:** Published facts are easily accessible for reference and verification, maintaining their integrity and reliability.
 
-- **Notarized Facts:** Notarized facts are verified and trusted, backed by a smart contract's ownership.
+- **Notarized Facts:** Notarized facts are verified and trusted, backed by a smart contract or trustee.
 
 ## Learn more ...
 

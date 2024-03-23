@@ -11,3 +11,4 @@ Ensuring the integrity and trustworthiness of fact claims is essential in any da
 
 ### [Curating and crawling](./crawling.md)
 
+### [SEO for AI](./seo.md)

@@ -3,7 +3,7 @@
 
 We need a simple solution that is easy to implement, based on existing standards, best practices, is future-ready and trustworthy.
 
-- The [fact claims RFC](../rfc/draft.md) proposes a methodology for leveraging the [InterPlanetary File System (IPFS)](https://ipfs.io/), [Linked Data (JSON-LD)](https://json-ld.org/), and [Smart Contracts](https://ethereum.org/) into a trusted web of fact graphs.
+- The [fact claims RFC](../rfc/draft.md) proposes a methodology for leveraging the `InterPlanetary File System (IPFS)`, `Linked Data`, and `Smart Contracts` into a trusted web of fact graphs.
 
 ---
 

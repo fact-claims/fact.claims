@@ -80,21 +80,20 @@ Ensure this starting point is relevant and trustworthy within your domain.
 
 ```mermaid
 graph TD;
-    A[Start] --> B(Choose Starting Point);
-    B --> C{Is IPFS URI?};
-    C -->|Yes| D[Load Grounded Facts from IPFS];
-    C -->|No| E[Error: Invalid Starting Point];
+    A[Start] --> C{Is IPFS?};
+    C -->|Yes| D[Load from IPFS];
+    C -->|No| E[Not Trusted];
     D --> F[Follow Chain of Trust];
-    F --> G[Traverse to Secondary Facts];
-    G --> H{Secondary Facts Found?};
-    H -->|Yes| I[Retrieve Secondary Facts from Public URLs];
-    H -->|No| J[Validate Claims using SHACL];
+    F --> G[Lookup Facts];
+    G --> H{Facts Found?};
+    H -->|Yes| I[from public URLs];
+    H -->|No| J[Validate using SHACL];
     I --> J;
-    J --> K[End: Fact Claims Crawling Completed];
+    J --> K[End: Crawl Complete];
     E --> K;
     K --> L{Success?};
-    L -->|Yes| M[Generate Report];
-    L -->|No| N[Review and Fix Errors];
+    L -->|Yes| M[Report];
+    L -->|No| N[Repair];
     M --> O[End];
     N --> B;
     O --> O1[End];

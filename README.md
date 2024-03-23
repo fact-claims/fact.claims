@@ -41,6 +41,9 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 - #### [Curating and crawling](./www/content/howto/crawling.md)
   Learn about curating and crawling data to ensure trustworthy fact claims.
 
+- #### [Querying facts with SPARQL](./www/content/howto/sparql.md)
+  Learn how to query with SPARQL to retrieve the facts you need.
+
 - #### [SEO for AI](./www/content/howto/seo.md)
   Learn how to repurpose existing SEO rich snippets as `fact.claims`.
 

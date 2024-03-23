@@ -99,22 +99,23 @@ flowchart TB
 
 | Solution Domain  | Use Cases |
 |---|---|
-| Ecommerce | - Standardize product, event, service, offer descriptions with [Schema.org](https://schema.org/Product), [Events](https://schema.org/Event), [Services](https://schema.org/Service), [Offers](https://schema.org/Offer), [Loans/Credit](https://schema.org/LoanOrCredit) and more - Leverage [GoodRelations](https://www.heppresearch.com/goodrelations/index.html) ontology for rich ecommerce data |
-| Content Creators | - Employ metadata standards like [Dublin Core Metadata Initiative](https://www.dublincore.org/specifications/dublin-core/) and [IPTC Photo Metadata](https://iptc.org/standards/photo-metadata/) for organized content management - Utilize [Creative Commons licenses](https://creativecommons.org/) for content licensing |
-| Education | - Ensure interoperability and metadata consistency through [IMS Global Learning Consortium standards](https://www.imsglobal.org/) and [SCORM](https://scorm.com/scorm-explained/) - Enhance resource discovery with [Learning Resource Metadata Initiative (LRMI)](https://www.imsglobal.org/activity/lrmi) and [CiTo (Citations)](https://sparontologies.github.io/cito/current/cito.html) |
-| Regulatory Compliance | - Meet regulatory requirements with [XBRL](https://www.xbrl.org/), [FIBO](https://spec.edmcouncil.org/fibo/), and [FIGREGONT](https://finregont.com/) - Ensure transparency and traceability using standards like [PROV-O](https://www.w3.org/TR/prov-o/) |
-| Financial Auditing  | - Facilitate financial data exchange with [XBRL](https://www.xbrl.org/) - Ensure data provenance and auditability with [PROV-O](https://www.w3.org/TR/prov-o/) |
-| Supply Chain Management | - Ensure traceability and interoperability in supply chain processes with [GS1 Standards](https://www.gs1.org/standards) - Utilize [PROV-O](https://www.w3.org/TR/prov-o/) for tracking provenance and changes |
-| Healthcare Data Management  | - Ensure interoperability in healthcare systems with standards like [HL7](https://www.hl7.org/) and [FHIR](https://www.hl7.org/fhir/) - Utilize [RDF](https://www.w3.org/RDF/) for semantic representation of healthcare data |
-| Intellectual Property | - Define digital rights with [W3C ODRL](https://www.w3.org/TR/odrl/) for intellectual property management |
-| Research & Innovation  | - Track research activities and relationships with [PROV-O](https://www.w3.org/TR/prov-o/) and [SKOS](https://www.w3.org/2004/02/skos/) - Cite and reference resources using [CiTo (Citations)](https://sparontologies.github.io/cito/current/cito.html) |
-| Environmental Sustainability  | - Model environmental data using [OGC SOSA/SSN](https://www.w3.org/TR/vocab-ssn/) for web best practices |
-| Legal Contracts and Agreements  | - Define digital rights and permissions using [W3C ODRL](https://www.w3.org/TR/odrl/) |
-| Identity and Access Management  | - Enable verifiable credentials and decentralized identifiers with [W3C VC](https://www.w3.org/TR/vc-data-model/) and [DID](https://www.w3.org/TR/did-core/) |
-| Energy Trading and Grid Management  | - Standardize energy market information exchange with [IEC CIM](https://www.iec.ch/cim/) |
-| Credential Verification | - Issue and verify credentials using [W3C VC](https://www.w3.org/TR/vc-data-model/) and [Open Badges](https://www.imsglobal.org/sites/default/files/Badges/OBv2p0/index.html) |
-| Asset Tokenization and Management | - Define fungible and non-fungible assets with [ERC-20](https://eips.ethereum.org/EIPS/eip-20) and [ERC-721](https://eips.ethereum.org/EIPS/eip-721) |
-| News and Data-driven Narratives | - Standardize news content and data exchange with [NewsML-G2](https://iptc.org/standards/newsml-g2/) and [NITF](https://iptc.org/standards/nitf/) - Utilize semantic web standards like [RDF](https://www.w3.org/RDF/) and [Schema.org](https://schema.org/) for structured data representation and discovery |
+| Ecommerce | Promote with [Schema.org](https://schema.org/) - [Products](https://schema.org/Product), [Events](https://schema.org/Event), [Services](https://schema.org/Service), [Offers](https://schema.org/Offer), [Loans/Credit](https://schema.org/LoanOrCredit) |
+| Content Creators | Employ metadata standards like [Dublin Core](https://www.dublincore.org/specifications/dublin-core/) and [IPTC](https://iptc.org/standards/photo-metadata/) for multimedia curation -  [Creative Commons](https://creativecommons.org/) for licensing |
+| Education | Ensure consistency through [IMS Global Learning](https://www.imsglobal.org/) and [SCORM](https://scorm.com/) - [Learning Resource Metadata Initiative (LRMI)](https://www.imsglobal.org/activity/lrmi) and [CiTo (Citations)](https://sparontologies.github.io/cito/current/cito.html) |
+| Regulatory Compliance | Verifiable reports with [XBRL](https://www.xbrl.org/), [FIBO](https://spec.edmcouncil.org/fibo/), and [FIGREGONT](https://finregont.com/) - Ensure transparency and traceability using standards like [PROV-O](https://www.w3.org/TR/prov-o/) |
+| Financial Auditing  |  Financial data exchange with [XBRL](https://www.xbrl.org/) - data auditability with [PROV-O](https://www.w3.org/TR/prov-o/) |
+| Supply Chain Management | Traceability in supply chain processes with [GS1 Standards](https://www.gs1.org/standards) - Utilize [PROV-O](https://www.w3.org/TR/prov-o/) for tracking changes |
+| Healthcare Data Management  | Standards like [HL7](https://www.hl7.org/) and [FHIR](https://www.hl7.org/fhir/) for semantic healthcare data |
+| Intellectual Property | Define digital rights with [W3C ODRL](https://www.w3.org/TR/odrl/) for IP management |
+| Research & Innovation  | Track research activities with [PROV-O](https://www.w3.org/TR/prov-o/) and [SKOS](https://www.w3.org/2004/02/skos/) - citeusing [CiTo (Citations)](https://sparontologies.github.io/cito/current/cito.html) |
+| Environmental Sustainability  | Model environmental data using [OGC SOSA/SSN](https://www.w3.org/TR/vocab-ssn/) |
+| Legal Contracts and Agreements  | Model legal matter [Legal Core Ontology](https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCore/) - Define digital rights using [W3C ODRL](https://www.w3.org/TR/odrl/) |
+| Identity and Access Management  | Digital credentials with [W3C VC](https://www.w3.org/TR/vc-data-model/) and [DID](https://www.w3.org/TR/did-core/) |
+| Energy Trading and Grid Management  | Energy market information with [IEC CIM](https://www.iec.ch/cim/) |
+| Credential Verification | Credentials using [W3C VC](https://www.w3.org/TR/vc-data-model/) and [Open Badges](https://openbadges.org/) |
+| Asset Tokenization and Management | Define tokenomics with [ERC-20](https://eips.ethereum.org/EIPS/eip-20) and [ERC-721](https://eips.ethereum.org/EIPS/eip-721) |
+| News and Data-driven Narratives | Story-driven data exchange with [NewsML-G2](https://iptc.org/standards/newsml-g2/) and [NITF](https://iptc.org/standards/nitf/) |
+
 ## 5. References
 
 - Benet, J. (2014). IPFS - Content Addressed, Versioned, P2P File System. [arXiv:1407.3561.](https://arxiv.org/abs/1407.3561).

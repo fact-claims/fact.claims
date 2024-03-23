@@ -82,7 +82,6 @@ graph TB;
   Services -->|hasPart| Outcomes
   Products -->|requiresComponent| SupplyChain["schema:Product"]
   Services -->|provider| Organization2
-  Benefits -->|receivedBy| Customer["schema:Person"]
   Organization -->|hasPartners| Organization2
   Organization2 -->|serves| Organization["schema:Organization"]
   my:Customer -->|memberOf| my:Demographic

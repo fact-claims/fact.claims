@@ -129,7 +129,6 @@ sequenceDiagram
 
     Client->>Client: Create RDF Claims
     Client->>IPFS: Publish RDF Claims
-    IPFS->>Oracle: Store claims
     IPFS-->>Oracle: Return IPFS URL
     Oracle->>Ethereum: Emit FactClaims Event(IPFS URL)
     Ethereum-->>Oracle: FactClaims Event

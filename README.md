@@ -8,16 +8,16 @@ Now, if our future AI is trained on this - we will see increasingly lower-qualit
 
 ## Learn more ...
 
-### [Trustworthy AI](./trust/index.md)
+### [Trustworthy AI](./content/trust/index.md)
 
-### [White Paper](./paper/index.md)
+### [White Paper](./content/paper/index.md)
 
-### [RFC v0.4 DRAFT](./rfc/draft.md)
+### [RFC v0.4 DRAFT](./content/rfc/draft.md)
 
-### [How-to Guides](./howto/index.md)
+### [How-to Guides](./content/howto/index.md)
 
-### [Learn the basics](./howto/begin.md)
+### [Learn the basics](./content/howto/begin.md)
 
-### [Publish your first facts](./howto/fact.claims.md)
+### [Publish your first facts](./content/howto/fact.claims.md)
 
-### [Curating and crawling](./howto/crawling.md)
+### [Curating and crawling](./content/howto/crawling.md)

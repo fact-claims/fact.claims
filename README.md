@@ -33,3 +33,5 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 ### [Publish your first facts](./www/content/howto/fact.claims.md)
 
 ### [Curating and crawling](./www/content/howto/crawling.md)
+
+### [Worked Example](./www/fact.claims)

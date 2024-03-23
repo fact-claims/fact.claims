@@ -6,14 +6,15 @@ Recently, mediocre web content has experienced exponential growth - bulk-automat
 
 Now, if our future AI are trained on this - we can expect increasingly lower-quality halluciations.
 
-To learn more, start with our [white paper](./www/content/paper/index.md) and [RFC](./www/content/rfc/draft.md).
+To learn more, start with our [white paper](./www/content/paper/index.md) then [Learn the basics](./www/content/howto/begin.md).
 
-### Featured Examples:
+For a formal specification, read the [RFC](./www/content/rfc/draft.md) and our [raw fact claims](./www/fact.claims).
+
+### Online Examples:
 
 - [fact.claims website](https://fact.claims/)
 - [fact.claims builder](https://fact.claims/build/)
-- [fact.claims viewer](https://fact.claims/view/)
-- [ourfact.claims](./www/fact.claims)
+- [fact.claims explorer](https://fact.claims/explore/)
 
 ### Fact Architecture:
 

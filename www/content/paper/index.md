@@ -97,8 +97,6 @@ flowchart TB
 - Real-time algorithms verify dynamic and evolving fact claims.
 - Semantic coherence and trust supersede traditional SEO practices.
 
-Here are the short solution statements with links:
-
 | Solution Domain  | Use Cases |
 |---|---|
 | Ecommerce | - Standardize product, event, service, offer descriptions with [Schema.org](https://schema.org/Product), [Events](https://schema.org/Event), [Services](https://schema.org/Service), [Offers](https://schema.org/Offer), [Loans/Credit](https://schema.org/LoanOrCredit) and more - Leverage [GoodRelations](https://www.heppresearch.com/goodrelations/index.html) ontology for rich ecommerce data |

@@ -36,7 +36,7 @@ It encompasses a wide range of activities, from asserting research findings and 
 
 However, ensuring transparency, accountability, and interoperability within such a trustful ecosystem requires a standardized approach for representing facts - a knowledge graph.
 
-## 1.1 Use Case: Ecommerce Supply Chain 
+## 1.1 Use Case: Supply Chain 
 
 The fact claims ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. 
 
@@ -55,7 +55,7 @@ By adopting standard ontologies such as PROV-O, SKOS, and VOID, we enhance inter
 
 Facts from multiple sources can be crawled, combined and curated into a custom fact graph, rich in contextual understanding for each use case.
 
-## 1.2 Use Case: Financial Industry 
+## 1.2 Use Case: Financial 
 
 ```mermaid
 graph TD;
@@ -73,16 +73,6 @@ graph TD;
     Transaction -- has --> Status["fib-tran:TransactionStatus"];
 ```
 
-## 1.3 Metholody
-
-This RFC proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted network of fact graphs. 
-
-Through the use of JSON-LD, we ensure semantic interoperability and compatibility, enabling machine-readable representation and interpretation of fact claims. Additionally, Smart Contracts provide governance mechanisms for managing the lifecycle of fact claims, ensuring transparency, and enforcing trust among participants.
-
-The distributed, immutable, and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. 
-
-
-In the following sections, we delve deeper into the objectives, technical details, use cases, security considerations, and implementation strategies for constructing trusted fact claims. 
 
 Through this RFC, we aim to lay the groundwork for a future where collaboration thrives securely and reliably, fostering innovation, transparency, and trust among participants.
 
@@ -114,11 +104,20 @@ The `fact graph` describes how fact claims are represented as linked data serial
 
 JSON-LD provides a lightweight and flexible means to express semantic information in a structured and easily understandable manner. 
 
-By following these steps, the Fact Claim protocol ensures the integrity, transparency, and traceability of asserted claims.
+## 3.1 Metholody
+
+This RFC proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted network of fact graphs. 
+
+Through the use of JSON-LD, we ensure semantic interoperability and compatibility, enabling machine-readable representation and interpretation of fact claims. Additionally, Smart Contracts provide governance mechanisms for managing the lifecycle of fact claims, ensuring transparency, and enforcing trust among participants.
+
+The distributed, immutable, and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. 
+
 
 The technical architecture outlined in this RFC provides a blueprint for integrating IPFS into existing systems to establish a tamper-resistant repository for storing and accessing fact claims. 
 
 Furthermore, the validation mechanisms outlined in this RFC ensure compliance with predefined constraints and rules, ensuring data integrity and consistency across fact graphs.
+
+### 3.1.1 Fact Claims Workflow
 
 ```mermaid
 sequenceDiagram
@@ -141,9 +140,9 @@ sequenceDiagram
     SmartContract-->>Client: Confirmation
 ```
 
-### 3.1. **Create Factual Claims in RDF Format**
+### 3.2. **Create Factual Claims in RDF Format**
 
-- 3.1.1 Define the factual claims using RDF format.
+- 3.2.1 Define the factual claims using RDF format.
 
 ```turtle
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -153,7 +152,7 @@ sequenceDiagram
 <https://example.claims/facts/claim1> prov:wasAttributedTo <ethereum://0x123abc...> .
 ```
 
-- 3.1.2. Make useful and necessary assertions with reference to relevant ontologies.
+- 3.2.2. Make useful and necessary assertions with reference to relevant ontologies.
 
 ```json-ld
 <https://example.claims/facts/claim1>
@@ -163,7 +162,7 @@ sequenceDiagram
   rdf:comment 'Trusted Facts for Autonomous Agents'.
 ```
 
-### 3.2. **Attribution to Ethereum Smart Contract Address**
+### 3.3. **Attribution to Ethereum Smart Contract Address**
 
 - 3.2.1. Embed `prov:wasAttributedTo` within the RDF claims to the Ethereum smart contract address (`ethereum://0x123abc...`) serving as the originating entity.
 
@@ -221,11 +220,41 @@ interface IFactClaims {
 
 - 3.7.5. Act upon claims and additional assertions according to the use case.
 
-### 3.8 Linked Data
+---
 
-- 3.8.1. **Serialization**: The fact graph is serialized in JSON-LD format, which extends JSON by adding support for Linked Data. JSON-LD allows for the representation of data in a graph-like structure composed of subject-predicate-object triples, following the RDF data model.
+## 4. Semantic Interoperability
 
-- 3.8.2. **Enriched XHTML**: To enhance human readability, the fact graph can be embedded within XHTML documents. This embedding allows for the seamless integration of structured data and semantic annotations within web pages, facilitating both human and machine interpretation.
+This section introduces standard semantic ontologies used in the proposal, such as PROV-O, SKOS, and VOID. It outlines the role of these ontologies in enhancing interoperability and compatibility.
+
+By adhering to these standard ontologies and vocabulary definitions, the fact graph ensures consistency, compatibility, and seamless integration.
+
+The fact graph relies on standard semantic ontologies to ensure interoperability and compatibility across diverse ecosystems
+
+### 4.1 Core Ontologies
+
+#### 4.1.1 PROV-O (Provenance Ontology)
+
+PROV-O furnishes a standardized vocabulary for representing provenance information, facilitating the documentation and tracking of entities, activities, and their relationships. By incorporating PROV-O, the fact graph can effectively capture the lineage and historical context of data, decisions, and actions within the ecosystem.
+
+This vocabulary defines the only mandatory fact (`prov:wasAttributedTo`) needed to define a fact claim .
+
+#### 4.1.2 SKOS (Simple Knowledge Organization System)
+
+SKOS presents a standard framework for representing controlled vocabularies and organizing knowledge systems. By utilizing SKOS, the fact graph can establish and manage hierarchical and associative relationships among concepts, thereby enhancing semantic enrichment and knowledge organization within the ecosystem.
+
+#### 4.1.3 VOID (Vocabulary of Interlinked Datasets)
+
+VOID provides metadata specifications for describing RDF datasets, including details concerning the dataset's structure, accessibility, and usage. Integration of VOID into the fact graph facilitates comprehensive documentation of dataset characteristics and attributes, thereby improving dataset discoverability, accessibility, and interoperability within the ecosystem.
+
+#### 4.1.4 General Knowledge (OpenGraph, Schema.org, and Others)
+
+Additionally, integration with Schema.org, OpenGraph, and similar standards significantly enhances search engine results (SERPs) and addresses the evolving landscape of "answer engines." Considering the importance of trust and relevance in the post-search era, further exploration of these standards is warranted.
+
+### 4.2 Linked Data
+
+- 4.2.1. **Serialization**: The fact graph is serialized in JSON-LD format, which extends JSON by adding support for Linked Data. JSON-LD allows for the representation of data in a graph-like structure composed of subject-predicate-object triples, following the RDF data model.
+
+- 4.2.2. **Enriched XHTML**: To enhance human readability, the fact graph can be embedded within XHTML documents. This embedding allows for the seamless integration of structured data and semantic annotations within web pages, facilitating both human and machine interpretation.
 
 #### For Example
 
@@ -266,47 +295,13 @@ interface IFactClaims {
 }
 ```
 
-- 3.8.3 URL Dereferencing
+### 4.3 URL Dereferencing
 
 At runtime, URLs referenced within the JSON-LD, especially those residing outside the IPFS subgraph, may be dereferenced at the agent's discretion. This dereferencing process involves retrieving the content associated with a URL from the web and incorporating it into the fact graph. It's crucial to ensure that data referenced on the public internet is permalinked, consistently and reliably accessible.
 
-- 3.8.4 Mutable Internet-Sourced Facts
+#### 4.3.1 Dynamic Sourcing
 
 Unlike fact claims stored within the IPFS subgraph, Internet-sourced facts need not be immutable. Dynamic observations and updates from external sources may be ingested and inferred by the agent at its discretion. This approach enables the fact graph to incorporate real-time data and adapt to evolving information landscapes while maintaining the integrity of internally stored immutable fact claims.
-
-- 3.8.5 Semantic Interoperability and Human Readability
-
-The utilization of JSON-LD for fact graph representation ensures semantic interoperability with existing standards such as RDF, PROV-O, SKOS, and VOID annotations. Additionally, embedding JSON-LD within XHTML documents enhances human readability and accessibility, fostering both machine-readable interpretation and intuitive understanding by humans.
-
-By leveraging JSON-LD serialization and embedded XHTML documents, the fact graph achieves a balance between machine readability, semantic interoperability, and human accessibility, laying the foundation for a robust and comprehensible knowledge representation framework.
-
----
-
-## 4. Ontologies for Interoperability
-
-This section introduces standard semantic ontologies used in the proposal, such as PROV-O, SKOS, and VOID. It outlines the role of these ontologies in enhancing interoperability and compatibility.
-
-By adhering to these standard ontologies and vocabulary definitions, the fact graph ensures consistency, compatibility, and seamless integration.
-
-The fact graph relies on standard semantic ontologies to ensure interoperability and compatibility across diverse ecosystems
-
-### PROV-O (Provenance Ontology)
-
-PROV-O furnishes a standardized vocabulary for representing provenance information, facilitating the documentation and tracking of entities, activities, and their relationships. By incorporating PROV-O, the fact graph can effectively capture the lineage and historical context of data, decisions, and actions within the ecosystem.
-
-This vocabulary defines the only mandatory fact (`prov:wasAttributedTo`) needed to define a fact claim .
-
-### SKOS (Simple Knowledge Organization System)
-
-SKOS presents a standard framework for representing controlled vocabularies and organizing knowledge systems. By utilizing SKOS, the fact graph can establish and manage hierarchical and associative relationships among concepts, thereby enhancing semantic enrichment and knowledge organization within the ecosystem.
-
-### VOID (Vocabulary of Interlinked Datasets)
-
-VOID provides metadata specifications for describing RDF datasets, including details concerning the dataset's structure, accessibility, and usage. Integration of VOID into the fact graph facilitates comprehensive documentation of dataset characteristics and attributes, thereby improving dataset discoverability, accessibility, and interoperability within the ecosystem.
-
-### General Knowledge (OpenGraph, Schema.org, and Others)
-
-Additionally, integration with Schema.org, OpenGraph, and similar standards significantly enhances search engine results (SERPs) and addresses the evolving landscape of "answer engines." Considering the importance of trust and relevance in the post-search era, further exploration of these standards is warranted.
 
 ---
 

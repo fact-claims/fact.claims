@@ -12,11 +12,11 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 
 - **Traceable Facts:** These facts can be traced back to their source through connections established during their creation or association.
 
-- **Grounded Facts:** Grounded facts are securely stored in an unchangeable document, ensuring their reliability.
+- **Grounded Facts:** Grounded facts are securely stored in an unchangeable document, ensuring their reliability and verification.
 
-- **Published Facts:** Published facts are online for reference and verification, they need not be immutable so may be real time.
+- **Published Facts:** Published facts are online for reference, they need not be immutable so may be real time.
 
-- **Notarized Facts:** Notarized facts are verified and trusted, backed by a smart contract, or digital trustee.
+- **Notarized Facts:** Notarized facts with a provable chain of custody, with provenance traced back to a digital trustee.
 
 ### Explore Further:
 

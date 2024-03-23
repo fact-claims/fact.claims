@@ -34,30 +34,7 @@ However, to be considered grounded [fact.claims](./fact.claims.md) they must be 
        schema:sameAs <https://www.facebook.com/example>, <https://www.twitter.com/example> .
    ```
 
-2. **Breadcrumb Markup:**
-   ```turtle
-   @prefix schema: <http://schema.org/> .
-   
-   [] a schema:BreadcrumbList ;
-       schema:itemListElement [
-           a schema:ListItem ;
-           schema:position 1 ;
-           schema:name "Home" ;
-           schema:item <https://www.example.com/>
-       ], [
-           a schema:ListItem ;
-           schema:position 2 ;
-           schema:name "Category" ;
-           schema:item <https://www.example.com/category/>
-       ], [
-           a schema:ListItem ;
-           schema:position 3 ;
-           schema:name "Product" ;
-           schema:item <https://www.example.com/category/product/>
-       ] .
-   ```
-
-3. **Article Markup:**
+2. **Article Markup:**
    ```turtle
    @prefix schema: <http://schema.org/> .
    
@@ -83,7 +60,7 @@ However, to be considered grounded [fact.claims](./fact.claims.md) they must be 
        ] .
    ```
 
-4. **Product Markup:**
+3. **Product Markup:**
    ```turtle
    @prefix schema: <http://schema.org/> .
    
@@ -107,5 +84,21 @@ However, to be considered grounded [fact.claims](./fact.claims.md) they must be 
        ] .
    ```
 
+4. **Potential Action:**
+   ```turtle
 
+@prefix schema: <http://schema.org/> .
 
+<https://www.example.com/action> a schema:Action ;
+    schema:name "Example Action" ;
+    schema:description "Description of the action." ;
+    schema:actionStatus schema:ActiveActionStatus ;
+    schema:potentialAction [
+        a schema:CommunicateAction ;
+        schema:actionOption "Call" ;
+        schema:expectsAcceptanceOf [
+            a schema:Offer ;
+            schema:name "Example Offer"
+        ]
+    ] .
+   ```

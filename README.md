@@ -1,4 +1,4 @@
-## Fact Claims - is your AI trustworthy?
+## Fact Claims - is your data trustworthy?
 
 Our goal is to enrich the world with data that is relevant, licensed, and trustable at planetary-scale.
 

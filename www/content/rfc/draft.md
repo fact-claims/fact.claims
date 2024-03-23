@@ -38,13 +38,13 @@ However, ensuring transparency, accountability, and interoperability within such
 
 ```mermaid
 graph TB;
-    subgraph "Example Fact Graph"
-      Organization[Organization] -->|Sells| Products[Products]
-      Organization -->|Publishes| Website[Website]
-      Website --> |Describes| Services
-      Website --> |Describes| Products
-      Website --> |Describes| Organization
-    end
+  subgraph "Example Fact Graph"
+  Organization[Organization] -->|Sells| Products[Products]
+  Organization -->|Publishes| Website[Website]
+  Website --> |Describes| Services
+  Website --> |Describes| Products
+  Website --> |Describes| Organization
+  end
 ```
 
 The fact claims ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. 
@@ -55,16 +55,16 @@ Facts from multiple sources can be crawled, combined and curated into a custom f
 
 ```mermaid
 graph TB;
-      Organization -->|Offers| Services[Services]
-      Products -->|Described by| Features[Features]
-      Services -->|Described by| Features[Features]
-      Products -->|Depend On| SupplyChain
-      Services -->|Delivered By| SupplyChain
-      Features -->|Delivers| Benefits
-      Benefits -->|Accrues| Customer[Customer]
-      Organization -->|Partners| SupplyChain[Supply Chain]
-      Organization -->|Serves| Demographic
-      Customer -->|Matches |Demographic
+  Organization -->|Offers| Services[Services]
+  Products -->|Described by| Features[Features]
+  Services -->|Described by| Features[Features]
+  Products -->|Depend On| SupplyChain
+  Services -->|Delivered By| SupplyChain
+  Features -->|Delivers| Benefits
+  Benefits -->|Accrues| Customer[Customer]
+  Organization -->|Partners| SupplyChain[Supply Chain]
+  Organization -->|Serves| Demographic
+  Customer -->|Matches |Demographic
 ```
 
 Traditional centralized storage solutions, while effective in some contexts, pose several challenges in decentralized environments. These challenges include single points of failure, data manipulation risks, and vulnerabilities to censorship and tampering. In contrast, decentralized technologies offer innovative solutions to address these challenges and enhance the integrity and auditability of fact claims.
@@ -76,22 +76,22 @@ Furthermore, the validation mechanisms outlined in this RFC ensure compliance wi
 
 ```mermaid
 flowchart TB
-        subgraph "Example AI Ecosystem"
-            SC[(Smart Contracts)]
-            agent1[(Smart Agent)]
-            agent2[(Human Agent)]
-            trustee1[(Trustee)]
-            partner1[(Partner)]
-            SC <-->|Collaboration| agent1
-            SC <-->|Activities| agent1
-            SC <-->|Observations| agent2
-            SC <-->|Search| trustee1
-            SC <-->|Collaboration| partner1
-            agent1 <--> IPFS
-            agent2 <--> IPFS
-            trustee1 <--> IPFS
-            partner1 <--> IPFS
-        end
+  subgraph "Example AI Ecosystem"
+  SC[(Smart Contracts)]
+  agent1[(Smart Agent)]
+  agent2[(Human Agent)]
+  trustee1[(Trustee)]
+  partner1[(Partner)]
+  SC <-->|Collaboration| agent1
+  SC <-->|Activities| agent1
+  SC <-->|Observations| agent2
+  SC <-->|Search| trustee1
+  SC <-->|Collaboration| partner1
+  agent1 <--> IPFS
+  agent2 <--> IPFS
+  trustee1 <--> IPFS
+  partner1 <--> IPFS
+  end
 
 ```
 
@@ -148,9 +148,9 @@ By following these steps, the Fact Claim protocol ensures the integrity, transpa
 ```json-ld
 <https://example.claims/facts/claim1>
 
-    rdf:label 'fact claim #1';
-    
-    rdf:comment 'Trusted Facts for Autonomous Agents'.
+  rdf:label 'fact claim #1';
+  
+  rdf:comment 'Trusted Facts for Autonomous Agents'.
 ```
 
 ### 3.2. **Attribution to Ethereum Smart Contract Address**
@@ -189,11 +189,11 @@ Example URL format: `ipfs://QmXqPj9sk...`
 pragma solidity ^0.8.0;
 
 interface IFactClaims {
-    event FactClaims(string ipfsURL);
+  event FactClaims(string ipfsURL);
 
-    function claim(string memory ipfsURL) external {
-        emit FactClaims(ipfsURL);
-    }
+  function claim(string memory ipfsURL) external {
+  emit FactClaims(ipfsURL);
+  }
 }
 ```
 
@@ -222,36 +222,36 @@ interface IFactClaims {
 ```json-ld
 {
   "@context": {
-    "prov": "http://www.w3.org/ns/prov#"
+  "prov": "http://www.w3.org/ns/prov#"
   },
   "@graph": [
-    {
-      "@id": "ipfs://QmXqPj9sk...",
-      "prov:wasAttributedTo": {
-        "@id": "ethereum://0x123abc..."
-      }
-    },
-    {
-      "@id": "ethereum://0x123abc...",
-      "prov:generated": {
-        "@id": "ipfs://QmXqPj9sk..."
-      },
-      "prov:used": {
-        "@id": "https://example.claims/facts/claim1"
-      }
-    },
-    {
-      "@id": "https://example.claims/facts/claim1",
-      "prov:hadPrimarySource": {
-        "@id": "ipfs://QmXqPj9sk..."
-      }
-    },
-    {
-      "@id": "https://example.claims/facts/claim1",
-      "prov:wasDerivedFrom": {
-        "@id": "ethereum://0x123abc..."
-      }
-    }
+  {
+  "@id": "ipfs://QmXqPj9sk...",
+  "prov:wasAttributedTo": {
+  "@id": "ethereum://0x123abc..."
+  }
+  },
+  {
+  "@id": "ethereum://0x123abc...",
+  "prov:generated": {
+  "@id": "ipfs://QmXqPj9sk..."
+  },
+  "prov:used": {
+  "@id": "https://example.claims/facts/claim1"
+  }
+  },
+  {
+  "@id": "https://example.claims/facts/claim1",
+  "prov:hadPrimarySource": {
+  "@id": "ipfs://QmXqPj9sk..."
+  }
+  },
+  {
+  "@id": "https://example.claims/facts/claim1",
+  "prov:wasDerivedFrom": {
+  "@id": "ethereum://0x123abc..."
+  }
+  }
   ]
 }
 ```
@@ -304,12 +304,12 @@ Additionally, integration with Schema.org, OpenGraph, and similar standards sign
 
 This section outlines the validation process, including SHACL (Shapes Constraint Language) validation, and emphasizes conformance with VOID and PROV-O standards to maintain interoperability and data quality.
 
-| Requirement                | Community Contributions                                                                                                                                                                       |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IPFS Integration           | [js-ipfs](https://github.com/ipfs/js-ipfs) for JavaScript or [py-ipfs](https://github.com/ipfs/py-ipfs) for Python or [Java IPFS API](https://github.com/ipfs/java-ipfs-http-client) for Java |
-| RDF Representation         | [Apache Jena](https://jena.apache.org/) for Java or [RDFLib](https://github.com/RDFLib/rdflib) for Python                                                                                     |
-| Smart Contract Integration | [Web3.js](https://github.com/ethereum/web3.js/) for JavaScript or [Web3.py](https://github.com/ethereum/web3.py) for Python                                                                   |
-| SHACL Validation           | [TopQuadrant SHACL](https://github.com/TopQuadrant/shacl) or [Eclipse RDF4J SHACL](https://rdf4j.org/documentation/programming/shacl/)                                                        |
+| Requirement  | Community Contributions |
+|---|---|
+| IPFS Integration | [js-ipfs](https://github.com/ipfs/js-ipfs) for JavaScript or [py-ipfs](https://github.com/ipfs/py-ipfs) for Python or [Java IPFS API](https://github.com/ipfs/java-ipfs-http-client) for Java |
+| RDF Representation | [Apache Jena](https://jena.apache.org/) for Java or [RDFLib](https://github.com/RDFLib/rdflib) for Python |
+| Smart Contract Integration | [Web3.js](https://github.com/ethereum/web3.js/) for JavaScript or [Web3.py](https://github.com/ethereum/web3.py) for Python |
+| SHACL Validation | [TopQuadrant SHACL](https://github.com/TopQuadrant/shacl) or [Eclipse RDF4J SHACL](https://rdf4j.org/documentation/programming/shacl/)  |
 
 
 ### 5.1 JSON-LD and SHACL Validation
@@ -320,18 +320,18 @@ As a minimum, a fact graph should conform to the following SHACL
 
 ```turtle
 trust:FactClaims
-    a sh:NodeShape ;
-    sh:targetClass prov:Entity ;
-    sh:property [
-        sh:path prov:generated ;
-        sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
-    ] ;
-    sh:property [
-        sh:path prov:wasAttributedTo ;
-        sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
-    ] .
+  a sh:NodeShape ;
+  sh:targetClass prov:Entity ;
+  sh:property [
+  sh:path prov:generated ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+  sh:path prov:wasAttributedTo ;
+  sh:minCount 1 ;
+  sh:nodeKind sh:IRI ;
+  ] .
 ```
 
 ### 5.2 Immutable Fact Claims
@@ -364,7 +364,7 @@ In fact claims ecosystems, establishing the immutability of data is crucial for 
 
 ---
 
-## 6. Problem Domains
+## 6. Solution Domains
 
 This section explores various use cases for fact claims, including regulatory compliance, financial auditing, supply chain management, healthcare data management, and more. It discusses the standards and technologies relevant to each use case.
 
@@ -375,78 +375,25 @@ This section explores various use cases for fact claims, including regulatory co
 - Real-time algorithms verify dynamic and evolving fact claims.
 - Semantic coherence and trust supersede traditional SEO practices.
 
-| Problem Domain                        | Standards                                                                                                                                                                                                                                                                                                                                                                                                           |
-|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Regulatory Compliance                 | - [XBRL (eXtensible Business Reporting Language)](https://www.xbrl.org/) - [FIBO (Financial Industry Business Ontology)](https://spec.edmcouncil.org/fibo/) - [FIGREGONT (Financial Industry Regulatory and Governance)](https://finregont.com/)                                                                                                                                                           |
-| Financial Auditing                    | - [XBRL (eXtensible Business Reporting Language)](https://www.xbrl.org/) - [RDF](https://www.w3.org/RDF/) - [PROV-O](https://www.w3.org/TR/prov-o/)                                                                                                                                                                                                          |
-| Supply Chain Management               | - [GS1 Standards](https://www.gs1.org/standards) - [RDF](https://www.w3.org/RDF/) - [PROV-O](https://www.w3.org/TR/prov-o/)                                                                                                                                                                                                                                  |
-| Healthcare Data Management            | - [HL7 (Health Level Seven International)](https://www.hl7.org/) - [FHIR (Fast Healthcare Interoperability Resources)](https://www.hl7.org/fhir/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                 |
-| Intellectual Property       | - [W3C ODRL (Open Digital Rights Language)](https://www.w3.org/TR/odrl/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                                                                                          |
-| Research Collaboration                | - [PROV-O](https://www.w3.org/TR/prov-o/) - [SKOS (Simple Knowledge Organization System)](https://www.w3.org/2004/02/skos/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                 |
-| Innovation Tracking                   | - [W3C PROV-O](https://www.w3.org/TR/prov-o/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                                                                                               |
-| Environmental Sustainability          | - [OGC SOSA/SSN (Spatial Data on the Web Best Practices)](https://www.w3.org/TR/vocab-ssn/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                                                                       |
-| Legal Contracts and Agreements        | - [W3C ODRL (Open Digital Rights Language)](https://www.w3.org/TR/odrl/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                                                                                          |
-| Identity and Access Management        | - [W3C VC (Verifiable Credentials)](https://www.w3.org/TR/vc-data-model/) - [DID (Decentralized Identifiers)](https://www.w3.org/TR/did-core/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                    |
-| Energy Trading and Grid Management    | - [IEC CIM (Common Information Model for Energy Markets)](https://www.iec.ch/cim/) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                                                                                                                |
-| Education and Credential Verification | - [W3C VC (Verifiable Credentials)](https://www.w3.org/TR/vc-data-model/) - [Open Badges (Open Badges Specification)](https://www.imsglobal.org/sites/default/files/Badges/OBv2p0/index.html) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                     |
-| Asset Tokenization and Management     | - [ERC-20 (Ethereum Request for Comments 20)](https://eips.ethereum.org/EIPS/eip-20) - [ERC-721 (Ethereum Request for Comments 721)](https://eips.ethereum.org/EIPS/eip-721) - [RDF](https://www.w3.org/RDF/)                                                                                                                                                                      |
-| News and Data-driven Narratives       | - [NewsML-G2 (News Markup Language - Generation 2)](https://iptc.org/standards/newsml-g2/) - [NITF (News Industry Text Format)](https://iptc.org/standards/nitf/) - [Linked Data Platform (LDP)](https://www.w3.org/TR/ldp/) - [Semantic Web Standards (RDF, RDFa, JSON-LD)](https://www.w3.org/RDF/) - [Schema.org](https://schema.org/) - [W3C Data Catalog Vocabulary (DCAT)](https://www.w3.org/TR/vocab-dcat/) |
+| Solution Domain  | Useful Vocabularies and Semantics |
+|---|---|
+| Ecommerce | - [Schema.org Products](https://schema.org/Product), [Events](https://schema.org/Event), [Services](https://schema.org/Service), [Offers](https://schema.org/Offer), [Loans/Credit](https://schema.org/LoanOrCredit) [etc ...](https://schema.org/) - [GoodRelations](https://www.heppresearch.com/goodrelations/index.html) |
+| Content Creators | - [Dublin Core Metadata Initiative](https://www.dublincore.org/specifications/dublin-core/) - [Creative Commons licenses](https://creativecommons.org/) - [IPTC Photo Metadata](https://iptc.org/standards/photo-metadata/) |
+| Education | - [IMS Global Learning Consortium standards](https://www.imsglobal.org/) - [SCORM (Sharable Content Object Reference Model)](https://scorm.com/scorm-explained/) - [Learning Resource Metadata Initiative (LRMI)](https://www.imsglobal.org/activity/lrmi)  - [CiTo (Citations)](https://sparontologies.github.io/cito/current/cito.html)|
+| Regulatory Compliance | - [XBRL (eXtensible Business Reporting Language)](https://www.xbrl.org/) - [FIBO (Financial Industry Business Ontology)](https://spec.edmcouncil.org/fibo/) - [FIGREGONT (Financial Industry Regulatory and Governance)](https://finregont.com/) |
+| Financial Auditing  | - [XBRL (eXtensible Business Reporting Language)](https://www.xbrl.org/) - [RDF](https://www.w3.org/RDF/) - [PROV-O](https://www.w3.org/TR/prov-o/)  |
+| Supply Chain Management | - [GS1 Standards](https://www.gs1.org/standards) - [RDF](https://www.w3.org/RDF/) - [PROV-O](https://www.w3.org/TR/prov-o/)  |
+| Healthcare Data Management  | - [HL7 (Health Level Seven International)](https://www.hl7.org/) - [FHIR (Fast Healthcare Interoperability Resources)](https://www.hl7.org/fhir/) - [RDF](https://www.w3.org/RDF/) |
+| Intellectual Property | - [W3C ODRL (Open Digital Rights Language)](https://www.w3.org/TR/odrl/) - [RDF](https://www.w3.org/RDF/)  |
+| Research & Innovation  | - [PROV-O](https://www.w3.org/TR/prov-o/) - [SKOS (Simple Knowledge Organization System)](https://www.w3.org/2004/02/skos/) - [CiTo (Citations)](https://sparontologies.github.io/cito/current/cito.html) |
+| Environmental Sustainability  | - [OGC SOSA/SSN (Spatial Data on the Web Best Practices)](https://www.w3.org/TR/vocab-ssn/) - [RDF](https://www.w3.org/RDF/) |
+| Legal Contracts and Agreements  | - [W3C ODRL (Open Digital Rights Language)](https://www.w3.org/TR/odrl/) - [RDF](https://www.w3.org/RDF/)  |
+| Identity and Access Management  | - [W3C VC (Verifiable Credentials)](https://www.w3.org/TR/vc-data-model/) - [DID (Decentralized Identifiers)](https://www.w3.org/TR/did-core/) - [RDF](https://www.w3.org/RDF/)  |
+| Energy Trading and Grid Management  | - [IEC CIM (Common Information Model for Energy Markets)](https://www.iec.ch/cim/) - [RDF](https://www.w3.org/RDF/)  |
+| Education and Credential Verification | - [W3C VC (Verifiable Credentials)](https://www.w3.org/TR/vc-data-model/) - [Open Badges (Open Badges Specification)](https://www.imsglobal.org/sites/default/files/Badges/OBv2p0/index.html) - [RDF](https://www.w3.org/RDF/) |
+| Asset Tokenization and Management | - [ERC-20 (Ethereum Request for Comments 20)](https://eips.ethereum.org/EIPS/eip-20) - [ERC-721 (Ethereum Request for Comments 721)](https://eips.ethereum.org/EIPS/eip-721) - [RDF](https://www.w3.org/RDF/)  |
+| News and Data-driven Narratives | - [NewsML-G2 (News Markup Language - Generation 2)](https://iptc.org/standards/newsml-g2/) - [NITF (News Industry Text Format)](https://iptc.org/standards/nitf/) - [Linked Data Platform (LDP)](https://www.w3.org/TR/ldp/) - [Semantic Web Standards (RDF, RDFa, JSON-LD)](https://www.w3.org/RDF/) - [Schema.org](https://schema.org/) - [W3C Data Catalog Vocabulary (DCAT)](https://www.w3.org/TR/vocab-dcat/) |
 
-### 6.1 Regulatory Compliance
-
-Adhering to laws, regulations, and industry standards is crucial for transparency and accountability in regulatory compliance. Utilizing standards such as [XBRL](https://www.xbrl.org/), [FIBO](https://spec.edmcouncil.org/fibo/) and [FIGREGONT](https://finregont.com/) ensures the traceability and integrity of financial data and regulatory reporting.
-
-### 6.2 Financial Auditing
-
-Ensuring the accuracy and compliance of financial records requires robust standards like [XBRL](https://www.xbrl.org/), [RDF](https://www.w3.org/RDF/), and [PROV-O](https://www.w3.org/TR/prov-o/). These standards facilitate the representation and provenance tracking of financial data, supporting audit trails and regulatory compliance.
-
-### 6.3 Supply Chain Management
-
-Documenting supply chain processes and ensuring transparency is essential for effective supply chain management. Standards such as [GS1](https://www.gs1.org/standards), [RDF](https://www.w3.org/RDF/), and [PROV-O](https://www.w3.org/TR/prov-o/) enable the tracking of product provenance and support efficient supply chain operations.
-
-### 6.4 Healthcare Data Management
-
-Securely managing and analyzing patient health information relies on interoperable standards like [HL7](https://www.hl7.org/), [FHIR](https://www.hl7.org/fhir/), and [RDF](https://www.w3.org/RDF/). These standards facilitate semantic representation and provenance tracking of healthcare data, enhancing patient care and research.
-
-### 6.5 Intellectual Property Management
-
-Protecting and monetizing intellectual property assets requires standards like [W3C ODRL](https://www.w3.org/TR/odrl/) and [RDF](https://www.w3.org/RDF/). These standards support the representation, licensing, and provenance tracking of patents, trademarks, and copyrights.
-
-### 6.6 Research Collaboration
-
-Collaborating to advance scientific knowledge relies on standards such as [PROV-O](https://www.w3.org/TR/prov-o/), [SKOS](https://www.w3.org/2004/02/skos/), and [RDF](https://www.w3.org/RDF/). These standards enable the documentation, sharing, and attribution of research data and findings among researchers and institutions.
-
-### 6.7 Innovation Tracking
-
-Monitoring trends and advancements in various fields is essential for innovation tracking. Standards like [W3C PROV-O](https://www.w3.org/TR/prov-o/) and [RDF](https://www.w3.org/RDF/) facilitate the capture, analysis, and visualization of innovation-related data and its provenance.
-
-### 6.8 Environmental Sustainability
-
-Promoting conservation efforts and informed decision-making in environmental sustainability relies on standards like [OGC SOSA/SSN](https://www.w3.org/TR/vocab-ssn/) and [RDF](https://www.w3.org/RDF/). These standards support the collection, integration, and analysis of environmental data.
-
-### 6.9 Legal Contracts and Agreements
-
-Enforcing legal terms and conditions in contracts and agreements is facilitated by standards like [W3C ODRL](https://www.w3.org/TR/odrl/) and [RDF](https://www.w3.org/RDF/). These standards enable the representation, interpretation, and enforcement of legal terms and conditions.
-
-### 6.10 Identity and Access Management
-
-Managing digital identities and controlling access to resources requires standards like [W3C VC](https://www.w3.org/TR/vc-data-model/), [DID](https://www.w3.org/TR/did-core/), and [RDF](https://www.w3.org/RDF/). These standards enable verifiable credentials, decentralized identifiers, and semantic representation of identity data.
-
-### 6.11 Energy Trading and Grid Management
-
-Optimizing energy production and distribution relies on standards like [IEC CIM](https://www.iec.ch/cim/) and [RDF](https://www.w3.org/RDF/). These standards support interoperability, data exchange, and modeling of energy systems for efficient grid management.
-
-### 6.12 Education and Credential Verification
-
-Validating academic achievements and qualifications depends on standards like [W3C VC](https://www.w3.org/TR/vc-data-model/), [Open Badges](https://www.imsglobal.org/sites/default/files/Badges/OBv2p0/index.html), and [RDF](https://www.w3.org/RDF/). These standards enable the issuance, verification, and exchange of digital credentials and badges.
-
-### 6.13 Asset Tokenization and Management
-
-Representing real-world assets as digital tokens requires standards like [ERC-20](https://eips.ethereum.org/EIPS/eip-20), [ERC-721](https://eips.ethereum.org/EIPS/eip-721), and [RDF](https://www.w3.org/RDF/). These standards facilitate the creation, transfer, and management of tokenized assets while ensuring transparency and interoperability.
-
-### 6.14 News and Data-driven Narratives
-
-Creating, disseminating, and analyzing news content and data stories is supported by standards like [NewsML-G2](https://iptc.org/standards/newsml-g2/) and [NITF](https://iptc.org/standards/nitf/).
 
 ---
 

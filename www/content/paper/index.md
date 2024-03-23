@@ -88,7 +88,7 @@ flowchart TB
             Tokenomics <--> Auditing
         end
 ```
-## 4. Problem Domains
+## 4. Solution Domains
 
 - AI Answer Engines require a new model for finding trusted facts.
 - Trust is paramount in assessing the credibility of information sources.

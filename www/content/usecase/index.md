@@ -1,4 +1,4 @@
-# Problem Domains
+# Solution Domains
 
 From regulatory compliance to scientific research, semantic standards provide a common framework to share facts across diverse domains:
 

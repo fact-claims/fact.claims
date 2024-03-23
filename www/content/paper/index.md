@@ -74,19 +74,19 @@ The technical architecture for fact claims consists of several key components:
 ```mermaid
 flowchart TB
     subgraph "Fact Claims Architecture"
-        subgraph "IPFS Fact Graph"
-            Regulatory -.-> Supply_Chain((Supply Chain))
-            Supply_Chain -.-> Healthcare((Healthcare))
-            IP((Intellectual Property)) -.-> Research((Research))
-            Research -.-> Innovation((Innovation))
-            Innovation -.-> Sustainability((Sustainability))
-            Innovation -.-> Healthcare((Healthcare))
-            Innovation -.-> Regulatory((Regulatory))
-            Innovation -.-> Supply_Chain((Supply Chain))
-            Innovation -.-> Tokenomics((Tokenomics))
-            Legal((Legal)) -.-> IP
-            Regulatory((Compliance)) -.-> Auditing((Auditing))
-            Tokenomics <-.-> Auditing((Auditing))
+        subgraph "Example Fact Graph"
+            Regulatory[Regulatory Compliance] --> Supply_Chain[Supply Chain]
+            Supply_Chain --> Products[Product Development]
+            RnD[R&D Efforts] --> Research[Market Research]
+            Research --> Innovation[Product Innovation]
+            Innovation --> Sustainability[Sustainability Practices]
+            Innovation --> Products
+            Innovation --> Regulatory
+            Innovation --> Supply_Chain
+            Innovation --> Tokenomics[Subscription Models]
+            Legal[Legal Framework] --> RnD
+            Compliance[Compliance Auditing] --> Auditing[Auditing Processes]
+            Tokenomics <--> Auditing
         end
 
         subgraph "Decentralized Ecosystem"

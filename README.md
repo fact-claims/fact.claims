@@ -1,4 +1,4 @@
-## Fact Claims
+## Fact Claims - Trustworthy AI in Autonomous Decentralized Ecosystems
 
 Ensuring the integrity and trustworthiness of our AI systems is important. 
 
@@ -49,4 +49,4 @@ Now, if our future AI are trained on this - we can expect increasingly lower-qua
 
 - #### [Live Website](https://fact.claims/)
   Visit the live website, which is the `www` folder rendered as a single page app.
-  
+

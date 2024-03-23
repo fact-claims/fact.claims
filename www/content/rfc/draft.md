@@ -128,12 +128,12 @@ sequenceDiagram
     participant Oracle
 
     Client->>Client: Create RDF Claims
-    Client->>IPFS: Publish RDF Claims
+    Client->>IPFS: Publish (JSON-LD) Claims
     IPFS-->>Client: Return IPFS URL
     Client->>SmartContract: Claim Facts 
     SmartContract->>Oracle: FactClaims Event
     Oracle->>IPFS: Retrieve Claims
-    IPFS-->>Oracle: Return IPFS Content
+    IPFS-->>Oracle: Return IPFS Claims (JSON-LD)
     Oracle-->>Oracle: Validate Claims
     Oracle-->>Client: Notarized Claims
 ```

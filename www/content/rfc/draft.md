@@ -36,38 +36,42 @@ It encompasses a wide range of activities, from asserting research findings and 
 
 However, ensuring transparency, accountability, and interoperability within such a trustful ecosystem requires a standardized approach for representing facts - a knowledge graph.
 
-```mermaid
-graph TB;
-  subgraph "Example Fact Graph"
-  Organization[Organization] -->|Sells| Products[Products]
-  Organization -->|Publishes| Website[Website]
-  Website --> |Describes| Services
-  Website --> |Describes| Products
-  Website --> |Describes| Organization
-  end
-```
+## 1.1 Example: Ecommerce Supply Chain 
 
 The fact claims ecosystem serves as the backbone for managing trusted collaborations and value exchange in diverse domains, including research, innovation, curation, collaboration, and creativity. 
+
+```mermaid
+graph TB;
+  Organization["schema:Organization"] -->|schema:offers| Services["schema:Service"]
+  Organization2 -->|my:supplier| Organization["schema:Organization"]
+  Products["schema:Product"] -->|schema:hasPart| Outcomes["my:Outcomes"]
+  Services -->|schema:hasPart| Outcomes
+  Products -->|my:supplier| SupplyChain["schema:Product"]
+  Services -->|my:provider| Organization2
+  Organization -->|my:partners| Organization2["schema:Organization"]
+```
 
 By adopting standard ontologies such as PROV-O, SKOS, and VOID, we enhance interoperability and facilitate knowledge organization within the ecosystem. 
 
 Facts from multiple sources can be crawled, combined and curated into a custom fact graph, rich in contextual understanding for each use case.
 
-```mermaid
-graph TB;
-  Organization -->|Offers| Services[Services]
-  Products -->|Described by| Features[Features]
-  Services -->|Described by| Features[Features]
-  Products -->|Depend On| SupplyChain
-  Services -->|Delivered By| SupplyChain
-  Features -->|Delivers| Benefits
-  Benefits -->|Accrues| Customer[Customer]
-  Organization -->|Partners| SupplyChain[Supply Chain]
-  Organization -->|Serves| Demographic
-  Customer -->|Matches |Demographic
-```
+## 1.2 Example: Financial Industry 
 
-Traditional centralized storage solutions, while effective in some contexts, pose several challenges in decentralized environments. These challenges include single points of failure, data manipulation risks, and vulnerabilities to censorship and tampering. In contrast, decentralized technologies offer innovative solutions to address these challenges and enhance the integrity and auditability of fact claims.
+```mermaid
+graph TD;
+    Account["fib-sec:Account"] -- owns --> Customer["fib-crm:Customer"];
+    Account -- holds --> Asset["fib-sec:FinancialAsset"];
+    Account -- has --> Balance["fib:Balance"];
+    Account -- refersTo --> Currency["fib-fbc:Currency"];
+    Account -- relatedTo --> Institution["fib-crm:Institution"];
+    PartyA["fib-crm:LegalEntity"] -- initiates --> Transaction["fib-tran:Transaction"];
+    PartyB["fib-crm:LegalEntity"] -- receives --> Transaction;
+    Transaction -- involves --> Contract["fib-tran:Contract"];
+    Contract -- specifies --> Terms["fib-tran:ContractTerms"];
+    Transaction -- has --> Amount["fib-tran:MonetaryAmount"];
+    Transaction -- has --> Date["fib-tran:Date"];
+    Transaction -- has --> Status["fib-tran:TransactionStatus"];
+```
 
 This RFC proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted network of fact graphs. By harnessing the distributed, immutable, and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. Through the use of JSON-LD, we ensure semantic interoperability and compatibility, enabling machine-readable representation and interpretation of fact claims. Additionally, Smart Contracts provide governance mechanisms for managing the lifecycle of fact claims, ensuring transparency, and enforcing trust among participants.
 

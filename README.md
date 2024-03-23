@@ -1,12 +1,13 @@
 ## Fact Claims - is your AI trustworthy?
 
-Ensuring the integrity and trustworthiness of our AI systems is important. 
+Our goal is to enrich the world with data that is relevant, licensed, attributable, and trustable at planetary-scale.
 
 Recently, mediocre web content has experienced exponential growth - bulk-automated by generative AI. 
 
-Now, if our future AI are trained on this - we can expect increasingly lower-quality halluciations.
+If our future AI are trained on this - we can expect increasingly lower-quality halluciations.
 
-Our goal is to enrich the world with data that is relevant, licensed, attributable, and trustable at planetary-scale.
+Ensuring the integrity and trustworthiness of our AI systems is important:
+
 
 - **To learn more:** start with our [white paper](./www/content/paper/index.md) then [learn the basics](./www/content/howto/begin.md).
 

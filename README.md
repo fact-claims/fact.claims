@@ -1,10 +1,10 @@
 # Fact Claims
 
-Ensuring the integrity and trustworthiness of our AI systems necessitates a network of dependable facts. 
+Ensuring the integrity and trustworthiness of our AI systems is important. 
 
-Recently, mediocre web content has experienced exponential growth - automated by generative AI. 
+Increasingly, mediocre web content has experienced exponential growth - automated by generative AI. 
 
-Now, if our future AI is trained on this - we will see increasingly lower-quality halluciations.
+Now, if our future AI are trained on this - we can expect increasingly lower-quality halluciations.
 
 ## Key Takeaways:
 
@@ -14,9 +14,9 @@ Now, if our future AI is trained on this - we will see increasingly lower-qualit
 
 - **Grounded Facts:** Grounded facts are securely stored in an unchangeable document, ensuring their reliability.
 
-- **Published Facts:** Published facts are easily accessible for reference and verification, maintaining their integrity and reliability.
+- **Published Facts:** Published facts are online for reference and verification, always maintaining their integrity and reliability.
 
-- **Notarized Facts:** Notarized facts are verified and trusted, backed by a smart contract or trustee.
+- **Notarized Facts:** Notarized facts are verified and trusted, backed by a smart contract, or digital trustee.
 
 ## Learn more ...
 

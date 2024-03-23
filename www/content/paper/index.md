@@ -18,7 +18,7 @@ These challenges include single points of failure, data manipulation risks, lack
 
 We seek a simple innovative solution to address these challenges that enhances the integrity and auditability of our AI and answer engines.
 
-The [Fact Claims RFC](./rfc/draft.md) proposes a methodology for leveraging the [InterPlanetary File System (IPFS)](https://ipfs.io/), [Linked Data (JSON-LD)](https://json-ld.org/), and [Smart Contracts](https://ethereum.org/) to construct a trusted network of fact graphs..
+The [Fact Claims RFC](../rfc/draft.md) proposes a methodology for leveraging the [InterPlanetary File System (IPFS)](https://ipfs.io/), [Linked Data (JSON-LD)](https://json-ld.org/), and [Smart Contracts](https://ethereum.org/) to construct a trusted network of fact graphs..
 
 ---
 

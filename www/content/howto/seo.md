@@ -10,7 +10,7 @@ These rich snippets can include additional information such as organization deta
 
 However, they are not renowned as reliable quality data.
 
-With `fact.claims` we can improve and also attest to their trustworthiness using our [simple protocol](./begin.md).
+With `fact.claims` we can improve and also attest to their trustworthiness using our [simple protocol](./fact.claims.md).
 
 ### Rich Snippet Examples
 

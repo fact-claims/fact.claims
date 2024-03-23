@@ -3,7 +3,7 @@
 
 We need a simple solution that is easy to implement, based on existing standards, best practices, is future-ready and trustworthy.
 
-The [fact claims RFC](../rfc/draft.md) proposes a methodology for leveraging the [InterPlanetary File System (IPFS)](https://ipfs.io/), [Linked Data (JSON-LD)](https://json-ld.org/), and [Smart Contracts](https://ethereum.org/) into a trusted web of fact graphs.
+- The [fact claims RFC](../rfc/draft.md) proposes a methodology for leveraging the [InterPlanetary File System (IPFS)](https://ipfs.io/), [Linked Data (JSON-LD)](https://json-ld.org/), and [Smart Contracts](https://ethereum.org/) into a trusted web of fact graphs.
 
 ---
 
@@ -50,7 +50,7 @@ These considerations apply to AI development and deployment processes so that so
 
 2.7. **Collaboration and Sharing**: By providing APIs, query interfaces, and visualization tools, the graph enables seamless collaboration and communication, accelerating the pace of discovery and innovation.
 
-## Fact Claims Architecture
+## 3 Fact Claims Architecture
 
 The fact graph is represented as linked data serialized as JSON-LD. 
 
@@ -110,7 +110,7 @@ flowchart TB
     end
 ```
 
-## Use Cases
+## 4. Problem Domains
 
 - AI Answer Engines require a new model for finding trusted facts.
 - Trust is paramount in assessing the credibility of information sources.
@@ -119,7 +119,7 @@ flowchart TB
 - Real-time algorithms verify dynamic and evolving fact claims.
 - Semantic coherence and trust supersede traditional SEO practices.
 
-| Problem Domain                        | Standards                                                                                                                                                                      |
+| Use Case                        | Standards                                                                                                                                                                      |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Regulatory Compliance                 | - [XBRL (eXtensible Business Reporting Language)](https://www.xbrl.org/) - [FIBO (Financial Industry Business Ontology)](https://spec.edmcouncil.org/fibo/) - [FIGREGONT (Financial Industry Regulatory and Governance)](https://finregont.com/)                                                                                                                                                           |
 | Financial Auditing                    | - [XBRL](https://www.xbrl.org/) - [RDF](https://www.w3.org/RDF/) - [PROV-O](https://www.w3.org/TR/prov-o/)                                                                                                         |
@@ -136,7 +136,7 @@ flowchart TB
 | Asset Tokenization and Management     | - [ERC-20 (Ethereum Request for Comments 20)](https://eips.ethereum.org/EIPS/eip-20) - [ERC-721 (Ethereum Request for Comments 721)](https://eips.ethereum.org/EIPS/eip-721) - [RDF](https://www.w3.org/RDF/)                                                               |
 | News and Data-driven Narratives       | - [NewsML-G2 (News Markup Language - Generation 2)](https://iptc.org/standards/newsml-g2/) - [NITF (News Industry Text Format)](https://iptc.org/standards/nitf/) - [Linked Data Platform (LDP)](https://www.w3.org/TR/ldp/) - [Semantic Web Standards (RDF, RDFa, JSON-LD)](https://www.w3.org/RDF/) - [Schema.org](https://schema.org/) - [W3C Data Catalog Vocabulary (DCAT)](https://www.w3.org/TR/vocab-dcat/) |
 
-## References
+## 5. References
 
 - Benet, J. (2014). IPFS - Content Addressed, Versioned, P2P File System. [arXiv:1407.3561.](https://arxiv.org/abs/1407.3561).
 - IPFS Documentation. [docs.ipfs.io](https://docs.ipfs.io/).
@@ -146,7 +146,7 @@ flowchart TB
 - Ethereum Smart Contracts. [ethereum.org/.../smart-contracts/](https://ethereum.org/en/developers/docs/smart-contracts/).
 - Trustworthy Agentic Collaboration. [fact.claims](https://fact.claims/rfc/).
 
-## Next Steps
+## 6. Next Steps
 
 Adopting a standardized approach for representing factual claims enhances transparency, interoperability, and trust among participants. 
 

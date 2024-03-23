@@ -72,22 +72,19 @@ The technical architecture for fact claims consists of several key components:
 - **Smart Agents:** Interface with the IPFS network and Internet for storage, retrieval, curation, inference, visualization and publication of fact graphs.
 
 ```mermaid
-flowchart TB
-        subgraph "Example Fact Graph"
-            Regulatory[Regulatory Compliance] --> Supply_Chain[Supply Chain]
-            Supply_Chain --> Products[Product Development]
-            RnD[R&D Efforts] --> Research[Market Research]
-            Research --> Innovation[Product Innovation]
-            Innovation --> Sustainability[Sustainability Practices]
-            Innovation --> Products
-            Innovation --> Regulatory
-            Innovation --> Supply_Chain
-            Innovation --> Tokenomics[Subscription Models]
-            Legal[Legal Framework] --> RnD
-            Compliance[Compliance Auditing] --> Auditing[Auditing Processes]
-            Tokenomics <--> Auditing
-        end
+graph TB;
+  Organization -->|Offers| Services[Services]
+  Products -->|Described by| Features[Features]
+  Services -->|Described by| Features[Features]
+  Products -->|Depend On| SupplyChain
+  Services -->|Delivered By| SupplyChain
+  Features -->|Delivers| Benefits
+  Benefits -->|Accrues| Customer[Customer]
+  Organization -->|Partners| SupplyChain[Supply Chain]
+  Organization -->|Serves| Demographic
+  Customer -->|Matches |Demographic
 ```
+
 ## 4. Solution Domains
 
 - AI Answer Engines require a new model for finding trusted facts.

@@ -6,9 +6,9 @@ Recently, mediocre web content has experienced exponential growth - bulk-automat
 
 Now, if our future AI are trained on this - we can expect increasingly lower-quality halluciations.
 
-To learn more, start with our [white paper](./www/content/paper/index.md) then [learn the basics](./www/content/howto/begin.md).
+- **To learn more:** start with our [white paper](./www/content/paper/index.md) then [learn the basics](./www/content/howto/begin.md).
 
-For the more technical, read the [RFC](./www/content/rfc/draft.md) and our [raw facts](./www/fact.claims).
+- **For the more technical:** read the [RFC](./www/content/rfc/draft.md) and our [raw facts](./www/fact.claims).
 
 ### Online Examples:
 

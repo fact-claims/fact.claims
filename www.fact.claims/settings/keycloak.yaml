@@ -1,0 +1,5 @@
+keycloak:
+  realm: droid-ltd
+  url: "https://oauth.pro"
+  clientId: api.droid.ltd
+  resource: api.droid.ltd

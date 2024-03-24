@@ -1,0 +1,24 @@
+{
+  "name": "factify",
+  "version": "0.0.1",
+  "description": "useful library for fact-based websites",
+  "main": "dist/index.js",
+  "types": "src/types.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "link": "tsc && npm link",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "aws-sdk": "^2.1584.0",
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "surveyjs": "^4.0.2",
+    "v-network-graph": "^0.9.15",
+    "yaml": "^2.4.1"
+  }
+}

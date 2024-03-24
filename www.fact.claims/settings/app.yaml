@@ -1,0 +1,18 @@
+app:
+  header:
+    - label: Agents
+      to: "/agent/"
+      external: false
+    - label: Support
+      to: "/agent/support"
+      external: false
+    - label: About
+      to: "/tags/about/"
+      external: false
+  footer:
+    - label: Home
+      icon: 'i-heroicons-home'
+      to: "/"
+    - label: Settings
+      icon: 'i-heroicons-command-line'
+      to: "/account/settings"

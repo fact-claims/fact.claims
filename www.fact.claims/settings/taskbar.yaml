@@ -1,0 +1,12 @@
+"taskbar": [
+  {
+    "label": "Home",
+    "icon": 'i-heroicons-home',
+    "to": "/",
+  },
+  {
+    "label": "Settings",
+    "icon": 'i-heroicons-command-line',
+    "to": "/account/settings",
+  }
+]

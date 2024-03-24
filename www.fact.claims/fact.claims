@@ -1,0 +1,135 @@
+
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+# fact.claims - towards trustworthy AI
+
+# A web of facts stored on InterPlanetary File System (IPFS) as Linked Data (JSON-LD), and truted by DAO Smart Contracts
+# All valid claims must include `prov:wasAssociatedWith` and `prov:wasGeneratedBy`. 
+# A grounded fact must have (`prov:wasGeneratedBy`) to an immutable source, either <ipfs://> or <ethereum://>.
+# A notarized fact is grounded by an <ethereum://> address owned by a smart contract.
+
+@prefix trust: <https://fact.claims/v0/trust#> .
+@prefix self: <https://smarttrust.ai/> .
+
+# grounded claims
+
+<https://fact.claims/> 
+    a skos:ConceptScheme;
+    a schema:Organization, prov:Organization ;
+    a trust:Claim;
+    a trust:DAO;
+    rdf:label "fact.claims";
+    rdf:comment "";
+    schema:name "fact.claims" ;
+    skos:prefLabel "fact.claims";
+    owl:sameAs <https://www.fact.claims/>.
+    schema:license <http://creativecommons.org/licenses/by-sa/4.0/>;
+    skos:member self:TrustworthyAI, self:ReliableAI, self:TransparentAI, self:AccountableAI;
+    skos:member self:IPFS, self:LinkedData, self:Claim;
+    skos:member self:DAO, self:Notarized;
+
+    prov:wasAssociatedWith self:;
+    prov:wasGeneratedBy self:;
+
+# claims for related assets
+
+<https://fact.claims/logo.png> 
+    rdf:label "fact.claims logo";
+    prov:wasAssociatedWith <https://fact.claims/>;
+    prov:wasGeneratedBy self:;
+.
+
+# notarized claims
+
+self:
+    a schema:Organization, prov:Organization ;
+    a trust:Claim;
+    a trust:DAO;
+    rdf:label "smart trust";
+    schema:name "smart trust" ;
+    skos:prefLabel "smart trust";
+    owl:sameAs <https://www.smarttrust.ai/>.
+    prov:wasAssociatedWith self:;
+    prov:wasGeneratedBy self:;
+    prov:wasAssociatedWith <ethereum://0x0000000000000000000000000000000000000000>.
+
+#  related concepts for context
+
+self:TrustworthyAI a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel "Trustworthy AI"@en ;
+    skos:definition "AI that are reliable, transparent, and accountable."@en .
+
+self:ReliableAI a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel "Reliable AI"@en ;
+    skos:definition "AI that consistently perform as expected."@en ;
+    skos:narrower self:TrustworthyAI .
+
+self:TransparentAI a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel "Transparent AI"@en ;
+    skos:definition "AI that provide visibility into their decision-making."@en ;
+    skos:narrower self:TrustworthyAI .
+
+self:AccountableAI a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel "Accountable AI"@en ;
+    skos:definition "AI that can be held responsible for their actions and decisions."@en ;
+    skos:narrower self:TrustworthyAI .
+
+self:IPFS a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    prov:wasAssociatedWith <https://fact.claims/>;
+    skos:prefLabel "InterPlanetary File System (IPFS)"@en ;
+    skos:definition "A method of storing and sharing tamper-proof content."@en .
+
+self:LinkedData a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel "Linked Data"@en ;
+    skos:definition "Smart data that it can be interlinked."@en ;
+    skos:related self:IPFS .
+
+self:DAO a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel "Decentralized Autonomous Organization (DAO)"@en ;
+    skos:definition "An organization operated by and on behalf of a smart contract."@en ;
+    skos:related self:TrustworthyAI .
+
+self:Notarized a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel " Notarized"@en ;
+    skos:definition "A fact graph that is verified and signed by a trusted third party."@en ;
+    skos:related self:DAO .
+
+self:Claim a skos:Concept ;
+    prov:wasGeneratedBy self:;
+    skos:prefLabel "Claim"@en ;
+    skos:definition "A statement asserting something is true."@en ;
+    skos:related self:Notarized .
+
+# licence claims
+
+<http://creativecommons.org/licenses/by-sa/4.0/>
+    prov:wasAssociatedWith <http://creativecommons.org/>;
+    prov:wasGeneratedBy self:;
+.
+
+<http://creativecommons.org/licenses/by-sa/4.0/>
+  a cc:License ;
+  cc:licenseClass <http://creativecommons.org/license/> ;
+  cc:permits cc:DerivativeWorks, cc:Distribution, cc:Reproduction ;
+  cc:requires cc:Attribution, cc:Notice, cc:ShareAlike ;
+  dc:creator <http://creativecommons.org> ;
+  dc:hasVersion "4.0" ;
+  dc:identifier "by-sa" ;
+  dc:source "http://creativecommons.org/licenses/by-sa/3.0/" ;
+  foaf:logo <http://licensebuttons.net/l/by-sa/4.0/80x15.png>, <http://licensebuttons.net/l/by-sa/4.0/88x31.png> ;
+  owl:sameAs <https://creativecommons.org/licenses/by-sa/4.0/> .
+

@@ -380,7 +380,7 @@ This section explores various use cases for fact claims, including regulatory co
 
 | Solution Domain  | Useful Vocabularies and Semantics |
 |---|---|
-| Ecommerce | - [Schema.org Products](https://schema.org/Product), [Events](https://schema.org/Event), [Services](https://schema.org/Service), [Offers](https://schema.org/Offer), [Loans/Credit](https://schema.org/LoanOrCredit) [etc ...](https://schema.org/) - [GoodRelations](https://www.heppresearch.com/goodrelations/index.html) |
+| Ecommerce | - [Schema.org Products](https://schema.org/Product), [Events](https://schema.org/Event), [Services](https://schema.org/Service), [Offers](https://schema.org/Offer), [Loans/Credit](https://schema.org/LoanOrCredit), [etc ...](https://schema.org/) |
 | Content Creators | - [Dublin Core Metadata Initiative](https://www.dublincore.org/specifications/dublin-core/) - [Creative Commons licenses](https://creativecommons.org/) - [IPTC Photo Metadata](https://iptc.org/standards/photo-metadata/) |
 | Education | - [IMS Global Learning Consortium standards](https://www.imsglobal.org/) - [SCORM (Sharable Content Object Reference Model)](https://scorm.com/scorm-explained/) - [Learning Resource Metadata Initiative (LRMI)](https://www.imsglobal.org/activity/lrmi)  - [CiTo (Citations)](https://sparontologies.github.io/cito/current/cito.html)|
 | Regulatory Compliance | - [XBRL (eXtensible Business Reporting Language)](https://www.xbrl.org/) - [FIBO (Financial Industry Business Ontology)](https://spec.edmcouncil.org/fibo/) - [FIGREGONT (Financial Industry Regulatory and Governance)](https://finregont.com/) |

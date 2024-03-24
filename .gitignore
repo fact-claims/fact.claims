@@ -1,0 +1,32 @@
+# Ignore secrets
+**/secrets/
+**/.secrets/
+
+# Ignore node_modules directory for all projects
+**/node_modules/
+
+# Ignore build artifacts
+**/dist/
+**/.nuxt/
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Ignore npm lock files
+package-lock.json
+yarn.lock
+
+# Ignore environment files
+.env*
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore dependencies installed by npm
+**/package-lock.json

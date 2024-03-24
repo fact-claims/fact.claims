@@ -1,0 +1,7 @@
+"anon": [
+  {
+    "label": "Register",
+    "to": "/register",
+    "external" : false
+  }
+]

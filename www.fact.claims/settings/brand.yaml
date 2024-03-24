@@ -1,0 +1,16 @@
+brand:
+  name: fact.claims
+  description: Trustworthy AI
+  copyright: fact.claims (c) 2025
+  domain: fact.claims
+
+  backgroundColor: '#000033'
+  color: '#110011'
+  paperColor: '#FFFFFF'
+  primaryColor: '#06283D'
+  secondaryColor: '#256D85'
+  accentColor: '#47B5FF'
+  highlightColor: '#DFF6FF'
+
+  favicon: "/favicon.png"
+  logo: "/favicon.png"

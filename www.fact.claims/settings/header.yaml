@@ -1,0 +1,61 @@
+"header": [
+  {
+    "label": "Agents",
+    "to": "/agent/",
+    "external": false
+  },
+  {
+    "label": "Technology",
+    "to": "/tags/tech",
+    "external": false
+  },
+  {
+    "label": "Capabilities",
+    "to": "/tags/droid",
+    "external": false
+  },
+  {
+    "label": "About",
+    "to": "/tags/about/",
+    "external": false
+  }
+]
+"app_header": [
+  {
+    "label": "Agents",
+    "to": "/agent/",
+    "external": false
+  },
+  {
+    "label": "Support",
+    "to": "/agent/support",
+    "external": false
+  },
+  {
+    "label": "About",
+    "to": "/tags/about/",
+    "external": false
+  }
+]
+"user_header": [
+  {
+    "label": "Agents",
+    "to": "/agent/",
+    "external": false
+  },
+  {
+    "label": "Support",
+    "to": "/agent/support",
+    "external": false
+  },
+  {
+    "label": "Pricing",
+    "to": "/pricing",
+    "external": false
+  },
+  {
+    "label": "About",
+    "to": "/tags/about/",
+    "external": false
+  }
+]

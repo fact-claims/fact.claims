@@ -1,0 +1,17 @@
+"footer": [
+  {
+    "label": "About",
+    "to": "/tags/about/",
+    "external" : false
+  },
+  {
+    "label": "Privacy",
+    "to": "/blog/privacy/",
+    "external" : false
+  },
+  {
+    "label": "Terms",
+    "to": "/blog/terms/",
+    "external" : false
+  }
+]

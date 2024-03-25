@@ -11,7 +11,7 @@ Each fact-ready website hosts a [fact.claims file](/howto/fact.claims), you can 
 
 ## Let's get started ...
 
-The full process looks like this, but it's not quite some complicated as it first appears:
+The full process looks like this - it's not quite some complicated as it first appears:
 
 ```mermaid
 sequenceDiagram

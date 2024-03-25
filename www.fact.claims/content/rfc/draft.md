@@ -422,7 +422,7 @@ Ensuring the immutability of data is crucial for establishing trust. Integration
 
 ### 7.4. Semantic Interactivity
 
-- **Semantic Interoperability**: RDF enables semantic representation of fact claims, enhancing interoperability.
+- **Semantic Interoperability**: RDF is a published representation of fact claims, enhancing discovery, understanding and interoperability.
 - **Provenance and Attribution**: Incorporating PROV-O allows metadata representation, enhancing transparency and trust.
 
 ### 7.5. Verification and Trust

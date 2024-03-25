@@ -33,7 +33,7 @@ Let's start with`schema.org`- they host definitions for organizations, events, p
     schema:name "Example Company" ;
     schema:url "https://www.example.com/" ;
     schema:logo <https://www.example.com/logo.png> ;
-    schema:customer_service <https://www.example.com/customer_service> ;
+    schema:contactPoint <https://www.example.com/customer_service> ;
     schema:sameAs <https://www.facebook.com/example>, <https://www.twitter.com/example> .
 
 <https://www.example.com/customer_service> a schema:ContactPoint ;

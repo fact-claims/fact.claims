@@ -1,33 +1,54 @@
-title: Science Claim
-description: Tell us a little about your life
+title: Scientific Claim
+description: Tell us about your research article
 logoPosition: right
 meta:
   goto: "/ai/render/website/"
 openai:
   endpoint: /api/
 pages:
-  - name: "page1"
-      # title: "Tell us a little about your business"
+  - name: "article_info"
+    description: "Provide basic information about your research article"
     elements:
       - type: "text"
-        name: "business_name"
-        title: "What is your business name?"
+        name: "schema:name"
+        title: "Title of the research article"
         isRequired: true
       - type: "text"
-        name: "business_website"
-        title: "What is your business website?"
+        name: "schema:url"
+        title: "URL of the research article"
         isRequired: true
         validate:
           - type: url
-            text: Please enter a valid URL for the business website
-  - name: "page2"
-      # title: "Tell us a little about your business"
-    elements:
+            text: "Please enter a valid URL for the research article"
       - type: "text"
-        name: "business_offer"
-        title: "What service do you offer?"
+        name: "schema:author"
+        title: "Author(s) of the research article"
         isRequired: true
       - type: "text"
-        name: "business_market"
-        title: "What market do you serve?"
+        name: "schema:institution"
+        title: "Institution(s) associated with the research article"
+        isRequired: true
+      - type: "text"
+        name: "schema:journal"
+        title: "Journal where the research article is published"
+        isRequired: true
+
+  - name: "article_content"
+    description: "Provide details about the content of your research article"
+    elements:
+      - type: "text"
+        name: "schema:description"
+        title: "Summary or abstract of the research article"
+        isRequired: true
+      - type: "text"
+        name: "schema:keywords"
+        title: "Keywords related to the research article (comma-separated)"
+        isRequired: true
+
+  - name: "article_contribution"
+    description: "Describe your contribution to the research article"
+    elements:
+      - type: "text"
+        name: "schema:contribution"
+        title: "What was your contribution to this research article?"
         isRequired: true

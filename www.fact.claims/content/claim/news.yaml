@@ -1,4 +1,4 @@
-title: News Claim
+title: Claim a News Story
 description: Tell us a little about your story
 logoPosition: right
 meta:
@@ -6,28 +6,36 @@ meta:
 openai:
   endpoint: /api/
 pages:
-  - name: "page1"
-      # title: "Tell us a little about your story "
+  - name: "story_info"
+    description: "Provide basic information about your story"
     elements:
       - type: "text"
-        name: "business_name"
+        name: "schema:name"
         title: "What is your story name?"
         isRequired: true
       - type: "text"
-        name: "business_website"
-        title: "What is your business website?"
+        name: "schema:url"
+        title: "What is your story website?"
         isRequired: true
         validate:
           - type: url
-            text: Please enter a valid URL for the story  website
-  - name: "page2"
-      # title: "Tell us a little about your story "
+            text: "Please enter a valid URL for the story website"
+      - type: "text"
+        name: "schema:image"
+        title: "URL of an image/photo for the story"
+        isRequired: true
+        validate:
+          - type: url
+            text: "Please enter a valid URL for the image/photo of the story"
+
+  - name: "story_content"
+    description: "Share details about your story"
     elements:
       - type: "text"
-        name: "business_offer"
-        title: "What service do you offer?"
+        name: "schema:description"
+        title: "Provide an excerpt from your story"
         isRequired: true
       - type: "text"
-        name: "business_market"
-        title: "What market do you serve?"
+        name: "schema:author"
+        title: "Who is the author of the story?"
         isRequired: true

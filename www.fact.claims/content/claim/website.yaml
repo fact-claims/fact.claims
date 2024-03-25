@@ -1,33 +1,44 @@
 title: Website Claim
-description: Tell us a little about your life
+description: Tell us a little about your site
 logoPosition: right
 meta:
   goto: "/ai/render/website/"
 openai:
   endpoint: /api/
 pages:
-  - name: "page1"
-      # title: "Tell us a little about your business"
+  - name: "website"
     elements:
       - type: "text"
-        name: "business_name"
-        title: "What is your business name?"
+        name: "schema:name"
+        title: "What is your website name?"
+        isRequired: true
+      - type: "textarea"
+        name: "schema:description"
+        title: "Please provide a brief description of your website."
         isRequired: true
       - type: "text"
-        name: "business_website"
-        title: "What is your business website?"
+        name: "schema:url"
+        title: "What is your website URL?"
         isRequired: true
         validate:
           - type: url
-            text: Please enter a valid URL for the business website
-  - name: "page2"
-      # title: "Tell us a little about your business"
+            text: Please enter a valid (https:) URL for your website
+  - name: "branding"
     elements:
       - type: "text"
-        name: "business_offer"
-        title: "What service do you offer?"
-        isRequired: true
+        name: "schema:image"
+        title: "What is the URL of your website logo?"
+        isRequired: false
+        validate:
+          - type: url
+            text: "The URL for your logo (image format: jpg, png, etc.)"
       - type: "text"
-        name: "business_market"
-        title: "What market do you serve?"
-        isRequired: true
+        name: "schema:keywords"
+        title: "What are the main keywords that describe your website?"
+        description: "Please separate keywords with commas."
+      - type: "email"
+        name: "schema:author"
+        title: "The email of the webmaster (will be redacted)?"
+      - type: "text"
+        name: "schema:copyrightHolder"
+        title: "Who holds the copyright for your website content?"

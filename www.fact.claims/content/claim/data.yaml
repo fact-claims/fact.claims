@@ -1,33 +1,60 @@
 title: Open Data Claim
-description: Tell us a little about your business
+description: Tell us a little about your open dataset
 logoPosition: right
 meta:
   goto: "/ai/render/website/"
 openai:
   endpoint: /api/
 pages:
-  - name: "page1"
-      # title: "Tell us a little about your business"
+  - name: "Dataset Information"
     elements:
-      - type: "text"
-        name: "business_name"
-        title: "What is your business name?"
+      - type: text
+        name: schema:name
+        title: "Dataset Name"
         isRequired: true
-      - type: "text"
-        name: "business_website"
-        title: "What is your business website?"
+      - type: text
+        name: schema:description
+        title: "Dataset Description"
         isRequired: true
-        validate:
-          - type: url
-            text: Please enter a valid URL for the business website
-  - name: "page2"
-      # title: "Tell us a little about your business"
+      - type: text
+        name: schema:keywords
+        title: "Keywords (comma-separated)"
+        isRequired: true
+      - type: text
+        name: void:vocabularies
+        title: "Vocabularies"
+        isRequired: true
+
+  - name: "Data Usage"
     elements:
-      - type: "text"
-        name: "business_offer"
-        title: "What service do you offer?"
+      - type: text
+        name: schema:license
+        title: "License"
         isRequired: true
-      - type: "text"
-        name: "business_market"
-        title: "What market do you serve?"
+      - type: text
+        name: schema:temporalCoverage
+        title: "Temporal Coverage"
+        isRequired: true
+      - type: text
+        name: schema:spatialCoverage
+        title: "Spatial Coverage"
+        isRequired: true
+      - type: text
+        name: void:exampleResource
+        title: "Example Resource"
+        isRequired: true
+
+  - name: "Data Format"
+    elements:
+      - type: text
+        name: schema:distribution
+        title: "Data Distribution URL"
+        isRequired: true
+      - type: text
+        name: schema:encodingFormat
+        title: "Encoding Format"
+        isRequired: true
+      - type: text
+        name: void:uriSpace
+        title: "URI Space"
         isRequired: true

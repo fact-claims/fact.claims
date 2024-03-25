@@ -6,28 +6,49 @@ meta:
 openai:
   endpoint: /api/
 pages:
-  - name: "page1"
-      # title: "Tell us a little about your business"
+  - name: "creator_info"
     elements:
       - type: "text"
-        name: "business_name"
-        title: "What is your business name?"
+        name: "schema:name"
+        title: "What is your name or the name of your content creation brand?"
         isRequired: true
+      - type: "textarea"
+        name: "schema:description"
+        title: "Please provide a brief description of yourself or your content creation brand."
+        isRequired: true
+
+  - name: "creator_website_social"
+    elements:
       - type: "text"
-        name: "business_website"
-        title: "What is your business website?"
+        name: "schema:url"
+        title: "What is the URL of your personal website or content platform?"
         isRequired: true
         validate:
           - type: url
-            text: Please enter a valid URL for the business website
-  - name: "page2"
-      # title: "Tell us a little about your business"
+            text: "Please enter a valid URL for your website (https://)"
+      - type: "text"
+        name: "schema:socialMedia"
+        title: "What are the URLs of your social media profiles? (e.g., Twitter, Instagram)"
+        description: "Please enter the URLs separated by commas."
+      - type: "text"
+        name: "schema:image"
+        title: "What is the URL of your profile picture or logo?"
+        isRequired: true
+        validate:
+          - type: url
+            text: "Please enter a valid URL for your profile picture or logo (image format: jpg, png, etc.)"
+
+  - name: "creator_bio_content"
     elements:
-      - type: "text"
-        name: "business_offer"
-        title: "What service do you offer?"
+      - type: "textarea"
+        name: "schema:biography"
+        title: "Please provide a biography or overview of yourself or your content creation brand."
+        isRequired: true
+      - type: "textarea"
+        name: "schema:specialty"
+        title: "What is your specialty or the main focus of your content?"
         isRequired: true
       - type: "text"
-        name: "business_market"
-        title: "What market do you serve?"
-        isRequired: true
+        name: "schema:keywords"
+        title: "What are the main keywords that describe your content?"
+        description: "Please separate keywords with commas."

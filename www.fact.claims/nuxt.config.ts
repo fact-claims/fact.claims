@@ -1,4 +1,4 @@
-import { loadSettings } from "factify";
+import { loadSettings } from "./factify";
 import { defineNuxtConfig } from "nuxt/config";
 import dotenv from "dotenv"
 dotenv.configDotenv()

@@ -9,7 +9,7 @@ Since the dawn of the century, web 3.0 has promised to reshape how we engage wit
 
 It's probably lost on most readers, but the two principle claimants to `web 3.0` are in mild dispute. 
 
-There are two contenders for one crown: Resource Description Framework (RDF) and Smart Contracts. 
+There are two contenders for one crown: Resource Description Framework (RDF) and the blockchains. 
 
 Let's (re)imagine them as `fact webs` and `trust chains` respectively. 
 
@@ -61,11 +61,14 @@ The [immutable](/claim/ipfs), tamper-proof IPFS (Interplanetary File System) sto
 
 2) Notarize by emitting the IPFS URL as a smart contract event.
 
-Our facts are now `grounded` on IPFS and cryptographically claimed on the blockchain.
+Our facts are now `grounded` on IPFS and cryptographically `notarized` by the blockchain.
 
 ## References:
 
-Berners-Lee, T(1999). World Wide Web Consortium. HTML.https://www.w3.org/MarkUp/
-Fielding, R.(1999). World Wide Web Consortium. HTTP.https://www.w3.org/Protocols/
-Benet, J.(2014). IPFS - Content Addressed, Versioned, P2P File System. https://ipfs.io/
-Brickley, D., & Guha, R. V.(2004). RDF Vocabulary Description Language 1.0: RDF Schema. https://www.w3.org/RDF/
+- Berners-Lee, T(1999). World Wide Web Consortium. HTML.https://www.w3.org/MarkUp/
+
+- Fielding, R.(1999). World Wide Web Consortium. HTTP.https://www.w3.org/Protocols/
+
+- Benet, J.(2014). IPFS - Content Addressed, Versioned, P2P File System. https://ipfs.io/
+
+- Brickley, D., & Guha, R. V.(2004). RDF Vocabulary Description Language 1.0: RDF Schema. https://www.w3.org/RDF/

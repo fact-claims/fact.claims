@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-# Tutorial: Building a Fact Finder
+# Designing a Fact Finder
 
 The `fact web` is represented as linked data serialized as JSON-LD. We find facts by crawling - just like a search engine.
 

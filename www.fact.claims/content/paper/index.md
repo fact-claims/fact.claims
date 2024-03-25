@@ -122,4 +122,4 @@ graph TB;
 - JSON-LD 1.1. [w3.org/TR/json-ld11/](https://www.w3.org/TR/json-ld11/).
 - ERC-20 Token Standard. [ethereum.org/.../erc-20/](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/).
 - Ethereum Smart Contracts. [ethereum.org/.../smart-contracts/](https://ethereum.org/en/developers/docs/smart-contracts/).
-- Trustworthy AI. [fact.claims RFC](https://fact.claims/rfc/).
+- Trustworthy AI. [fact.claims RFC](/rfc/draft).

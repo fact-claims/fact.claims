@@ -8,11 +8,15 @@ layout: page
 
 # Fact Augmented Generation
 
-Current Large Language Models (LLMs) often employ a Retrieval Augmented Generation (RAG) technique, utilizing databases for context injection. Our approach enhances this by creating embeddings from semantically relevant corpuses, stored against distinct concepts within a fact web.
+Current Large Language Models (LLMs) often employ a Retrieval Augmented Generation (RAG) technique, utilizing databases to inject context that reduces hallucinations. 
 
-This enables LLMs to navigate the graph, providing accurate, insightful, and contextually appropriate responses across diverse domains and user scenarios. The benefits include improved user satisfaction, enhanced decision-making processes, and the advancement of AI technologies.
+Our approach enhances this by creating embeddings from semantically relevant corpuses, stored against distinct concepts within a fact web.
 
-## Key Benefits:
+This enables LLMs to navigate the graph, providing accurate, insightful, and contextually appropriate responses across diverse domains and user scenarios. 
+
+The goals include improved user satisfaction, enhanced decision-making processes, and the advancement of AI technologies.
+
+## Solution Objectives:
 
 - **Precise and Relevant Responses:** Semantic search functionality allows LLMs to retrieve information directly from the knowledge graph, ensuring precise and relevant responses.
   

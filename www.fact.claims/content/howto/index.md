@@ -18,3 +18,6 @@ Ensuring the integrity and trustworthiness of fact claims is essential in any da
 - [SEO for AI](/howto/seo)
 
 - [Queries and Inferences](/howto/sparql)
+
+- [RDF & Smart Contracts](/usecase/web3)
+

@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-# We need to make & trust all kinds of claims 
+# Make & trust all kinds of claims 
 
 RDF is a framework for representing information in the form of statements - our `fact claims`. 
 
@@ -69,7 +69,7 @@ So `fact:Claim` becomes `<https://fact.claims/v0/fact#Claim>`, a fully qualified
 
 For production use cases, it's best practice to define a formal vocabulary using RDFS notation ([W3C standard](https://www.w3.org/TR/rdf12-schema/)).
 
-Ours is retrievable from [https://fact.claims/v0/fact](https://fact.claims/v0/fact). 
+Our vocabulary is retrievable from [https://fact.claims/v0/fact](https://fact.claims/v0/fact) and our claims from [https://fact.claims/fact.claims](https://fact.claims/fact.claims). 
 
 This allows any agent to make sense of our (or your) terms by following links to their definitions.
 

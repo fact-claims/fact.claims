@@ -20,7 +20,6 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "factify": "file:../factify",
     "three": "^0.162.0"
   }
 }

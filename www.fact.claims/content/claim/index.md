@@ -23,6 +23,7 @@ layout: page
 | Joint Venture| [Memorialize your partnerships](/claim/jv)  |
 | Real Estate  | [Claim your property](/claim/realestate)|
 | Forever  | [Immortalize your claims](/claim/forever)|
+| Tamper-proof  | [Publish grounded claims](/claim/ipfs)|
 
 ## Publish your web of facts ...
 

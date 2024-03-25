@@ -3,7 +3,7 @@
     <claims-wizard :claim="claim" @completed="doCompleted" @updated="doUpdated" :singleton="false"></claims-wizard>
       <h1 v-if="!user_response">pending</h1>
       <div v-if="user_response">
-        <claims-json :data="ai.context"></claims-json>
+        <claims-json :data="user_response"></claims-json>
       </div>
   </div>
 </template>

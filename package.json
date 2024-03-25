@@ -1,0 +1,14 @@
+{
+    "name": "www-fact-claims",
+    "version": "0.4.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "build": "bin/build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare",
+      "start": "nuxt build"
+    }
+}  

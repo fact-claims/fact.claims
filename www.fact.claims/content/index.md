@@ -12,7 +12,7 @@ links:
 ---
 # Trustworthy AI needs facts
 
-- **[Claiming facts is free](/claim/)** when you help [fact-seekers](/howto/crawling) to [trust them](/howto/begin).
+- **[Fact claims are free](/claim/)** and you help [fact-seekers](/howto/crawling) to [trust them](/howto/begin).
 
 **The web was flooded with content - now it's drowning in spam ...**
 

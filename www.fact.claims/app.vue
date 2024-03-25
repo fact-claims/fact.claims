@@ -14,6 +14,9 @@
     color: #003300;
 }
 
+.prose h2 {
+    margin-top: 1em;
+}
 .prose a {
     color: #006600;
 }

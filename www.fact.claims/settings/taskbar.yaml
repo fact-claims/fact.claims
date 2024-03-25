@@ -8,7 +8,7 @@ taskbar:
 - to: "/claim/life"
   title: Claim a Lived Experience
 - to: "/claim/credentials"
-  title: Claim your Credentials
+  title: Claim your Expertise
 - to: "/claim/realestate"
   title: Claim Real Estate
 - to: "/claim/science"

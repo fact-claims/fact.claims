@@ -25,5 +25,3 @@ bin
 logs/
 *.log
 
-# Ignore dependencies installed by npm
-**/package-lock.json

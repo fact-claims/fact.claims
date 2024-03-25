@@ -350,23 +350,17 @@ In fact claims ecosystems, establishing the immutability of data is crucial for 
 
 5.2.3. **Decentralized Distribution** IPFS content is distributed across multiple nodes. When a fact claim is added to IPFS, it gets replicated across numerous nodes, ensuring redundancy and resilience. This further strengthens the immutability of the content.
 
-### 5.3 Cryptographic Ownership
+### 5.3 Semantic Representation
 
-5.3.1. **FactClaims Provenance Protocol** Upon publishing a fact claim to IPFS, a corresponding smart contract event (e.g., FactClaim(string ipfsURL)) is emitted. This event, integrated with the Fact Claims provenance protocol, establishes cryptographic proof of ownership by linking the fact claim to the DAO (Decentralized Autonomous Organization), smart contract, and/or private key holder.
+5.3.1. **Semantic Interoperability** RDF provides a standardized framework for representing data in a semantic format. Fact claims, along with their associated metadata and relationships, can be represented using RDF vocabularies such as PROV-O and VOID (Vocabulary of Interlinked Datasets). This semantic representation enhances interoperability and machine readability.
 
-5.3.2. **Smart Contract Integration** The smart contract event serves as an [immutable](/claim/ipfs) record of the fact claim's publication, attributing ownership to the entity that initiated the event. This integration with smart contracts ensures transparency, traceability, and accountability in the generation and evolution of fact claims.
+5.3.2. **Provenance and Attribution** RDF enables the representation of provenance information, including attribution, sources, and lineage of fact claims. By incorporating PROV-O, fact claims can include metadata describing their origins, transformations, and ownership. This provenance information enhances transparency and trust in the data.
 
-### 5.4 Semantic Representation
+### 5.4 Web of Trust
 
-5.4.1. **Semantic Interoperability** RDF provides a standardized framework for representing data in a semantic format. Fact claims, along with their associated metadata and relationships, can be represented using RDF vocabularies such as PROV-O and VOID (Vocabulary of Interlinked Datasets). This semantic representation enhances interoperability and machine readability.
+5.4.1. **Verification Mechanisms** IPFS enables verification mechanisms that allow users to verify the integrity of fact claims by recalculating their content hashes and comparing them with the expected addresses. This process ensures that the content remains unchanged and authentic, enhancing trust and reliability.
 
-5.4.2. **Provenance and Attribution** RDF enables the representation of provenance information, including attribution, sources, and lineage of fact claims. By incorporating PROV-O, fact claims can include metadata describing their origins, transformations, and ownership. This provenance information enhances transparency and trust in the data.
-
-### 5.5 Web of Trust
-
-5.5.1. **Verification Mechanisms** IPFS enables verification mechanisms that allow users to verify the integrity of fact claims by recalculating their content hashes and comparing them with the expected addresses. This process ensures that the content remains unchanged and authentic, enhancing trust and reliability.
-
-5.5.2. **Semantic Integrity** By crawling the fact web, the trustworthiness and provenance of fact claims can be inspected.
+5.4.2. **Semantic Integrity** By crawling the fact web, the trustworthiness and provenance of fact claims can be inspected.
 
 ---
 
@@ -421,10 +415,10 @@ Ensuring the immutability of data is crucial for establishing trust. Integration
 - **[immutable](/claim/ipfs) Nature**: Modifications to content result in distinct hashes, preserving original content integrity.
 - **Decentralized Distribution**: Content is replicated across IPFS nodes, ensuring redundancy and resilience.
 
-### 7.3. Cryptographic Ownership
+### 7.3. Cryptographic Trustees
 
-- **FactClaims Provenance Protocol**: Emitting a smart contract event links fact claims to DAO, smart contract, or private key holder, establishing cryptographic ownership.
-- **Smart Contract Integration**: Smart contract events serve as [immutable](/claim/ipfs) records, ensuring transparency and accountability.
+- **Provenance Protocol**: Emitting a smart contract event bakes your fact claims onto the blockchain (DAO, smart contract, or private account).
+- **Trustee Notarization**: Smart contract are the trustees, their events are [immutable](/claim/ipfs) records, claiming custody and provenance.
 
 ### 7.4. Semantic Interactivity
 

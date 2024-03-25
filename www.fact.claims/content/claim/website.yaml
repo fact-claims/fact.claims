@@ -22,7 +22,7 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: Please enter a valid (https:) URL for your website
+            text: Avalid (https:) URL for your website
   - name: "branding"
     elements:
       - type: "text"

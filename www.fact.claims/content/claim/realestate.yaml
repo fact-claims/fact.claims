@@ -19,7 +19,7 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: Please enter a valid URL for the business website
+            text: Avalid URL for the business website
   - name: "page2"
       # title: "Tell us a little about your business"
     elements:

@@ -1,4 +1,4 @@
-title: Joint Venture Claim
+title: Business Claim
 description: Tell us a little about your venture
 logoPosition: right
 meta:
@@ -7,15 +7,15 @@ openai:
   endpoint: /api/
 pages:
   - name: "business_name_description"
-    description: Tell us about your joint venture
+    description: Tell us about your business
     elements:
       - type: "text"
         name: "schema:name"
-        title: "What is the name of your joint venture?"
+        title: "What is the name of your business?"
         isRequired: true
       - type: "text"
         name: "schema:description"
-        title: "Please provide a brief description of your joint venture."
+        title: "Please provide a brief description of your business."
         isRequired: true
 
   - name: "business_website_logo"
@@ -23,33 +23,33 @@ pages:
     elements:
       - type: "text"
         name: "schema:url"
-        title: "What is the URL of your joint venture website?"
+        title: "What is the URL of your website?"
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for your joint venture website (https://)"
+            text: "A valid URL for your business website (https://)"
       - type: "text"
         name: "schema:image"
-        title: "What is the URL of your joint venture logo?"
+        title: "What is the URL of your logo?"
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for your joint venture logo (image format: jpg, png, etc.)"
+            text: "A valid URL for your logo (image format: jpg, png, etc.)"
 
   - name: "business_contact"
     elements:
       - type: "text"
         name: "schema:address"
-        title: "What is the address of your joint venture?"
+        title: "What is the address of your business?"
         isRequired: true
       - type: "text"
         name: "schema:telephone"
-        title: "What is the telephone number of your joint venture?"
+        title: "What is the telephone number of your business?"
         isRequired: true
       - type: "text"
         name: "schema:email"
-        title: "What is the email address of your joint venture?"
+        title: "What is the email address of your business?"
         isRequired: true
         validate:
           - type: email
-            text: "Please enter a valid email address for your joint venture"
+            text: "Avalid email address for your business"

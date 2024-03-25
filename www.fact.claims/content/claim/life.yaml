@@ -18,7 +18,7 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for the subject website"
+            text: "Avalid URL for the subject website"
 
   - name: "personal_information"
     description: "Tell us more about your life"

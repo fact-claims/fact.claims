@@ -23,4 +23,4 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: Please enter a valid URL for the claim website
+            text: Avalid URL for the claim website

@@ -25,7 +25,7 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for your website (https://)"
+            text: "Avalid URL for your website (https://)"
       - type: "text"
         name: "schema:socialMedia"
         title: "What are the URLs of your social media profiles? (e.g., Twitter, Instagram)"
@@ -36,7 +36,7 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for your profile picture or logo (image format: jpg, png, etc.)"
+            text: "Avalid URL for your profile picture or logo (image format: jpg, png, etc.)"
 
   - name: "creator_bio_content"
     elements:

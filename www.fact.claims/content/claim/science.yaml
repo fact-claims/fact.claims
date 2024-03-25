@@ -19,7 +19,7 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for the research article"
+            text: "Avalid URL for the research article"
       - type: "text"
         name: "schema:author"
         title: "Author(s) of the research article"

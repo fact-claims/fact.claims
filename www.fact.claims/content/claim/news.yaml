@@ -19,14 +19,14 @@ pages:
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for the story website"
+            text: "Avalid URL for the story website"
       - type: "text"
         name: "schema:image"
         title: "URL of an image/photo for the story"
         isRequired: true
         validate:
           - type: url
-            text: "Please enter a valid URL for the image/photo of the story"
+            text: "Avalid URL for the image/photo of the story"
 
   - name: "story_content"
     description: "Share details about your story"

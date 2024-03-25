@@ -418,7 +418,7 @@ Ensuring the immutability of data is crucial for establishing trust. Integration
 ### 7.3. Cryptographic Trustees
 
 - **Provenance Protocol**: Emitting a smart contract event bakes your fact claims onto the blockchain (DAO, smart contract, or private account).
-- **Trustee Notarization**: Smart contract are the trustees, their events are [immutable](/claim/ipfs) records, claiming custody and provenance.
+- **Trustee Notarization**: Smart contracts act as trustees, their events are [immutable](/claim/ipfs) records, claiming custody and provenance.
 
 ### 7.4. Semantic Interactivity
 

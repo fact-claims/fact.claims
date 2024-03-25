@@ -87,7 +87,7 @@ Since we're using RDF Turtle, we must define our prefixes before we refer to the
     @prefix schema: <https://schema.org/> .
     @prefix prov: <http://www.w3.org/ns/prov#> .
     @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-    @prefix trust: <https://fact.claims/v0/trust#> .
+    @prefix fact: <https://fact.claims/v0/trust#> .
     @prefix cito: <http://purl.org/spar/cito/> .
     @prefix w3cvc: <https://www.w3.org/2018/credentials#> .
 

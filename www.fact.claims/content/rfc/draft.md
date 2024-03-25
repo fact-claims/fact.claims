@@ -325,7 +325,7 @@ The validation uses SHACL to ensure compliance with the protocol's simplest sema
 As a minimum, a fact web should conform to the following SHACL
 
 ```turtle
-trust:FactClaims
+fact:FactClaims
   a sh:NodeShape ;
   sh:targetClass prov:Entity ;
   sh:property [

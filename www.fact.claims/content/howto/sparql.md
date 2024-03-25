@@ -18,7 +18,7 @@ And the `FILTER` only includes statements that match a boolean expression.
 ```sparql
 SELECT ?claim ?by
 WHERE {
-  ?claim rdf:type trust:Claim ;
+  ?claim rdf:type fact:Claim ;
     prov:generatedBy ?by .
 }
 ```
@@ -37,7 +37,7 @@ WHERE {
 ```sparql
 SELECT ?claim
 WHERE {
-  ?claim rdf:type trust:Claim ;
+  ?claim rdf:type fact:Claim ;
          prov:wasGeneratedBy ?by .
   FILTER (startswith(str(?by), "ethereum://"))
 }
@@ -97,7 +97,7 @@ WHERE {
 The `WHERE` clause in SPARQL serves as a pattern matching mechanism, allowing you to specify patterns that RDF triples must conform to in order to match the query. 
 
 1. **Basic Pattern Matching**:
-   - The basic form of pattern matching in SPARQL involves matching triples directly. For example, `?claim rdf:type trust:Claim` matches triples where `?claim` is of type `trust:Claim`.
+   - The basic form of pattern matching in SPARQL involves matching triples directly. For example, `?claim rdf:type fact:Claim` matches triples where `?claim` is of type `fact:Claim`.
 
 2. **Optional Matching**:
    - Optional patterns are specified using the `OPTIONAL` keyword. They allow you to specify patterns that may or may not match. If an optional pattern doesn't match, the variables within it will be bound to null.

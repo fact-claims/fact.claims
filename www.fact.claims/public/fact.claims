@@ -14,16 +14,16 @@
 # A grounded fact must have (`prov:wasGeneratedBy`) to an immutable source, either <ipfs://> or <ethereum://>.
 # A notarized fact is grounded by an <ethereum://> address owned by a smart contract.
 
-@prefix trust: <https://fact.claims/v0/trust#> .
-@prefix self: <https://smarttrust.ai/> .
+@prefix fact: <https://fact.claims/v0/fact#> .
+@prefix self: <https://smarttrust.ai/v0/self#> .
 
 # grounded claims
 
 <https://fact.claims/> 
     a skos:ConceptScheme;
     a schema:Organization, prov:Organization ;
-    a trust:Claim;
-    a trust:DAO;
+    a fact:Claim;
+    a fact:DAO;
     rdf:label "fact.claims";
     rdf:comment "";
     schema:name "fact.claims" ;
@@ -49,8 +49,8 @@
 
 self:
     a schema:Organization, prov:Organization ;
-    a trust:Claim;
-    a trust:DAO;
+    a fact:Claim;
+    a fact:DAO;
     rdf:label "smart trust";
     schema:name "smart trust" ;
     skos:prefLabel "smart trust";

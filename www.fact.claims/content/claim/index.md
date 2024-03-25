@@ -10,7 +10,7 @@ layout: page
 | Lived Experience  | [Immortalize lives and events](/claim/life)  |
 | Website Ownership  | [Claim your website](/claim/website)  |
 | Content Authorship| [Claim  your content](/claim/content)  |
-| Formal Credentials  | [Claim your credentials](/claim/credentials)|
+| Expertise & Credentials  | [Claim your credentials](/claim/credentials)|
 | Scientific Research| [Claim your research](/claim/science)  |
 | Open Data  | [Inform the community](/claim/data)  |
 | Featured| [Your fact-based projects](/howto/)  |

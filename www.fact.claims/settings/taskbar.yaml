@@ -5,6 +5,8 @@ taskbar:
   title: Claim a Business
 - to: "/claim/content"
   title: Claim your Content
+- to: "/claim/life"
+  title: Claim a Lived Experience
 - to: "/claim/credentials"
   title: Claim your Credentials
 - to: "/claim/realestate"

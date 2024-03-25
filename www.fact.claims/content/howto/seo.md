@@ -3,23 +3,27 @@ layout: page
 ---
 # Technical SEO for AI
 
-We know structured data plays a crucial role in improving search engine visibility and enriching results with enhanced snippets. 
+We know structured data plays a crucial role in search engine relevance, prominence and visibility. 
 
-JSON-LD allows webmasters to embed structured data directly into their HTML code, these are published facts.
+JSON-LD allows webmasters to embed structured data directly into their HTML code, these are `published` facts.
 
-By implementing these JSON-LD structured data examples, webmasters can enhance their website's SEO performance and increase the likelihood of their content. 
+By implementing JSON-LD, webmasters can enhance their website's SEO performance **and** curate content for AI. 
 
-These rich snippets can include additional information such as organization details, breadcrumbs, article summaries, and product details, providing users with more relevant and informative search results.
+These rich snippets can include additional information such as organizations, articles and products.
 
-However, they are not renowned as reliable quality data.
+They provide intelligent agents with more relevant, informative and crawl-able search results.
 
-With `fact.claims` we can improve and also attest to their trustworthiness using our [simple protocol](/fact.claims).
+SEO is rarely quality data - `fact.claims` is a simple solution to reduce the GIGO (Garbage-in, Garbage-out).
 
-### Rich Snippet Examples
+### Implemention
 
-These representations capture the structured data examples for `schema.org` organization, breadcrumb list, article, and products. 
+A modern SEO-optimized website will likely already host `published` facts, in the form of SEO snippets.
 
-However, to be considered grounded [fact.claims](/fact.claims) they must be converted into JSON-LD before being pinned to an `ipfs://` URL.
+However, to be considered `grounded` our [fact.claims](/fact.claims) must be pinned to an `ipfs://` URL and become [immutable](/claim/ipfs).
+
+**For that reason, it's wise to take a little more care over the facts we declare:**
+
+Let's start with`schema.org`- they host definitions for organizations, events, people, articles, products and much more. 
 
 1. **Organization Markup:**
    ```turtle

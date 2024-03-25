@@ -8,9 +8,9 @@ A claimed website contains a set of facts that identify the site, it's resources
 
 The key principles governing fact claims:
 
-- **Valid Facts:** To be valid, a fact must include `prov:wasAssociatedWith` and `prov:wasGeneratedBy`.
+- **Specific Facts:** To be valid, a fact must include `prov:wasAssociatedWith` and `prov:wasGeneratedBy`.
 - **Traceable Facts:** Found by following a path via `prov:wasAssociatedWith` and/or `prov:wasGeneratedBy`.
-- **Grounded Facts:** A set of grounded facts stored in an immutable document and stored using `ipfs://`.
+- **Grounded Facts:** A set of grounded facts stored in an [immutable](/claim/ipfs) document and stored using `ipfs://`.
 - **Notarized Facts:** A notarized fact is grounded by an `ethereum://` address owned by a trusted smart contract.
 - **Published Facts:** A published fact can use either `IPFS` or `HTTPS` protocols.
 
@@ -24,19 +24,16 @@ Follow these steps:
    
 2. **Save it to the Root of Your Website:** 
     - Place the `fact.claims` file at the root of your website
-    - Make it accessible via a URL such as `https://example.com/fact.claims` or `https://fact.claims/fact.claims`.
+    - Make it accessible via a URL such as [https://fact.claims/fact.claims](/fact.claims).
 
-3. **Publish to IPFS:** 
-    - Submit your `fact.claims` file to `https://fact.claims/ipfs/` 
-    - Obtain the IPFS hash for your `fact.claims` file.
-    - Your facts are now published as a tamper-proof fact web.
-
-4. **Notarize Your `fact.claims`:** 
+3. **Notarize on IPFS:** 
     - It's recommend, but not necessary to notarize your `fact claims`.
-    - A notary must  validate, sign, then catalog the statements
-    - Finally, the notary will publish the results, to it'w own `ipfs://` link, that references your `fact.claims`, on the blockchain.
+    - Submit your `fact.claims` file to [https://fact.claims/example#](/claim/) for notarization.
+    - Obtain the IPFS hash for your `fact.claims` file.
+    - Your facts are now published as a tamper-proof record on the `fact web`.
+    - Finally, the notary will publish your `ipfs://` link on the blockchain.
 
-5. **Link back to your notarized facts**
+4. **Link to your notarized facts**
 
     - Include a link (on your home page or elsewhere) to your notarized `ipfs://` JSON-LD file
     - This allows standard crawlers, include search engines, to find them.

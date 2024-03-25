@@ -2,8 +2,8 @@
   <site-header :menu="settings.menu.header" class=" "></site-header>
   <div class="mx-auto h-screen pt-20 pb-10 flex">
     <!-- Left column for ToC menu -->
-    <div class="w-1/4">
-        <site-page-menu></site-page-menu>
+    <div class="w-1/4 prose" >
+      <site-tool-menu></site-tool-menu>
     </div>
 
     <!-- Middle column for content -->
@@ -12,10 +12,8 @@
     </div>
 
     <!-- Right column for tools -->
-    <div class="w-1/4 prose ml-8">
-      <h3>Fact Factories</h3>
-
-      <site-tool-menu></site-tool-menu>
+    <div class="w-1/4 prose ml-8 ">
+      <site-page-menu></site-page-menu>
 
       </div>
   </div>

@@ -1,0 +1,33 @@
+title: Content Claim
+description: Tell us a little about your content
+logoPosition: right
+meta:
+  goto: "/ai/render/website/"
+openai:
+  endpoint: /api/
+pages:
+  - name: "page1"
+      # title: "Tell us a little about your business"
+    elements:
+      - type: "text"
+        name: "business_name"
+        title: "What is your business name?"
+        isRequired: true
+      - type: "text"
+        name: "business_website"
+        title: "What is your business website?"
+        isRequired: true
+        validate:
+          - type: url
+            text: Please enter a valid URL for the business website
+  - name: "page2"
+      # title: "Tell us a little about your business"
+    elements:
+      - type: "text"
+        name: "business_offer"
+        title: "What service do you offer?"
+        isRequired: true
+      - type: "text"
+        name: "business_market"
+        title: "What market do you serve?"
+        isRequired: true

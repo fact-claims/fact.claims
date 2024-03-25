@@ -3,6 +3,8 @@ layout: page
 ---
 # Solution Domains
 
+**Support collaborative innovation by publishing fact claims.**
+
 From regulatory compliance to scientific research, semantic standards provide a common framework to share facts across diverse domains:
 
 We've documented a few use cases with examples:
@@ -10,6 +12,7 @@ We've documented a few use cases with examples:
 - [Scientific Research](/usecase/science)
 - [Innovation](/usecase/innovation)
 - [Real Estate](/usecase/real-estate)
+- [Web 3.x](/usecase/web3)
 
 ### Industry use cases
 | Use Case | Peak Body, Regulator, or Trade Association |
@@ -26,5 +29,5 @@ We've documented a few use cases with examples:
 | Identity and Access Management | [National Institute of Standards and Technology (NIST)](https://www.nist.gov/) |
 | Energy Trading and Grid Management | [Federal Energy Regulatory Commission (FERC)](https://www.ferc.gov/) |
 | Education and Credential Verification | [American Council on Education (ACE)](https://www.acenet.edu/) |
-| [Asset Tokenization and Management](/usecase/Web3) | [International Organization for Standardization (ISO)](https://www.iso.org/) |
+| [Asset Tokenization and Management](/usecase/web3) | [International Organization for Standardization (ISO)](https://www.iso.org/) |
 | [Real Estate](/usecase/real-estate) | [National Association of Realtors (NAR)](https://www.nar.realtor/) |

@@ -29,7 +29,13 @@ RDFs legacy lives-on in SEO and the rich snippets that still power the Web 2.0 c
 
 Maybe together, they hint at a solution to the trust crisis ?
 
-## Semantic Trust Chains: Enforcers of Trust
+## Are we post-truth ?
+
+If RDF and smart contracts define Web 3.0, then trust and transparency can emerge as early key benefits of the AI era.
+
+**On the shoulders of giants ... we're closer to AI we can trust**
+
+## Trust Chains: The Immutable Guardians
 
 Smart contracts, our second contender, emerged as blockchain's powerhouse, ensuring transparent and autonomous transactions.
 
@@ -41,27 +47,21 @@ Integrating smart contracts with fact webs enhances accountability, enabling aut
 
 Together, they move us closer to realizing a decentralized and trustworthy internet.
 
-## Architecting Trust: An Alliance
+## Architecting Trust: A Factual Alliance
 
 RDF's semantic interoperability and smart contracts' decentralized governance can unite to form the bedrock of trust in Web 3.0. 
 
 The trusted web can empower both human and AI users to navigate with confidence and certainty.
 
-The immutable, tamper-proof IPFS (Interplanetary File System) stores facts forever.
+The [immutable](/claim/ipfs), tamper-proof IPFS (Interplanetary File System) stores facts forever.
 
 ## It's all there already, only two tiny steps to go ...
 
-1) Publish a few dozen permanent RDF snippets to IPFS to mint a permanent identifier.
+1) Publish a few dozen permanent RDF snippets to IPFS to mint a permanent `ipfs://` URL.
 
-2) Transmit the identifier as part of any smart contract event.
+2) Notarize by emitting the IPFS URL as a smart contract event.
 
-An immutable fact web on IPFS and an assertion on the blockchain, linked to your private key.
-
-## A Trust-Centric Future or Post-Truth?
-
-If RDF and smart contracts define Web 3.0, then trust and transparency can emerge as early key benefits of the AI era.
-
-On the shoulders of these giants, an inch closer to, a future we can trust.
+Our facts are now `grounded` on IPFS and cryptographically claimed on the blockchain.
 
 ## References:
 

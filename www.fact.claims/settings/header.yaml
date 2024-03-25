@@ -1,11 +1,11 @@
 "header": [
   {
-    "label": "Fact Factory",
-    "to": "/facts/",
+    "label": "Claim Facts",
+    "to": "/claim/",
     "external": false
   },
   {
-    "label": "How to",
+    "label": "How To",
     "to": "/howto/",
     "external": false
   },
@@ -15,17 +15,18 @@
     "external": false
   },
   {
-    "label": "Trust Model",
+    "label": "Maturity Model",
     "to": "/trust/",
     "external": false
   },
   {
     "label": "RFC",
     "to": "/rfc/draft",
-    "external": false
+    "external": false,
+    "icon": "i-heroicons-light-bulb"
   },
   {
-    "label": "Paper",
+    "label": "Why ?",
     "to": "/paper/",
     "external": false,
     "icon": "i-heroicons-light-bulb"

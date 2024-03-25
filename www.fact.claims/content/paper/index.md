@@ -10,9 +10,11 @@ layout: paper
 
 In 2023, the Internet started buzzing with AI agents, crawlers and language models all vying for their moment of glory. 
 
-We've learned that they can be clever, creative, productive and resourceful, but also lacking in integrity, factual grounding and attribution.
+We've learned that they can be clever, creative, productive and resourceful
 
 As with all new technologies, new challenges also emerged.
+
+**Too often they are low quality, out of touch, lack integrity and attribution.**
 
 Content creators need a way to verify and demonstrate ownership, receive attribution even negotiate automatic compensation.
 
@@ -36,7 +38,7 @@ We consider the following challenges with respect to AI so that society benefits
 
 ## 2. Project Objectives
 
-2.1. **Ensure Trustworthiness**: Ensure that the facts are trustworthy and immutable - fostering trust among stakeholders.
+2.1. **Ensure Trustworthiness**: Ensure that the facts are trustworthy and [immutable](/claim/ipfs) - fostering trust among stakeholders.
 
 2.2. **Semantic Interoperability**: Incorporating standards such as PROV-O, SKOS, and VOID annotations facilitates semantic interoperability. Enable seamless information exchange and collaboration across diverse domains and platforms.
 
@@ -56,7 +58,7 @@ In our architecture, a `fact` is a small atomic unit of knowledge - serialized i
 
 The web links one fact to another - in same or separate documents - a technique called `linked data`.
 
-We consider a `grounded fact` to be one stored on IPFS as an immutable record.
+We consider a `grounded fact` to be one stored on IPFS as an [immutable](/claim/ipfs) record.
 
 At runtime, URLs within the JSON-LD may be retrieved at the agent's discretion. 
 
@@ -66,7 +68,7 @@ The technical architecture for fact claims consists of several key components:
 
 - **IPFS Network:** A peer-to-peer network of nodes running IPFS software, facilitating the storage and retrieval of files using content-based addressing.
 - **Fact Web:** A graph data structure representing interconnected facts and trust claims within the decentralized system.
-- **Trust Chains:** Blockchain smart contracts can notarize an immutable chain of facts, asserting provenance permanetly.
+- **Trust Chains:** Blockchain smart contracts can notarize an [immutable](/claim/ipfs) chain of linked facts, asserting provenance permanetly.
 - **Smart Agents:** Interface with the IPFS network and Internet for storage, retrieval, curation, inference, visualization and publication of fact webs.
 
 ### 3.1 Conceptual Fact Web

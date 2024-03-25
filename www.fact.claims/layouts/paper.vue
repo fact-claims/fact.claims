@@ -21,7 +21,10 @@
 
     <!-- Right column for tools -->
     <div class="w-1/4 prose ml-8">
+      <site-page-menu></site-page-menu>
 
+      <h3>{{ settings.brand.name }}</h3>
+      <site-tool-menu></site-tool-menu>
       </div>
   </div>
 

@@ -3,7 +3,7 @@ import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
 
 const query: QueryBuilderParams = {
   where: [{
-    "_dir": "wizard"
+    "_dir": "claim"
   }],
   sort: [{ title: 1 }],
 };
@@ -20,6 +20,7 @@ function isCompleted(wizard: any) {
 
 </script>
 <template>
+  <ContentDoc/>
   <flow-tiles>
     <ContentList :query="query" v-slot="{ list }">
       <div v-for="card in list" v-bind:key="card._path">

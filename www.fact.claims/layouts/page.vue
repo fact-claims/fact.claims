@@ -1,8 +1,8 @@
 <template>
   <site-header :menu="settings.menu.header"></site-header>
   <div class="h-screen pt-20 pb-10 flex">
-    <div class="w-1/4">
-      <site-page-menu></site-page-menu>
+    <div class="w-1/4 prose">
+      <site-tool-menu></site-tool-menu>
     </div>
 
     <div class="w-1/2 prose">
@@ -10,9 +10,8 @@
     </div>
 
     <div class="w-1/4 prose">
-      <h3>Fact Factories</h3>
-
-      <site-tool-menu></site-tool-menu>
+      <!-- <h2>{{ settings.brand.name }}</h2> -->
+      <site-page-menu></site-page-menu>
     </div>
   </div>
   <!-- <site-footer :menu="settings.menu.footer"></site-footer> -->

@@ -23,6 +23,7 @@ yarn.lock
 
 # Ignore environment files
 .env*
+bin
 
 # Ignore logs
 logs/

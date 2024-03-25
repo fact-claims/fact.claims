@@ -39,7 +39,7 @@ Ensuring the integrity and trustworthiness of our AI systems is important:
 
 - **Published Facts:** Published facts are online for reference, they need not be immutable so may be real time.
 
-- **Notarized Facts:** Notarized facts with a provable chain of custody, with provenance traced back to a digital trustee.
+- **Notarized Facts:** Notarized facts with a trusted chain of custody, with provenance traced back to a digital trustee.
 
 ### Explore Further:
 

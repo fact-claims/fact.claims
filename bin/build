@@ -3,4 +3,6 @@ cd factify
 npm run link
 cd ..
 cd www.fact.claims
-npm run build
+npm link factify
+npx nuxi generate
+

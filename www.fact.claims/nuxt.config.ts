@@ -14,7 +14,7 @@ let kc_config = {
 export default defineNuxtConfig({
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml']
+      // routes: ['/sitemap.xml']
     }
   },
   runtimeConfig: {
@@ -37,8 +37,6 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', "@nuxt/image", '@nuxt/ui'],
   content: {
     documentDriven: true,
-    page: true,
-    surround: true,
     markdown: {
       remarkPlugins: ['remark-emoji']
     }

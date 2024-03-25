@@ -1,7 +1,9 @@
 ---
 layout: page
 ---
-# AI Maturity Model
+# Maturity Model for  Trustworthy AI 
+
+**A simple measurement framework for autonomous AI.**
 
 | Stage | Level            | Broad Capabilities                |
 |-------|------------------|-----------------------------------|
@@ -11,11 +13,11 @@ layout: page
 | 3     | Autonomous AI    | Autonomous Adaptive Agents        |
 | 4     | Decentralized AI | DAO Governance                    |
 | 5     | Legal Autonomy   | DAO LLC, Trust, or Similar        |
-| 6	    | Trusted Autonomy | Factual and Rule-Abiding          |
+| 6	    | Trusted Autonomy | Truthful and Law-Abiding          |
 | 7     | Self-Managed     | Budgets, Owns and Manages Assets  |
 | 8     | Self-Sufficient  | Generates Profitable Partnerships |
 | 9     | Self-Sovereign   | Self-Aware, Sentient, Responsible |
-| 10    | Self-Fulfilling	 | Eternally Ethical Autonomy        |
+| 10    | Self-Fulfilling	 | Ethical Autonomy        |
 
 ## The Path To Autonomy ...
 

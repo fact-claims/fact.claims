@@ -1,17 +1,20 @@
 taskbar:
-- to: "/facts/website"
-  title: Website
-- to: "/facts/business"
-  title: Business Offers
-- to: "/facts/content"
-  title: Content Creators
-- to: "/facts/credentials"
-  title: Credentials
-- to: "/facts/real_easte"
-  title: Real Estate
-- to: "/facts/science"
-  title: Science Research
-- to: "/facts/research"
-  title: Research Data
-- to: "/facts/news"
-  title: News Stories
+- to: "/claim/website"
+  title: Claim a Website
+- to: "/claim/business"
+  title: Claim a Business
+- to: "/claim/content"
+  title: Claim your Content
+- to: "/claim/credentials"
+  title: Claim your Credentials
+- to: "/claim/realestate"
+  title: Claim Real Estate
+- to: "/claim/science"
+  title: Publish Science Research
+- to: "/claim/data"
+  title: Publish Open Data
+- to: "/claim/news"
+  title: Publish News Stories
+- to: "/howto/seo"
+  title: SEO for AI
+

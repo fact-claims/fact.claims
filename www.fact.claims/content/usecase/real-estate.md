@@ -43,7 +43,7 @@ Innovation in real estate, supported by trusted, decentralized fact webs and sem
 
 - **Semantic Regulatory Compliance Platforms**: Real estate firms can leverage semantic to create regulatory compliance platforms that provide context-aware insights. Decentralized fact webs aggregate regulatory data from diverse sources, enabling real-time monitoring of compliance status and proactive risk management across portfolios.
 
-- **Blockchain-Based Building Code Verification**: Building information models (BIM) integrated with smart contracts can ensure adherence to building codes throughout the construction lifecycle. Decentralized fact webs store immutable records of code compliance, enabling stakeholders to verify regulatory compliance and track changes transparently.
+- **Blockchain-Based Building Code Verification**: Building information models (BIM) integrated with smart contracts can ensure adherence to building codes throughout the construction lifecycle. Decentralized fact webs store [immutable](/claim/ipfs) records of code compliance, enabling stakeholders to verify regulatory compliance and track changes transparently.
 
 ### Conclusion
 

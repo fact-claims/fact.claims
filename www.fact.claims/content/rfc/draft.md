@@ -19,11 +19,11 @@ To delve into further details, please consult the code, test suite and use case 
 
 ## Abstract
 
-In a decentralized, AI-first environment, maintaining trustworthy and immutable data is essential for ensuring transparency, auditability, and reliability. 
+In a decentralized, AI-first environment, maintaining trustworthy and [immutable](/claim/ipfs) data is essential for ensuring transparency, auditability, and reliability. 
 
 This paper proposes a methodology for leveraging the InterPlanetary File System (IPFS), Linked Data (JSON-LD), and Smart Contracts to construct a trusted decentralized network of fact webs. 
 
-By utilizing the distributed, immutable, and censorship-resistant IPFS, we address the challenges associated with decentralized trust and enhance the integrity and auditability of diverse fact claims. 
+By utilizing the distributed, [immutable](/claim/ipfs), and censorship-resistant IPFS, we address the challenges associated with decentralized trust and enhance the integrity and auditability of diverse fact claims. 
 
 We outline the technical architecture, design considerations, and implementation strategies for integrating IPFS into existing systems to establish a reliable and tamper-resistant repository for storing and accessing fact claims.
 
@@ -31,7 +31,7 @@ We outline the technical architecture, design considerations, and implementation
 
 ## 1. Introduction
 
-Given rapidly evolving artificial intelligence (AI), the need for trustworthy and immutable data has become paramount. 
+Given rapidly evolving artificial intelligence (AI), the need for trustworthy and [immutable](/claim/ipfs) data has become paramount. 
 
 Decentralized ecosystems, built upon principles of transparency, auditability, and reliability, require robust mechanisms for managing and verifying information exchange. In this context, the establishment of fact claims - assertions of truth or validity regarding specific entities, relationships, or events - plays a crucial role in facilitating trustful collaboration across autonomous decentralized ecosystems.
 
@@ -85,7 +85,7 @@ Through this RFC, we aim to lay the groundwork for a future where collaboration 
 
 This section defines the objectives of the proposal, including the goals, scope, and intended outcomes. It outlines the need for a standardized approach to representing fact claims  and identifies the key technologies and standards utilized.
 
-2.1. **Ensure Trustworthiness**: Ensure that the facts are trustworthy and immutable - fostering trust among stakeholders.
+2.1. **Ensure Trustworthiness**: Ensure that the facts are trustworthy and [immutable](/claim/ipfs) - fostering trust among stakeholders.
 
 2.2. **Semantic Interoperability**: Incorporating standards such as PROV-O, SKOS, and VOID annotations facilitates semantic interoperability. Enable seamless information exchange and collaboration across diverse domains and platforms.
 
@@ -113,7 +113,7 @@ This RFC proposes a methodology for leveraging the InterPlanetary File System (I
 
 Through the use of JSON-LD, we ensure semantic interoperability and compatibility, enabling machine-readable representation and interpretation of fact claims. Additionally, Smart Contracts provide governance mechanisms for managing the lifecycle of fact claims, ensuring transparency, and enforcing trust among participants.
 
-The distributed, immutable, and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. 
+The distributed, [immutable](/claim/ipfs), and censorship-resistant nature of IPFS, we aim to address the challenges associated with decentralized trust and establish a reliable repository for storing and accessing fact claims. 
 
 
 The technical architecture outlined in this RFC provides a blueprint for integrating IPFS into existing systems to establish a tamper-resistant repository for storing and accessing fact claims. 
@@ -148,15 +148,15 @@ sequenceDiagram
 ```turtle
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-<https://fact.claims/> prov:generated <https://example.claims/facts/claim1>.
+<https://fact.claims/> prov:generated <https://fact.claims/example#claim1>.
 
-<https://example.claims/facts/claim1> prov:wasAttributedTo <ethereum://0x123abc...> .
+<https://fact.claims/example#claim1> prov:wasAttributedTo <ethereum://0x123abc...> .
 ```
 
 - 3.2.2. Make useful and necessary assertions with reference to relevant ontologies.
 
 ```json-ld
-<https://example.claims/facts/claim1>
+<https://fact.claims/example#claim1>
 
   rdf:label 'fact claim #1';
   
@@ -277,17 +277,17 @@ Additionally, integration with Schema.org, OpenGraph, and similar standards sign
   "@id": "ipfs://QmXqPj9sk..."
   },
   "prov:used": {
-  "@id": "https://example.claims/facts/claim1"
+  "@id": "https://fact.claims/example#claim1"
   }
   },
   {
-  "@id": "https://example.claims/facts/claim1",
+  "@id": "https://fact.claims/example#claim1",
   "prov:hadPrimarySource": {
   "@id": "ipfs://QmXqPj9sk..."
   }
   },
   {
-  "@id": "https://example.claims/facts/claim1",
+  "@id": "https://fact.claims/example#claim1",
   "prov:wasDerivedFrom": {
   "@id": "ethereum://0x123abc..."
   }
@@ -302,7 +302,7 @@ At runtime, URLs referenced within the JSON-LD, especially those residing outsid
 
 #### 4.3.1 Dynamic Sourcing
 
-Unlike fact claims stored within the IPFS subgraph, Internet-sourced facts need not be immutable. Dynamic observations and updates from external sources may be ingested and inferred by the agent at its discretion. This approach enables the fact web to incorporate real-time data and adapt to evolving information landscapes while maintaining the integrity of internally stored immutable fact claims.
+Unlike fact claims stored within the IPFS subgraph, Internet-sourced facts need not be [immutable](/claim/ipfs). Dynamic observations and updates from external sources may be ingested and inferred by the agent at its discretion. This approach enables the fact web to incorporate real-time data and adapt to evolving information landscapes while maintaining the integrity of internally stored [immutable](/claim/ipfs) fact claims.
 
 ---
 
@@ -340,13 +340,13 @@ trust:FactClaims
   ] .
 ```
 
-### 5.2 Immutable Fact Claims
+### 5.2 [immutable](/claim/ipfs) Fact Claims
 
 In fact claims ecosystems, establishing the immutability of data is crucial for building trust and reliability. The integration of IPFS (InterPlanetary File System) and RDF not only ensures immutability but also provides cryptographic proof of ownership.
 
 5.2.1. **Unique Identification** IPFS assigns a unique cryptographic hash to each piece of content, including fact claims. This hash, derived from the content itself, serves as the content's address on the IPFS network, securely linking the content's identity to its actual data.
 
-5.2.2. **Immutable Nature** Utilizing cryptographic hashing algorithms like SHA-256, IPFS ensures that any modification to the content results in a completely different hash. Thus, even the slightest alteration to the content produces a distinct address, rendering the original content immutable.
+5.2.2. **[immutable](/claim/ipfs) Nature** Utilizing cryptographic hashing algorithms like SHA-256, IPFS ensures that any modification to the content results in a completely different hash. Thus, even the slightest alteration to the content produces a distinct address, rendering the original content [immutable](/claim/ipfs).
 
 5.2.3. **Decentralized Distribution** IPFS content is distributed across multiple nodes. When a fact claim is added to IPFS, it gets replicated across numerous nodes, ensuring redundancy and resilience. This further strengthens the immutability of the content.
 
@@ -354,7 +354,7 @@ In fact claims ecosystems, establishing the immutability of data is crucial for 
 
 5.3.1. **FactClaims Provenance Protocol** Upon publishing a fact claim to IPFS, a corresponding smart contract event (e.g., FactClaim(string ipfsURL)) is emitted. This event, integrated with the Fact Claims provenance protocol, establishes cryptographic proof of ownership by linking the fact claim to the DAO (Decentralized Autonomous Organization), smart contract, and/or private key holder.
 
-5.3.2. **Smart Contract Integration** The smart contract event serves as an immutable record of the fact claim's publication, attributing ownership to the entity that initiated the event. This integration with smart contracts ensures transparency, traceability, and accountability in the generation and evolution of fact claims.
+5.3.2. **Smart Contract Integration** The smart contract event serves as an [immutable](/claim/ipfs) record of the fact claim's publication, attributing ownership to the entity that initiated the event. This integration with smart contracts ensures transparency, traceability, and accountability in the generation and evolution of fact claims.
 
 ### 5.4 Semantic Representation
 
@@ -413,18 +413,18 @@ Fact webs should conform to standard semantic ontologies like VOID and PROV-O.
 
 Adhering to these standards ensures semantic interoperability, facilitating seamless integration and exchange of fact claims across diverse platforms.
 
-### 7.2 Immutable Fact Claims
+### 7.2 [immutable](/claim/ipfs) Fact Claims
 
 Ensuring the immutability of data is crucial for establishing trust. Integration of IPFS and RDF not only ensures immutability but also provides cryptographic proof of ownership provenance protocol.
 
 - **Unique Identification**: IPFS assigns a unique cryptographic hash to each content piece, ensuring its identity and integrity.
-- **Immutable Nature**: Modifications to content result in distinct hashes, preserving original content integrity.
+- **[immutable](/claim/ipfs) Nature**: Modifications to content result in distinct hashes, preserving original content integrity.
 - **Decentralized Distribution**: Content is replicated across IPFS nodes, ensuring redundancy and resilience.
 
 ### 7.3. Cryptographic Ownership
 
 - **FactClaims Provenance Protocol**: Emitting a smart contract event links fact claims to DAO, smart contract, or private key holder, establishing cryptographic ownership.
-- **Smart Contract Integration**: Smart contract events serve as immutable records, ensuring transparency and accountability.
+- **Smart Contract Integration**: Smart contract events serve as [immutable](/claim/ipfs) records, ensuring transparency and accountability.
 
 ### 7.4. Semantic Interactivity
 

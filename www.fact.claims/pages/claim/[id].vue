@@ -1,6 +1,7 @@
 <template>
   <div>
-    <OrganismsWizard :wizard="wizard" @completed="doCompleted" @updated="doUpdated" class="survey" :singleton="false">
+    <h2>Hello</h2>
+    <!-- <Organismsclaim :claim="claim" @completed="doCompleted" @updated="doUpdated" class="survey" :singleton="false">
       <h1 v-if="ai?.pending">pending</h1>
       <div v-if="ai?.context">
         <MoleculesJSON :data="ai.context"></MoleculesJSON>
@@ -8,7 +9,7 @@
       <div v-if="ai?.content">
         <MoleculesJSON :data="ai.content"></MoleculesJSON>
       </div>
-    </OrganismsWizard>
+    </Organismsclaim> -->
   </div>
 </template>
 
@@ -18,27 +19,27 @@ import markdownParser from '@nuxt/content/transformers/markdown';
 
 const router = useRouter();
 const { params } = useRoute();
-const { data: wizard } = await useAsyncData(`wizard-${params.wizard}`, () => {
-  return queryContent().where({ "_path": "/wizard/" + params.wizard }).findOne()
+const { data: claim } = await useAsyncData(`claim-${params.id}`, () => {
+  return queryContent().where({ "_path": "/claim/" + params.id }).findOne()
 })
 const user_response = ref()
 const ai = ref()
 
 const doCompleted = async (sender: any) => {
-  console.log("wizard.doCompleted: %o", sender.data)
+  console.log("claim.doCompleted: %o", sender.data)
   user_response.value = sender.data
 
-  await useAsyncData(`wizard-`+params.wizard, async () => {
-    console.log("wizard.useFetch: %o -> %o", params.wizard, user_response.value)
-    const ask_ai = await useFetch("/api/openai/" + params.wizard, {
+  await useAsyncData(`claim-`+params.id, async () => {
+    console.log("claim.useFetch: %o -> %o", params.id, user_response.value)
+    const ask_ai = await useFetch("/api/openai/" + params.id, {
       method: 'POST',
       headers: { "content-type":"application/json" },
       body: JSON.stringify(user_response.value),
     })
     if (ask_ai && ask_ai.data.value) {
       ai.value = ask_ai.data.value
-      let meta = (wizard.value as any).meta || {}
-      console.log("wizard.done.ai: %o -> %o", ai.value, meta )
+      let meta = (claim.value as any).meta || {}
+      console.log("claim.done.ai: %o -> %o", ai.value, meta )
       // if (meta.goto) {
       //   const goto = meta.goto+ai.value.context.id
       //   router.push(goto);

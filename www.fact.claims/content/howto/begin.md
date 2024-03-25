@@ -1,86 +1,89 @@
 ---
 layout: page
 ---
-# We need to describe all kinds of things in a structured way. 
+# We need to make & trust all kinds of claims 
 
 RDF is a framework for representing information in the form of statements - our `fact claims`. 
 
-We use URIs to uniquely identify resources and the relationships between them. 
-
 Each statement consists of three components - `subject`,`tag,` and `object`.
 
+We use URLs to uniquely identify resources and the relationships between them. 
 
 ### Let's make a simple claim:
 
-Since resources are often rather long URIs, we can use a prefix, in this case `trust` denotes the vocabulary namespace.
+It becomes easier to read if we work on an example:
 
 ```turtle
-    <https://example.com/> a trust:Claim .
+    <https://fact.claims/> a fact:Claim .
 ```
 
-It's hopefully easy to read, let's break down our example:
-
-- Formally our statement claims that `https://example.com/` (our subject) is a kind of `trust:Claim`. 
+- Formally our statement says that `https://fact.claims/` is `a` kind of `fact:Claim`. 
 
 
-- Subject: `<https://example.com/>`
-- Relationship: `a` (short for "is a")
-- Object: `trust:Claim` (A `Claim` as defined by the `trust` vocabulary)
+- Subject: `<https://fact.claims/>`
+- Tag: `a` (short for "is a kind of")
+- Object: `fact:Claim`  - something called a `Claim` is defined in the `fact:` vocabulary)
 
-### Now, we can enrich statements to be more and more interesting:
+### Now, Let's enrich our statements to be more descriptive:
 
-Let's us describe our subject by adding `tags` that can refer to both links and literals, like this:
+We can tag our subject with both links and literals, like this:
 
 ```turtle
-<https://example.com>
-    a schema:Organization, prov:Organization ;
-    a trust:Claim;
-    rdf:label "example";
-    schema:name "example" ;
-    skos:prefLabel "example";
-    rdf:comment "The Example";
-    owl:sameAs <https://www.example.com>.
+<https://fact.claims/>
+
+    a schema:Organization, prov:Organization, fact:Claim ;
+
+    rdf:label "fact.claims";
+    schema:name "fact.claims" ;
+    skos:prefLabel "fact.claims";
+
+    rdf:comment "The fact.claims project builds tools for fact-based AI.";
+    owl:sameAs <https://www.fact.claims/>.
 ```
 
-### Let's break down our extended example:
+### Let's break it down:
 
-- As always, we start with a subject resource: `<https://example.com/>`
-- Then we add some tags to assign more meaning:
-  - `a` (signifying "is a") with `schema:Organization` and `prov:Organization`.
-- Let's give it some human-readable labels in a few common vocabularies: 
-  - `rdf:label`, `schema:name`, and `skos:prefLabel` are well-known properties used to provide labels or names for the subject.
-  - `rdf:comment` is a property used to provide a comment or description of the subject.
-- Finally, let's tag some resources that are exactly equivalent.  
+- We always start with a subject resource, like`<https://fact.claims/>`
+- Then we add some tags to assign more meaning - to tell it's story so to speak:
+  - We claim to be`a` `schema:Organization` and a `prov:Organization`.
+- We added some human-readable labels - using a few common vocabularies for compatibility: 
+  - `rdf:label`, `schema:name`, and `skos:prefLabel` are well-known properties.
+  - `rdf:comment` provides a longer description of the subject.
   - `owl:sameAs` indicating that it is an alias of another resource.
 
+### Using short tags instead of URLs:
 
-### Using short tags instead of URIs:
+The simplest vocabulary is really just a URL prefix that ensure terms are globally unique.
 
-A short tag uses a `prefix` that stands in for the URI namespace, and a local `name` that is appended to it.
+A short tag uses a prefix (we use `fact:`) to stand-in for the URL namespace.
+
+In our example, `fact:` is expanded into a full URL when the RDF is parsed only if we declare it as prefix.
 
 ```
-  @prefix trust: <https://fact.claims/v0/trust#> .
+  @prefix fact: <https://fact.claims/v0/fact#> .
 ```
 
-In our example, `trust` is expanded into a full URI when the RDF is parsed, and we define in our RDF document.
+For our implementation, we created and hosted an RDF resource named [/v0/fact](/v0/fact.ttl) that describes our terms. 
 
-The simplest vocabulary is really just a URI namespace that ensure terms are globally unique.
+So `fact:Claim` becomes `<https://fact.claims/v0/fact#Claim>`, a fully qualified URL that can, but need not, be resolvable.
 
 For production use cases, it's best practice to define a formal vocabulary using RDFS notation ([W3C standard](https://www.w3.org/TR/rdf12-schema/)).
 
-So our `trust:Claim` becomes `<https://fact.claims/v0/trust#Claim>`, a fully qualified URI that can, but need not, be resolvable.
+Ours is retrievable from [https://fact.claims/v0/fact](https://fact.claims/v0/fact). 
 
-A best practice vocabulary specifies terms with more precision, and would be retrievable from `https://fact.claims/v0/trust`. 
-
-This allows an agent to make sense of facts by following the links and self-discovering the detailed (schema) definitions.
+This allows any agent to make sense of our (or your) terms by following links to their definitions.
 
 ### And that's it (mostly)! 
 
-- [Publish your fact.claims](/fact.claims)
+- [Claim your facts](/claim)
 
-- [Curating and crawling](/crawling)
+- [Fact Augmented Generation](/howto/fag)
 
-- [Curating and crawling](/crawling)
+- [Curating and crawling](/howto/crawling)
+
+- [SEO for AI](/howto/seo)
+
+- [Querying facts with SPARQL](/howto/sparql)
 
 - [White Paper](/paper/)
 

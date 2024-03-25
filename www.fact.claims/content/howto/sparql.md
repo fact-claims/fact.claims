@@ -1,4 +1,7 @@
-## Some sample SPARQL queries
+---
+layout: page
+---
+# Some sample SPARQL queries
 
 With SPARQL, you can craft queries to retrieve the facts based on complex criteria.
 

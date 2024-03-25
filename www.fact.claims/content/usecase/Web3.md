@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # Web 3.0: Facts vs Smart Contracts
 
 We need web 3.0 to be a web that we can trust, or we risk being washed away by torrents of disinformation.
@@ -34,7 +37,7 @@ Smart contracts enforce trust in Web 3.0 transactions, eliminating intermediarie
 
 Trust chains on the blockchain extend this idea by establishing verifiable provenance, a decentralized web of trusted facts.
 
-Integrating smart contracts with fact graphs enhances accountability, enabling autonomous decisions based on verifiable information.
+Integrating smart contracts with fact webs enhances accountability, enabling autonomous decisions based on verifiable information.
 
 Together, they move us closer to realizing a decentralized and trustworthy internet.
 
@@ -52,7 +55,7 @@ The immutable, tamper-proof IPFS (Interplanetary File System) stores facts forev
 
 2) Transmit the identifier as part of any smart contract event.
 
-An immutable fact graph on IPFS and an assertion on the blockchain, linked to your private key.
+An immutable fact web on IPFS and an assertion on the blockchain, linked to your private key.
 
 ## A Trust-Centric Future or Post-Truth?
 

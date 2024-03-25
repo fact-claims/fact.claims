@@ -1,17 +1,16 @@
 <template>
-  <site-header :menu="settings.menu.header"></site-header>
+  <site-header :menu="settings.menu.header" class=" "></site-header>
   <div class="mx-auto h-screen pt-20 pb-10 flex">
     <!-- Left column for ToC menu -->
     <div class="w-1/4">
       <nav class="prose pl-4">
-        <!-- <ContentDoc v-slot="{ doc }">
-          <h3>{{ settings.brand.name }}</h3>
+        <ContentDoc v-slot="{ doc }">
           <ul>
-            <li v-for="link of doc.body.toc.links" :key="link._path">
-              <a :href="'#' + link.id">{{ link.text }}</a>
+            <li v-for="link of doc.body.toc.links" :key="link.id">
+              <a :href="'#'+link.id">{{ link.text }}</a>
             </li>
           </ul>
-        </ContentDoc> -->
+        </ContentDoc>
       </nav>
     </div>
 
@@ -21,9 +20,9 @@
     </div>
 
     <!-- Right column for tools -->
-    <div class="w-1/4">
-      <h2>Featured Tools</h2>
-    </div>
+    <div class="w-1/4 prose ml-8">
+
+      </div>
   </div>
 
   <!-- <site-footer :menu="settings.menu.footer"></site-footer> -->

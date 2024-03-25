@@ -1,12 +1,8 @@
 
 <template>
-  <div class="text-white mr-0">
-    <nuxt-link
-      class="flex tracking-tight animated-link"
-      to="/"
-    >
-      <nuxt-img v-if="settings?.brand?.logo" :src="settings.brand.logo" width="32"/>
-      <span class="ml-2 text-xl" v-if="settings?.brand?.name" v-text="settings.brand.name"></span>
+  <div class="text-white mr-0" v-if="settings?.brand?.logo" >
+    <nuxt-link class="flex tracking-tight animated-link" to="/">
+      <nuxt-img :src="settings.brand.logo" width="100%" height="32"/>
     </nuxt-link>
   </div>
 </template>

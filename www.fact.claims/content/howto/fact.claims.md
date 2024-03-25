@@ -1,5 +1,8 @@
+---
+layout: page
+---
 
-## Publish fact.claims on your website:
+# Publish fact.claims on your website:
 
 A claimed website contains a set of facts that identify the site, it's resources, concepts, licensing and other statements as required.
 
@@ -16,7 +19,7 @@ The key principles governing fact claims:
 Follow these steps:
 
 1. **Create a `fact.claims` File:** 
-    - Generate a file named fact.claims containing your [RDF statements](./begin.md).
+    - Generate a file named fact.claims containing your [RDF statements](/begin).
     - The `fact.claims` file can choose to use JSON-LD, RDF Turtle, or N3 serialization formats.
    
 2. **Save it to the Root of Your Website:** 
@@ -26,7 +29,7 @@ Follow these steps:
 3. **Publish to IPFS:** 
     - Submit your `fact.claims` file to `https://fact.claims/ipfs/` 
     - Obtain the IPFS hash for your `fact.claims` file.
-    - Your facts are now published as a tamper-proof fact graph.
+    - Your facts are now published as a tamper-proof fact web.
 
 4. **Notarize Your `fact.claims`:** 
     - It's recommend, but not necessary to notarize your `fact claims`.
@@ -43,6 +46,6 @@ Follow these steps:
 ```
 
 5. **Discovering and trusting new facts:**
-    - Any agent (or search engine) can [crawl the facts](./crawling.md) as they are simply standard JSON-LD rich snippets. 
+    - Any agent (or search engine) can [crawl the facts](/crawling) as they are simply standard JSON-LD rich snippets. 
     - A smart observer can listen to `FactClaim` events on the blockchain, to discover new notarized facts.
     - All fact claims are transparently traceable backwards to their originating owner and primary sources.  

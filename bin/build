@@ -1,0 +1,6 @@
+
+cd factify
+npm run link
+cd ..
+cd www.fact.claims
+npm run build

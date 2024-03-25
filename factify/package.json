@@ -20,5 +20,8 @@
     "surveyjs": "^4.0.2",
     "v-network-graph": "^0.9.15",
     "yaml": "^2.4.1"
+  },
+  "dependencies": {
+    "sharp": "^0.33.3"
   }
 }

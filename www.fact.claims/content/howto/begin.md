@@ -1,4 +1,7 @@
-## We need to describe all kinds of things in a structured way. 
+---
+layout: page
+---
+# We need to describe all kinds of things in a structured way. 
 
 RDF is a framework for representing information in the form of statements - our `fact claims`. 
 
@@ -73,13 +76,13 @@ This allows an agent to make sense of facts by following the links and self-disc
 
 ### And that's it (mostly)! 
 
-- [Publish your fact.claims](./fact.claims.md)
+- [Publish your fact.claims](/fact.claims)
 
-- [Curating and crawling](./crawling.md)
+- [Curating and crawling](/crawling)
 
-- [Curating and crawling](./crawling.md)
+- [Curating and crawling](/crawling)
 
-- [White Paper](../paper/index.md)
+- [White Paper](/paper/)
 
-- [RFC v0.4 DRAFT](../rfc/draft.md)
+- [RFC v0.4 DRAFT](/rfc/draft)
 

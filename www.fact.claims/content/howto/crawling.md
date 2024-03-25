@@ -1,10 +1,13 @@
+---
+layout: page
+---
 # Tutorial: Building a Fact Claims Crawler
 
-The fact graph is represented as web of linked data serialized as JSON-LD. 
+The fact web is represented as web of linked data serialized as JSON-LD. 
 
 As required, URLs referenced within the JSON-LD may be dereferenced at the agent's discretion. 
 
-To curate a `grounded` fact graph, we must only start with, and crawl, immutable IPFS URIs (e.g., `ipfs://root-hash`).
+To curate a `grounded` fact web, we must only start with, and crawl, immutable IPFS URIs (e.g., `ipfs://root-hash`).
 
 It's crucial to ensure that data referenced on the public internet is under your custodianship, is trustworthy, and consistently available.
 
@@ -49,17 +52,17 @@ Ensure this starting point is relevant and trustworthy within your domain.
 
 ### 3. Loading Grounded Facts from IPFS:
 
-- Grounded facts act as the foundation of the fact graph.
+- Grounded facts act as the foundation of the fact web.
 - Retrieve facts from the specified IPFS URI.
 - Download and parse data (preferably in JSON-LD format) into new RDF statements.
-- Merge these statements into the fact graph for further processing.
+- Merge these statements into the fact web for further processing.
 
 ### 4. Following Chain of Trust:
 
 - Begin traversal from the root node.
 - Follow relationships like `prov:wasAssociatedWith` and `prov:wasGeneratedBy`.
 - When encountering an object representing a grounded fact (`ipfs://{hash}`), 
-    - Dereference the URI and load the RDF data into the fact graph.
+    - Dereference the URI and load the RDF data into the fact web.
     - For each statement containing grounded facts, follow the chain of trust recursively.
 
 ### 5. Optionally, Retrieving Secondary Facts from Public URLs:
@@ -71,7 +74,7 @@ Ensure this starting point is relevant and trustworthy within your domain.
 
 ### 6. Validating Claims:
 
-- Ensure the fact graph conforms to the `fact.claims` SHACL specification.
+- Ensure the fact web conforms to the `fact.claims` SHACL specification.
 - Employ SHACL validation to check for consistency, integrity, and adherence to predefined rules.
 - Implement automated validation during or post-crawling.
 - Handle any validation errors systematically, providing appropriate feedback or corrective measures.

@@ -1,16 +1,18 @@
-## Fact Claims:
+---
+layout: page
+---
+# Guides and Tutorials:
 
 Ensuring the integrity and trustworthiness of fact claims is essential in any data ecosystem. 
 
+- [Learn the basics](/howto/begin)
 
-## Tutorials:
+- [Publish your fact.claims](/create)
 
-### [Learn the basics](./begin.md)
+- [Fact Augmented Generation](/howto/FAG)
 
-### [Publish your fact.claims](./fact.claims.md)
+- [Curating and crawling](/howto/crawling)
 
-### [Curating and crawling](./crawling.md)
+- [SEO for AI](/howto/seo)
 
-### [SEO for AI](./seo.md)
-
-### [Querying facts with SPARQL](./sparql.md)
+- [Querying facts with SPARQL](/howto/sparql)

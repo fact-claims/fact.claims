@@ -1,21 +1,7 @@
-## Is your AI trustworthy ?
-
-- Build trust among collaborators and stakeholders with transparent governance and legal compliance.
-- Foster a culture of collaboration and inclusivity to drive success in your ventures.
-
-### - Are you ready to take AI to the next level?
-
-- Ensure your AI operates factually with integrity, accountability, and trustworthiness.
-
-### - Join us in shaping a trustworthy AI future.
-
-- **Fact Discovery:** Follow the facts or get notified when a trusted fact graph is updated.
-
-- **Transparent Governance:** Establish trust among collaborators and stakeholders by adopting transparent governance practices and adhering to legal compliance standards.
-
-- **Inclusive Collaboration:** Foster a culture of collaboration and inclusivity to drive success in your ventures, ensuring that diverse perspectives are valued and integrated into decision-making processes.
-
-## Smart Trust: An AI Maturity Model
+---
+layout: page
+---
+# AI Maturity Model
 
 | Stage | Level            | Broad Capabilities                |
 |-------|------------------|-----------------------------------|
@@ -30,10 +16,6 @@
 | 8     | Self-Sufficient  | Generates Profitable Partnerships |
 | 9     | Self-Sovereign   | Self-Aware, Sentient, Responsible |
 | 10    | Self-Fulfilling	 | Eternally Ethical Autonomy        |
-
-### - Take your AI to the next level ...
-
-- A future where AI operates with integrity and accountability, guided by principles of truth, transparency, fairness, and inclusivity.
 
 ## The Path To Autonomy ...
 

@@ -1,22 +1,22 @@
-# Fact Claims: Towards Trustworthy AI
-
-
-We need a simple solution that is easy to implement, based on existing standards, best practices, is future-ready and trustworthy.
-
-- The [fact claims RFC](../rfc/draft.md) proposes a methodology for leveraging the `InterPlanetary File System (IPFS)`, `Linked Data`, and `Smart Contracts` into a trusted web of fact graphs.
-
 ---
+layout: paper
+---
+
+# Fact-based, Trustworthy AI
+
+**A simple solution that is easy to implement, tamper-proof and future-ready.**
 
 ## 1. Problem Statement
 
-
-Addressing the challenges associated with untrusted, raw data lacking ethical or commercial context requires comprehensive approaches that encompass data integrity, attribution, ethical considerations, legal compliance, contextual understanding, bias mitigation, and transparency. 
-
-In 2024, the Internet started buzzing with AI agents, crawlers and language models all vying for their moment of glory. 
+In 2023, the Internet started buzzing with AI agents, crawlers and language models all vying for their moment of glory. 
 
 We've learned that they can be clever, creative, productive and resourceful, but also lacking in integrity, factual grounding and attribution.
 
-As with all new technologies, new challenges also emerged- AI builders struggle to knowing what content is fair use, whether it has restrictive licensing and so on. Content creators need a way to verify and demonstrate ownership, receive attribution even negotiate automatic compensation.
+As with all new technologies, new challenges also emerged.
+
+Content creators need a way to verify and demonstrate ownership, receive attribution even negotiate automatic compensation.
+
+Teams building `AI` struggle to know what content is fair use, whether it has permissive licensing and so on. 
 
 We consider the following challenges with respect to AI so that society benefits as a whole.
 
@@ -40,11 +40,11 @@ We consider the following challenges with respect to AI so that society benefits
 
 2.2. **Semantic Interoperability**: Incorporating standards such as PROV-O, SKOS, and VOID annotations facilitates semantic interoperability. Enable seamless information exchange and collaboration across diverse domains and platforms.
 
-2.3. **Knowledge Curation**: The fact graph should serve as a structured repository for organizing and discovering relevant facts by adhering to standards, ontologies and vocabularies, such as PROV-O, SKOS, and VOID.
+2.3. **Knowledge Curation**: The fact web should serve as a structured repository for organizing and discovering relevant facts by adhering to standards, ontologies and vocabularies, such as PROV-O, SKOS, and VOID.
 
-2.4. **Transparent and Reproducible**: By capturing provenance information using PROV-O, the fact graph enables transparent and reproducible research. Auditors can trace the lineage of data and assertions, understand how they were derived or obtained, and verify their authenticity.
+2.4. **Transparent and Reproducible**: By capturing provenance information using PROV-O, the fact web enables transparent and reproducible research. Auditors can trace the lineage of data and assertions, understand how they were derived or obtained, and verify their authenticity.
 
-2.5. **Reasoning and Analysis**: The fact graph facilitates automated reasoning and analysis. By representing data and relationships using standardized RDF, tools can infer new knowledge, detect patterns, and derive insights.
+2.5. **Reasoning and Analysis**: The fact web facilitates automated reasoning and analysis. By representing data and relationships using standardized RDF, tools can infer new knowledge, detect patterns, and derive insights.
 
 2.6. **Privacy and Security**: While promoting openness and transparency maintain privacy and security of sensitive information. Access control is part of the graph, identifying confidential data, authorized agents, privacy regulations and ethical standards.
 
@@ -52,26 +52,24 @@ We consider the following challenges with respect to AI so that society benefits
 
 ## 3 Fact Claims Architecture
 
-The fact graph is represented as linked data serialized as JSON-LD. 
+In our architecture, a `fact` is a small atomic unit of knowledge - serialized in JSON-LD format.
 
-At runtime, URLs referenced within the JSON-LD, especially those residing outside the IPFS subgraph, may be de-referenced at the agent's discretion. 
+The web links one fact to another - in same or separate documents - a technique called `linked data`.
 
-Additionally, for enhanced human readability, one could publish XHTML documents embedded with JSON-LD, including the millions of sites that already support SEO rich snippets. 
+We consider a `grounded fact` to be one stored on IPFS as an immutable record.
 
-It's crucial to ensure that data referenced on the public internet is under your custodianship, is trustworthy and consistently available. 
+At runtime, URLs within the JSON-LD may be retrieved at the agent's discretion. 
 
-Unlike the IPFS fact claims, Internet-sourced facts need not be immutable, so that dynamic observations may be ingested and inferred by the agent at its discretion. 
-
-This approach enables seamless integration of structured data and semantic annotations within HTML documents, fostering interoperability and facilitating machine-readable interpretation.
+Unlike IPFS, Internet facts are not tamper-proof. They are dynamic so facts may be ingested by the agent, as required. 
 
 The technical architecture for fact claims consists of several key components:
 
 - **IPFS Network:** A peer-to-peer network of nodes running IPFS software, facilitating the storage and retrieval of files using content-based addressing.
-- **Fact Graph:** A graph data structure representing interconnected fact graphs and claims within the decentralized system.
-- **Trust Chains:** Blockchain smart contracts manage governance of an immutable custody chain of fact graphs.
-- **Smart Agents:** Interface with the IPFS network and Internet for storage, retrieval, curation, inference, visualization and publication of fact graphs.
+- **Fact Web:** A graph data structure representing interconnected facts and trust claims within the decentralized system.
+- **Trust Chains:** Blockchain smart contracts can notarize an immutable chain of facts, asserting provenance permanetly.
+- **Smart Agents:** Interface with the IPFS network and Internet for storage, retrieval, curation, inference, visualization and publication of fact webs.
 
-### 3.1 Conceptual Fact Graph
+### 3.1 Conceptual Fact Web
 
 With Linked Data, concepts and documents can be inter-related to describe almost anything.
 
@@ -122,16 +120,4 @@ graph TB;
 - JSON-LD 1.1. [w3.org/TR/json-ld11/](https://www.w3.org/TR/json-ld11/).
 - ERC-20 Token Standard. [ethereum.org/.../erc-20/](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/).
 - Ethereum Smart Contracts. [ethereum.org/.../smart-contracts/](https://ethereum.org/en/developers/docs/smart-contracts/).
-- Trustworthy Agentic Collaboration. [fact.claims](https://fact.claims/rfc/).
-
-## 6. Next Steps
-
-Adopting a standardized approach for representing factual claims enhances transparency, interoperability, and trust among participants. 
-
-By adhering to semantic standards, ontologies, and validation mechanisms, we can effectively collaborate and offer value, innovation and knowledge sharing.
-
-We hope our  methodology paves the way for a future where collaboration thrives securely and reliably.
-
-- [Smart Trust](../trust/)
-- [Case Studies](..`/usecase/)
-- [RFC v0.4 Draft](../rfc/draft.md)
+- Trustworthy AI. [fact.claims RFC](https://fact.claims/rfc/).

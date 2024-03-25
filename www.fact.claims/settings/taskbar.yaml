@@ -1,12 +1,17 @@
-"taskbar": [
-  {
-    "label": "Home",
-    "icon": 'i-heroicons-home',
-    "to": "/",
-  },
-  {
-    "label": "Settings",
-    "icon": 'i-heroicons-command-line',
-    "to": "/account/settings",
-  }
-]
+taskbar:
+- to: "/facts/website"
+  title: Website
+- to: "/facts/business"
+  title: Business Offers
+- to: "/facts/content"
+  title: Content Creators
+- to: "/facts/credentials"
+  title: Credentials
+- to: "/facts/real_easte"
+  title: Real Estate
+- to: "/facts/science"
+  title: Science Research
+- to: "/facts/research"
+  title: Research Data
+- to: "/facts/news"
+  title: News Stories

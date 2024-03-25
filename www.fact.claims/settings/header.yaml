@@ -1,61 +1,33 @@
 "header": [
   {
-    "label": "Agents",
-    "to": "/agent/",
+    "label": "Fact Factory",
+    "to": "/facts/",
     "external": false
   },
   {
-    "label": "Technology",
-    "to": "/tags/tech",
+    "label": "How to",
+    "to": "/howto/",
     "external": false
   },
   {
-    "label": "Capabilities",
-    "to": "/tags/droid",
+    "label": "Solution Domains",
+    "to": "/usecase/",
     "external": false
   },
   {
-    "label": "About",
-    "to": "/tags/about/",
-    "external": false
-  }
-]
-"app_header": [
-  {
-    "label": "Agents",
-    "to": "/agent/",
+    "label": "Trust Model",
+    "to": "/trust/",
     "external": false
   },
   {
-    "label": "Support",
-    "to": "/agent/support",
+    "label": "RFC",
+    "to": "/rfc/draft",
     "external": false
   },
   {
-    "label": "About",
-    "to": "/tags/about/",
-    "external": false
-  }
-]
-"user_header": [
-  {
-    "label": "Agents",
-    "to": "/agent/",
-    "external": false
-  },
-  {
-    "label": "Support",
-    "to": "/agent/support",
-    "external": false
-  },
-  {
-    "label": "Pricing",
-    "to": "/pricing",
-    "external": false
-  },
-  {
-    "label": "About",
-    "to": "/tags/about/",
-    "external": false
+    "label": "Paper",
+    "to": "/paper/",
+    "external": false,
+    "icon": "i-heroicons-light-bulb"
   }
 ]

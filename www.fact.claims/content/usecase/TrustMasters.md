@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # The Role of Trust Master
 
 Trust Masters exist in every business, government, and private homes.

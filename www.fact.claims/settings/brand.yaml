@@ -4,7 +4,7 @@ brand:
   copyright: fact.claims (c) 2025
   domain: fact.claims
 
-  backgroundColor: '#000033'
+  backgroundColor: '#006600'
   color: '#110011'
   paperColor: '#FFFFFF'
   primaryColor: '#06283D'
@@ -13,4 +13,4 @@ brand:
   highlightColor: '#DFF6FF'
 
   favicon: "/favicon.png"
-  logo: "/favicon.png"
+  logo: "/logo.png"

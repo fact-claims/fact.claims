@@ -1,4 +1,7 @@
-## Technical SEO for AI
+---
+layout: page
+---
+# Technical SEO for AI
 
 We know structured data plays a crucial role in improving search engine visibility and enriching results with enhanced snippets. 
 
@@ -10,13 +13,13 @@ These rich snippets can include additional information such as organization deta
 
 However, they are not renowned as reliable quality data.
 
-With `fact.claims` we can improve and also attest to their trustworthiness using our [simple protocol](./fact.claims.md).
+With `fact.claims` we can improve and also attest to their trustworthiness using our [simple protocol](/fact.claims).
 
 ### Rich Snippet Examples
 
 These representations capture the structured data examples for `schema.org` organization, breadcrumb list, article, and products. 
 
-However, to be considered grounded [fact.claims](./fact.claims.md) they must be converted into JSON-LD before being pinned to an `ipfs://` URL.
+However, to be considered grounded [fact.claims](/fact.claims) they must be converted into JSON-LD before being pinned to an `ipfs://` URL.
 
 1. **Organization Markup:**
    ```turtle

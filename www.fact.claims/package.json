@@ -12,11 +12,13 @@
   "dependencies": {
     "@nuxt/content": "^2.12.1",
     "@nuxt/image": "^1.4.0",
+    "@nuxt/ui": "^2.14.2",
     "nuxt": "^3.11.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "factify": "file:../factify"
+    "factify": "file:../factify",
+    "three": "^0.162.0"
   }
 }

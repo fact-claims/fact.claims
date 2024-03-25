@@ -3,8 +3,7 @@
     <div class="bg-current text-gray-100 text-white py-2">
       <div class="container mx-auto">
         <div class="flex flex-column justify-between">
-          <atoms-brand-credit></atoms-brand-credit>
-          <app-menu-footer :menu="settings.menu.footer"></app-menu-footer>
+          <site-credit></site-credit>
         </div>
       </div>
     </div>

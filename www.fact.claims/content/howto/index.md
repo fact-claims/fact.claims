@@ -11,13 +11,13 @@ Ensuring the integrity and trustworthiness of fact claims is essential in any da
 
 - [Claim your facts](/claim)
 
-- [Fact Augmented Generation](/howto/fag)
-
-- [Curating and crawling](/howto/crawling)
+- [Designing a Fact Finder](/howto/crawling)
 
 - [SEO for AI](/howto/seo)
 
 - [Queries and Inferences](/howto/sparql)
 
 - [RDF & Smart Contracts](/usecase/web3)
+
+- [Fact Augmented Generation](/howto/fag)
 

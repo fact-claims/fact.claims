@@ -5,10 +5,7 @@
     "type": "module",
     "scripts": {
       "build": "bin/build",
-      "dev": "nuxt dev",
-      "generate": "nuxt generate",
-      "preview": "nuxt preview",
-      "postinstall": "nuxt prepare",
-      "start": "nuxt build"
+      "generate": "bin/build",
+      "start": "bin/build"
     }
 }  

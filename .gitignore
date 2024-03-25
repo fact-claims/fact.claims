@@ -17,10 +17,6 @@
 *.njsproj
 *.sln
 
-# Ignore npm lock files
-package-lock.json
-yarn.lock
-
 # Ignore environment files
 .env*
 bin

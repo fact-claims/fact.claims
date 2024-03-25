@@ -7,7 +7,7 @@ The `fact web` is represented as linked data serialized as JSON-LD. We find fact
 
 A `published` fact is published on the Internet as an `https://` resource, just like any web page. 
 
-Each fact-ready website hosts a [fact.claims file](/howto/fact.claims), you can start with [our fact.claims](/fact.claims).
+Each fact-ready website hosts a [fact claims file](/howto/fact.claims), you can start with [our fact.claims](/fact.claims).
 
 ## Let's get started ...
 

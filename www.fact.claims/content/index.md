@@ -24,7 +24,7 @@ links:
 
 - **[Published](/claim/):** Online for reference, they may be real time, they may go away.
 
-- **[Grounded](/claim/):** Stored forever, reliably ensuring their verification.
+- **[Grounded](/claim/):** Stored forever, with a tamper-proof fingerprint, ensuring reliable verification.
 
 - **[Notarized](/claim/):** A traceable chain of custody, trusted and signed by a blockchain trustee.
 

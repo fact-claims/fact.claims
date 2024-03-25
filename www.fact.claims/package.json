@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "survey-knockout-ui": "^1.9.135",
-    "three": "^0.162.0"
+    "three": "^0.162.0",
+    "v-network-graph": "^0.9.15"
   }
 }

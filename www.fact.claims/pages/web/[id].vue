@@ -1,10 +1,10 @@
 <template>
   <div class="w-full flex pt-4">
-    <fact-maps class="w-2/3" :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode"></fact-maps>
-    <div class="w-1/3">
+    <fact-maps class="w-1/2" :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode"></fact-maps>
+    <div class="w-1/2">
       <fact-box v-if="selectedNode" :node="selectedNode"/>
-      <div v-else>
-        <ContentDoc path="/web/index"></ContentDoc>
+      <div v-else class="prose">
+        <ContentDoc></ContentDoc>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@ definePageMeta({
 const nodes = ref({})
 const edges = ref({})
 const layouts = ref({})
-const selectedNode = ref({})
+const selectedNode = ref(null)
 
 onMounted(async () => {
   const response = await fetch("/fact.claims.json");

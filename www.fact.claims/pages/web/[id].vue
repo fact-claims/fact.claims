@@ -3,6 +3,9 @@
     <fact-maps class="w-2/3" :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode"></fact-maps>
     <div class="w-1/3">
       <fact-box v-if="selectedNode" :node="selectedNode"/>
+      <div v-else>
+        <ContentDoc path="/web/index"></ContentDoc>
+      </div>
     </div>
   </div>
 </template>

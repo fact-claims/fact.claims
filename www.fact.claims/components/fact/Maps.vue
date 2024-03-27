@@ -73,6 +73,11 @@ const configs = vNG.defineConfigs({
             direction: 'south',
             text: (node: any) => JSONToGraph.label(node),
         },
+        normal: {
+            type: node => node["@type"]?"rect":"circle" ,
+            color: node => node["@type"]?"green":"gray",
+
+        }
     },
 });
 

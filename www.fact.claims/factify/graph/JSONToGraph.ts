@@ -78,6 +78,7 @@ export class JSONToGraph {
   }
 
   public static label(node: Record<string, any>): string {
-    return node['skos:prefLabel'] || node['schema:name'] || node['rdf:label'] || node['rdf:value'] || JSONToGraph.localname(node['@id'])    
+    const label: string = node['skos:prefLabel'] || node['schema:name'] || node['rdf:label'] || node['rdf:value'] || JSONToGraph.localname(node['@id'])    
+    return label.length>24?label.substring(0,24):label;
   }
 }

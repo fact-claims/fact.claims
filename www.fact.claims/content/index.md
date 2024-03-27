@@ -16,7 +16,7 @@ links:
 
 We believe in `trustable data` that grounds AI in our shared reality
 
-- **Fact claims help [fact-seekers](/howto/crawling) to build &amp; explore the [fact web](/web/self)**
+- **Fact claims help [fact-seekers](/howto/crawling) to build &amp; explore your [web of facts](/web/self)**
 - **They are easy to create, tamper-proof, and [forever free](/claim/)** .
 
 Are you are launching a product, creating content, running a business or publishing research ...?

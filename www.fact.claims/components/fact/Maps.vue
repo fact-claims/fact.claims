@@ -74,8 +74,8 @@ const configs = vNG.defineConfigs({
             text: (node: any) => JSONToGraph.label(node),
         },
         normal: {
-            type: node => node["@type"]?"rect":"circle" ,
-            color: node => node["@type"]?"green":"gray",
+            type: node => node["@type"]?"rect":"circle",
+            color: node => Object.keys(node).length>1?"green":"gray",
 
         }
     },

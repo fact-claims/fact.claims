@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <client-only>
     <claims-wizard :claim="claim" @completed="doCompleted" @updated="doUpdated" :singleton="false"></claims-wizard>
       <h1 v-if="!user_response">pending</h1>
       <div v-if="user_response">
         <claims-json :data="user_response"></claims-json>
       </div>
-  </div>
+  </client-only>
 </template>
 
 <script setup lang="ts">
@@ -19,7 +19,7 @@ const { data: claim } = await useAsyncData(`claim-${params.id}`, () => {
 })
 const user_response = ref()
 const ai = ref()
-console.log("claim.wizard: %o", claim)
+// console.log("claim.wizard: %o", claim)
 
 const doCompleted = async (sender: any) => {
   console.log("claim.doCompleted: %o", sender.data)

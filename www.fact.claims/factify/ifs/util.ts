@@ -1,4 +1,4 @@
-import { I_File } from "../types";
+import { I_File } from "..";
 
 export function extractExtension(filename: string) {
     const lastDotIndex = filename.lastIndexOf('.');

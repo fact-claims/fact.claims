@@ -1,4 +1,4 @@
-import { I_CRUD, I_CRUD_ID } from "../types";
+import { I_CRUD, I_CRUD_ID } from "..";
 
 export default class LocalStorageCRUD<T extends I_CRUD_ID> implements I_CRUD<T> {
     private storageKey: string;

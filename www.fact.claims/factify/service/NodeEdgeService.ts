@@ -1,5 +1,5 @@
 import JSONToGraph from "../graph/JSONToGraph";
-import { Graph } from "../types";
+import { Graph } from "..";
 
 export class NodeEdgeService {
     token: string = "";

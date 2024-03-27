@@ -1,6 +1,6 @@
 {
   "name": "www-fact-claims",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": true,
   "type": "module",
   "scripts": {
@@ -20,7 +20,9 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "d3-force": "^3.0.0",
     "survey-knockout-ui": "^1.9.135",
+    "tailwindcss": "^3.4.1",
     "three": "^0.162.0",
     "v-network-graph": "^0.9.15"
   }

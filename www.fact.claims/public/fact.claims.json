@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "cc": "http://creativecommons.org/ns#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "schema": "http://schema.org/",
+    "dc": "http://purl.org/dc/terms/",
+    "fact": "https://fact.claims/v0/fact#",
+    "self": "https://smarttrust.ai/v0/self#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "foaf": "http://xmlns.com/foaf/0.1/"
+  },
+  "@graph": [
+    {
+      "@id": "https://fact.claims/",
+      "@type": ["skos:ConceptScheme", "schema:Organization", "prov:Organization"],
+      "rdf:label": "fact.claims",
+      "schema:name": "fact.claims",
+      "rdf:comment": "A knowledge graph for AI",
+      "skos:prefLabel": "fact.claims",
+      "owl:sameAs": "https://www.fact.claims/",
+      "schema:license": {
+        "@id": "http://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "skos:member": [
+        {"@id": "https://smarttrust.ai/v0/self#TrustworthyAI"},
+        {"@id": "https://smarttrust.ai/v0/self#ReliableAI"},
+        {"@id": "https://smarttrust.ai/v0/self#TransparentAI"},
+        {"@id": "https://smarttrust.ai/v0/self#AccountableAI"},
+        {"@id": "https://smarttrust.ai/v0/self#IPFS"},
+        {"@id": "https://smarttrust.ai/v0/self#LinkedData"},
+        {"@id": "https://smarttrust.ai/v0/self#Claim"},
+        {"@id": "https://smarttrust.ai/v0/self#DAO"},
+        {"@id": "https://smarttrust.ai/v0/self#Notarized"}
+      ],
+      "prov:wasAssociatedWith": {"@id": "https://smarttrust.ai/v0/self#"},
+      "prov:wasGeneratedBy": {"@id": "https://smarttrust.ai/v0/self#"}
+    },
+    {
+      "@id": "https://fact.claims/logo.png",
+      "rdf:label": "fact.claims logo",
+      "prov:wasAssociatedWith": {"@id": "https://fact.claims/"},
+      "prov:wasGeneratedBy": {"@id": "https://smarttrust.ai/v0/self#"}
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#",
+      "@type": ["schema:Organization", "prov:Organization"],
+      "rdf:label": "smart trust",
+      "schema:name": "smart trust",
+      "skos:prefLabel": "smart trust",
+      "owl:sameAs": "https://www.smarttrust.ai/",
+      "prov:wasAssociatedWith": {"@id": "ethereum://0x0000000000000000000000000000000000000000"},
+      "prov:wasGeneratedBy": {"@id": "https://smarttrust.ai/v0/self#"}
+    },
+    {
+      "@id": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "@type": "cc:License",
+      "cc:licenseClass": {"@id": "http://creativecommons.org/license/"},
+      "cc:permits": ["cc:DerivativeWorks", "cc:Distribution", "cc:Reproduction"],
+      "cc:requires": ["cc:Attribution", "cc:Notice", "cc:ShareAlike"],
+      "dc:creator": {"@id": "http://creativecommons.org"},
+      "dc:hasVersion": "4.0",
+      "dc:identifier": "by-sa",
+      "dc:source": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "foaf:logo": [
+        {"@id": "http://licensebuttons.net/l/by-sa/4.0/80x15.png"},
+        {"@id": "http://licensebuttons.net/l/by-sa/4.0/88x31.png"}
+      ],
+      "owl:sameAs": "https://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ]
+}

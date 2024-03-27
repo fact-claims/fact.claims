@@ -1,4 +1,4 @@
-import { I_CRUD } from "../types";
+import { I_CRUD } from "..";
 
 class CrudAPI<T> implements I_CRUD<T> {
 

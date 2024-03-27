@@ -1,5 +1,5 @@
 import AWS from 'aws-sdk';
-import { I_FileReader, I_FileWriter, I_Filing, I_File, I_ContentFile, I_Folder } from '../types';
+import { I_FileReader, I_FileWriter, I_Filing, I_File, I_ContentFile, I_Folder } from '..';
 import { toID } from './util';
 
 export class S3Store implements I_FileReader<string>, I_FileWriter<string>, I_Filing {

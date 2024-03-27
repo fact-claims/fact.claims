@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { I_FileReader, I_File, I_ContentFile, I_Folder, I_FileWriter } from '../types';
+import { I_FileReader, I_File, I_ContentFile, I_Folder, I_FileWriter } from '..';
 import yaml from 'yaml';
 import { extractExtension, toID, toName } from './util';
 import path from 'path'

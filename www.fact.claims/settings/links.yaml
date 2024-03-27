@@ -1,4 +1,6 @@
 links:
+- to: "/web/self"
+  title: view our fact map
 - to: "https://github.com/fact-claims/fact.claims/"
   title: source code
 - to: "https://fact.claims/"

@@ -1,48 +1,83 @@
-import { Graph, Node, Edge } from "../types";
+import type { Node, Edge } from "v-network-graph";
 
-export default class JSONToGraph {
-  private nodeIdCounter = 0;
-  private edgeIdCounter = 0;
-  private nodes: Record<string, Node> = {};
-  private edges: Record<string, Edge> = {};
+const localPartRegex = new RegExp("[^/]+(?=#|$)");
 
-  constructor(private data: any, private predicate: string) { }
+export class JSONToGraph {
+  nodes: Record<string, Node>;
+  edges: Record<string, Edge>;
 
-  private generateNodeId(): string {
-    this.nodeIdCounter++;
-    return `node${this.nodeIdCounter}`;
+  constructor(data: any, nodes: Record<string, Node> = {}, edges: Record<string, Edge> = {}) {
+    this.nodes = nodes;
+    this.edges = edges;
+    this.flatten(data);
   }
 
-  private generateEdgeId(): string {
-    this.edgeIdCounter++;
-    return `edge${this.edgeIdCounter}`;
-  }
+  private flatten(nodes: Record<string, any>[]) {
+    console.log("map.graph: %o", nodes);
 
-  private traverse(node: any, parentId?: string) {
-    const nodeId = this.generateNodeId();
-
-    this.nodes[nodeId] = node;
-
-    if (parentId) {
-      this.edges[this.generateEdgeId()] = {
-        source: parentId,
-        target: nodeId
-      } as any;
+    for (const node of nodes) {
+      this.traverse(node, null);
     }
+  }
 
-    if (node[this.predicate]) {
-      for (const child of node[this.predicate]) {
-        this.traverse(child, nodeId);
+  private handleArray(key: string, value: any[], pid: string) {
+
+    value.forEach((item: Record<string, any>, index: number) => {
+      if (typeof item === 'object' && item !== null) {
+        const nid = this.traverse(item);
+        const edgeId = `${pid}_${key}_${nid}`;
+        this.edges[edgeId] = { source: pid, target: nid, label: key };
+        console.log("map.edge: %o --> %o => %o", pid, key, nid);
       }
-    }
+    });
   }
 
-  toGraph(): Graph {
-    this.traverse(this.data);
-    return {
-      nodes: this.nodes,
-      edges: this.edges,
-      layouts: { nodes: {} }
-    };
+  private handleObject(key: string, node: Record<string, any>, pid: string) {
+    const nid = node['@id'];
+    if (!nid) {
+      console.log("map.skip: %o --> %o => %o", pid, key, nid);
+      return;
+    }
+    delete node[key];
+    const edgeId = `${pid}_${key}`;
+    this.edges[edgeId] = { source: pid, target: nid, label: key };
+    if (nid) {
+      console.log("map.object: %o --> %o --> %o  --> %o ----> %o", pid, key, nid, node, edgeId);
+      this.traverse(node);
+    }
+}
+
+  private traverse(node: Record<string, any>) {
+    const nid = node["@id"];
+    console.log("map.node: %o -> %o", nid, node);
+
+    Object.entries(node).forEach(([key, value]) => {
+      if (key === '@id') {
+        console.log("map.id: %o --> %o == %s", nid, node, this.nodes[nid]);
+        this.nodes[nid] = this.nodes[nid] || node;
+      } else if (Array.isArray(value)) {
+        console.log("map.array: %o --> %o => %o", nid, key, value);
+        this.handleArray(key, value, nid);
+      } else if (typeof value === 'object' && value !== null) {
+        this.handleObject(key, value, nid);
+      } else {
+        // console.log("map.string: %o --> %o => %o", nid, key, value);
+        this.nodes[nid][key] = value;
+        }
+    });
+    return nid;
+  }
+
+  public getes(): { nodes: Record<string, Node>, edges: Record<string, Edge> } {
+    return { nodes: this.nodes, edges: this.edges };
+  }
+
+  public static localname(uri: string): string {
+    const found = uri ? uri.match(localPartRegex) : "[?]";
+    return found ? found[0] : uri;
+  }
+
+  public static label(node: Record<string, any>): string {
+    return node['skos:prefLabel'] || node['schema:name'] || node['rdf:label'] || node['rdf:value'] || JSONToGraph.localname(node['@id'])    
   }
 }

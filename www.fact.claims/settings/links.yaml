@@ -1,6 +1,6 @@
 links:
 - to: "/web/self"
-  title: view our fact map
+  title: live demo
 - to: "https://github.com/fact-claims/fact.claims/"
   title: source code
 - to: "https://fact.claims/"

@@ -35,7 +35,7 @@ Are you are launching a product, creating content, running a business or publish
 
 ## The technicalities:
 
-- [RDF: Trustworthy Agentic Collaboration across Autonomous Decentralized Ecosystems](/rfc/draft)
+- [RFC: Trustworthy Agentic Collaboration across Autonomous Decentralized Ecosystems](/rfc/draft)
 
 - [Learn the basics](/howto/begin)
 

@@ -16,7 +16,7 @@ links:
 
 **We believe in `trustable data` that grounds AI in our shared reality**
 
-- **Fact claims are [free and forever](/claim/) - they helpf [fact-seekers](/howto/crawling) to [navigate our world](/web/self)** .
+- **Fact claims are [free and forever](/claim/) - they help [fact-seekers](/howto/crawling) to navigate with a [map of facts](/web/self)** .
 
 **The web was flooded with content - now it's drowning in spam ...**
 

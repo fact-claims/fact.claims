@@ -2,7 +2,7 @@
 layout: home
 links:
 - to: "/web/self"
-  title: view our fact map
+  title: live demo
 - to: "https://github.com/fact-claims/fact.claims/"
   title: source code
 - to: "https://fact.claims/"
@@ -14,9 +14,9 @@ links:
 ---
 # Trustworthy AI needs facts
 
-**We imagine a tamper-proof web of facts that grounds AI in our shared reality**
+**We believe in `trustable data` that grounds AI in our shared reality**
 
-- **Fact claims are [free and forever](/claim/) - please help [fact-seekers](/howto/crawling) to [navigate reality](/web/self)** .
+- **Fact claims are [free and forever](/claim/) - they helpf [fact-seekers](/howto/crawling) to [navigate our world](/web/self)** .
 
 **The web was flooded with content - now it's drowning in spam ...**
 

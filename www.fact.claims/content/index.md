@@ -14,11 +14,12 @@ links:
 ---
 # Trustworthy AI needs facts
 
-**We believe in `trustable data` that grounds AI in our shared reality**
+We believe in `trustable data` that grounds AI in our shared reality
 
-- **Fact claims are [free and forever](/claim/) - they help [fact-seekers](/howto/crawling) to navigate with a [map of facts](/web/self)** .
+- **Fact claims help [fact-seekers](/howto/crawling) to build &amp; explore the [fact web](/web/self)**
+- **They are easy to create, tamper-proof, and [forever free](/claim/)** .
 
-**The web was flooded with content - now it's drowning in spam ...**
+Are you are launching a product, creating content, running a business or publishing research ...?
 
 ## Introducing fact.claims ...
 

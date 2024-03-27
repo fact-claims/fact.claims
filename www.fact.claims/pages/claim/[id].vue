@@ -9,9 +9,6 @@
 </template>
 
 <script setup lang="ts">
-// @ts-expect-error avoid lint error
-import markdownParser from '@nuxt/content/transformers/markdown';
-
 const router = useRouter();
 const { params } = useRoute();
 const { data: claim } = await useAsyncData(`claim-${params.id}`, () => {

@@ -16,8 +16,8 @@ links:
 
 We believe AI needs to trained on curated, `trustable` data so it is `grounded` and trustworthy:
 
-- **We help [fact-seekers](/howto/crawling) to build &amp; explore a trustable [web of facts](/web/self)**
-- **Join us ... fact claims are easy to create, tamper-proof, decentralized and [forever free](/claim/)** .
+- **You can help [AI agents](/howto/crawling) to find, verify and collaborate on [your facts](/web/self)**
+- **Join in ... fact claims are easy to create, tamper-proof, decentralized and [forever free](/claim/)** .
 
 Are you are launching a product, creating content, running a business or publishing research ...?
 

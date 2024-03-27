@@ -1,7 +1,11 @@
 <template>
   <div class="w-full flex pt-4">
+    <div class="w-1/4 prose">
+      <site-tool-menu></site-tool-menu>
+
+  </div>
     <fact-maps class="w-1/2" :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode"></fact-maps>
-    <div class="w-1/2">
+    <div class="w-1/4">
       <fact-box v-if="selectedNode" :node="selectedNode"/>
       <div v-else class="prose">
         <ContentDoc></ContentDoc>

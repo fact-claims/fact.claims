@@ -1,15 +1,16 @@
 <template>
     <div class="h-screen w-full">
         <v-network-graph ref="graph" :nodes="nodes" :edges="edges" :layouts="layouts || {}" :configs="configs"
-        v-model:selected-nodes="selectedNodes" v-model:selected-edges="selectedEdges" :event-handlers="eventHandlers">
-        <template #edge-label="{ edge, ...slotProps }">
-            <v-edge-label :text="edge.label" align="center" vertical-align="above" v-bind="slotProps" />
-        </template>
-    </v-network-graph>
+            v-model:selected-nodes="selectedNodes" v-model:selected-edges="selectedEdges"
+            :event-handlers="eventHandlers">
+            <template #edge-label="{ edge, ...slotProps }">
+                <v-edge-label :text="edge.label" align="center" vertical-align="above" v-bind="slotProps" />
+            </template>
+        </v-network-graph>
 
-    <div v-if="targetNodeId" ref="tooltip" class="tooltip" :style="{ ...tooltipPos, opacity: tooltipOpacity }">
-        <div>{{ nodes[targetNodeId]?.name || "" }}</div>
-    </div>
+        <div v-if="targetNodeId" ref="tooltip" class="tooltip" :style="{ ...tooltipPos, opacity: tooltipOpacity }">
+            <div>{{ nodes[targetNodeId]?.name || "" }}</div>
+        </div>
 
     </div>
 </template>
@@ -21,12 +22,12 @@ import { ForceLayout } from 'v-network-graph/lib/force-layout';
 import { JSONToGraph } from '~/factify';
 
 const props = defineProps({
-    nodes: { type: Object as () => Record<string,vNG.Node>, required: true },
-    edges: { type: Object as () => Record<string,vNG.Edge>, required: true },
+    nodes: { type: Object as () => Record<string, vNG.Node>, required: true },
+    edges: { type: Object as () => Record<string, vNG.Edge>, required: true },
 })
 const emit = defineEmits<{
     selectNode: [node: Record<string, any>]
-    hoverNode: [node: Record<string, any>|null]
+    hoverNode: [node: Record<string, any> | null]
 }>()
 
 const graph = ref();
@@ -56,6 +57,21 @@ const configs = vNG.defineConfigs({
                     .alphaMin(0.001);
             },
         }),
+        xgrid: {
+            visible: true,
+            interval: 10,
+            thickIncrements: 5,
+            line: {
+                color: "#e0e0e0",
+                width: 1,
+                dasharray: 1,
+            },
+            thick: {
+                color: "#cccccc",
+                width: 1,
+                dasharray: 0,
+            },
+        },
     },
     edge: {
         selectable: true,
@@ -74,8 +90,8 @@ const configs = vNG.defineConfigs({
             text: (node: any) => JSONToGraph.label(node),
         },
         normal: {
-            type: node => node["@type"]?"rect":"circle",
-            color: node => Object.keys(node).length>1?"green":"gray",
+            type: node => node["@type"] ? "rect" : "circle",
+            color: node => Object.keys(node).length > 1 ? "green" : "gray",
 
         }
     },

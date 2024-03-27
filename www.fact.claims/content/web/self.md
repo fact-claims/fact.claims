@@ -11,7 +11,7 @@
 - A `gray` claim can be explored and expanded 
 
 
-### Stil work in progress
+### Still work in progress
 
 - Click a `green` fact box to view details
 - Clicking `gray` claims is work-in-progress

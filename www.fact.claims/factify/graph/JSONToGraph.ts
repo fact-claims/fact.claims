@@ -1,6 +1,6 @@
 import type { Node, Edge } from "v-network-graph";
 
-const localPartRegex = new RegExp("[^/]+(?=#|$)");
+const localPartRegex = new RegExp("[^#]+(?=[^#/]*$)");
 
 export class JSONToGraph {
   nodes: Record<string, Node>;

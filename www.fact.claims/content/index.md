@@ -14,10 +14,10 @@ links:
 ---
 # Trustworthy AI needs facts
 
-We believe in `trustable data` that grounds AI in our shared reality
+We believe AI needs to trained on curated, `trustable` data so it is `grounded` and trustworthy:
 
-- **Fact claims help [fact-seekers](/howto/crawling) to build &amp; explore your [web of facts](/web/self)**
-- **They are easy to create, tamper-proof, and [forever free](/claim/)** .
+- **We help [fact-seekers](/howto/crawling) to build &amp; explore a trustable [web of facts](/web/self)**
+- **Join us ... fact claims are easy to create, tamper-proof, decentralized and [forever free](/claim/)** .
 
 Are you are launching a product, creating content, running a business or publishing research ...?
 

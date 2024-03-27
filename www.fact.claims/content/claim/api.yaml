@@ -1,0 +1,55 @@
+title: API Claim
+description: Tell us a little about your API
+logoPosition: right
+meta:
+  goto: "/ai/render/website/"
+openai:
+  endpoint: /api/
+pages:
+  - name: "business_name_description"
+    description: Tell us about your API
+    elements:
+      - type: "text"
+        name: "schema:name"
+        title: "What is the name of your API?"
+        isRequired: true
+      - type: "text"
+        name: "schema:description"
+        title: "Please provide a brief description of your API."
+        isRequired: true
+
+  - name: "business_website_logo"
+    description: "We want to get your branding right"
+    elements:
+      - type: "text"
+        name: "schema:url"
+        title: "What is the URL of your API website?"
+        isRequired: true
+        validate:
+          - type: url
+            text: "Avalid URL for your API website (https://)"
+      - type: "text"
+        name: "schema:image"
+        title: "What is the URL of your API logo?"
+        isRequired: true
+        validate:
+          - type: url
+            text: "Avalid URL for your API logo (image format: jpg, png, etc.)"
+
+  - name: "business_contact"
+    elements:
+      - type: "text"
+        name: "schema:address"
+        title: "What is the address of your API?"
+        isRequired: false
+      - type: "text"
+        name: "schema:telephone"
+        title: "What is the telephone number of your API?"
+        isRequired: false
+      - type: "text"
+        name: "schema:email"
+        title: "What is the email address of your API?"
+        isRequired: false
+        validate:
+          - type: email
+            text: "Avalid email address for your API"

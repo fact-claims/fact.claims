@@ -7,6 +7,10 @@ taskbar:
   title: Claim your Content
 - to: "/claim/life"
   title: Claim a Lived Experience
+- to: "/claim/ai"
+  title: Claim your AI
+- to: "/claim/api"
+  title: Claim your API
 - to: "/claim/credentials"
   title: Claim your Expertise
 - to: "/claim/realestate"

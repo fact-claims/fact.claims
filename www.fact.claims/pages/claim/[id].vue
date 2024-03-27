@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <claims-wizard :claim="claim" @completed="doCompleted" @updated="doUpdated" :singleton="false"></claims-wizard>
-      <h1 v-if="!user_response">pending</h1>
+      <!-- <h1 v-if="!user_response">pending</h1> -->
       <div v-if="user_response">
         <claims-json :data="user_response"></claims-json>
       </div>

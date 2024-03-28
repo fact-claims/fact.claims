@@ -5,6 +5,14 @@ meta:
   goto: "/ai/render/website/"
 openai:
   endpoint: /api/
+template:
+  "schema:name": "{{schema:name}}"
+  "schema:description": "{{schema:description}}"
+  "schema:url": "{{schema:url}}"
+  "schema:image": "{{schema:image}}"
+  "schema:address": "{{schema:address}}"
+  "schema:telephone": "{{schema:telephone}}"
+  "schema:email": "{{schema:email}}"
 pages:
   - name: "business_name_description"
     description: Tell us about your AI
@@ -52,4 +60,4 @@ pages:
         isRequired: false
         validate:
           - type: email
-            text: "Avalid email address for your AI"
+            text: "A valid email address for your AI"

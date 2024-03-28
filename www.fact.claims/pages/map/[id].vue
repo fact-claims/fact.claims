@@ -1,13 +1,15 @@
 <template>
   <div class="w-full flex pt-4">
-    <div class="w-1/4 prose">
+    <div class="w-1/6 prose">
       <site-tool-menu></site-tool-menu>
+    </div>
+    <div class="w-1/3">
+      <fact-maps :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode"></fact-maps>
+    </div>
 
-  </div>
-    <fact-maps class="w-1/2" :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode"></fact-maps>
-    <div class="w-1/4">
-      <fact-box v-if="selectedNode" :node="selectedNode"/>
-      <div v-else class="prose">
+    <div class="w-1/2 prose ">
+      <fact-box v-if="selectedNode" :node="selectedNode" />
+      <div v-else>
         <ContentDoc></ContentDoc>
       </div>
     </div>
@@ -16,7 +18,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { JSONToGraph } from "../../factify"
+import { LDToGraph } from "../../factify"
 
 definePageMeta({
   layout: 'app'
@@ -31,7 +33,7 @@ onMounted(async () => {
   const response = await fetch("/fact.claims.json");
   const json = await response.json();
   // console.log("claim.json: %o", json);
-  const j2g = new JSONToGraph(json["@graph"]);
+  const j2g = new LDToGraph(json["@graph"]);
   console.log("claim.j2g: %o", j2g);
   nodes.value = j2g.nodes;
   edges.value = j2g.edges;

@@ -1,6 +1,6 @@
 import { Graph, Node, Edge } from "../types";
 
-export default class JSONToGraph {
+export default class LDToGraph {
   private nodeIdCounter = 0;
   private edgeIdCounter = 0;
   private nodes: Record<string, Node> = {};

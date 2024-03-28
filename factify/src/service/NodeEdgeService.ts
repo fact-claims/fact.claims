@@ -1,4 +1,4 @@
-import JSONToGraph from "../graph/JSONToGraph";
+import LDToGraph from "../graph/LDToGraph";
 import { Graph } from "../types";
 
 export class NodeEdgeService {
@@ -20,7 +20,7 @@ export class NodeEdgeService {
         if (json.nodes && json.edges) {
             return Promise.resolve(json);
         } else {
-            const j2g = new JSONToGraph(json, "narrower")
+            const j2g = new LDToGraph(json, "narrower")
             return Promise.resolve(j2g.toGraph())
         }
 

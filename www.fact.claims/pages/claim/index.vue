@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
 
+definePageMeta({
+  layout: 'app'
+})
+
 const query: QueryBuilderParams = {
   where: [{
     "_dir": "claim"

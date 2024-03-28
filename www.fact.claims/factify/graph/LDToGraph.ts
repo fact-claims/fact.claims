@@ -2,7 +2,7 @@ import type { Node, Edge } from "v-network-graph";
 
 const localPartRegex = new RegExp("[^#]+(?=[^#/]*$)");
 
-export class JSONToGraph {
+export class LDToGraph {
   nodes: Record<string, Node>;
   edges: Record<string, Edge>;
 
@@ -16,7 +16,7 @@ export class JSONToGraph {
     console.log("map.graph: %o", nodes);
 
     for (const node of nodes) {
-      this.traverse(node, null);
+      this.traverse(node);
     }
   }
 
@@ -50,6 +50,7 @@ export class JSONToGraph {
   private traverse(node: Record<string, any>) {
     const nid = node["@id"];
     console.log("map.node: %o -> %o", nid, node);
+    if (!nid) return null;
 
     Object.entries(node).forEach(([key, value]) => {
       if (key === '@id') {
@@ -60,9 +61,9 @@ export class JSONToGraph {
         this.handleArray(key, value, nid);
       } else if (typeof value === 'object' && value !== null) {
         this.handleObject(key, value, nid);
-      } else {
-        // console.log("map.string: %o --> %o => %o", nid, key, value);
-        this.nodes[nid][key] = value;
+      } else if (key && value) {
+        console.log("map.string: %o --> %o => %o", nid, key, value);
+        this.nodes[nid][key] = ""+value;
         }
     });
     return nid;
@@ -78,7 +79,7 @@ export class JSONToGraph {
   }
 
   public static label(node: Record<string, any>): string {
-    const label: string = node['skos:prefLabel'] || node['schema:name'] || node['rdf:label'] || node['rdf:value'] || JSONToGraph.localname(node['@id'])    
+    const label: string = node['skos:prefLabel'] || node['schema:name'] || node['rdf:label'] || node['rdf:value'] || LDToGraph.localname(node['@id'])    
     return label.length>24?label.substring(0,24):label;
   }
 }

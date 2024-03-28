@@ -1,6 +1,6 @@
 <template>
     <div  class="border rounded prose p-4 mr-4">
-        <h3 class="">{{ JSONToGraph.label(node) }}</h3>
+        <h3 class="">{{ LDToGraph.label(node) }}</h3>
       <div v-for="(value, key) in node" :key="key" class="flex pt-2">
         <div class="w-1/4"><b>{{ key }}</b></div>
         <div class="w-3/4" v-html="format(value)"></div>
@@ -10,7 +10,7 @@
 
 
 <script setup lang="ts">
-import { JSONToGraph } from '~/factify';
+import { LDToGraph } from '~/factify';
 
 
 const props = defineProps({
@@ -32,7 +32,7 @@ const format = (value: any): string => {
         return value.map( v => format(v)).join(", ")
     }
     if (typeof value == "object" ) {
-        return '<a href="'+value["@id"]+ '">'+JSONToGraph.label(value)+"</a>";
+        return '<a href="'+value["@id"]+ '">'+LDToGraph.label(value)+"</a>";
 
     }
     return value?.toString() || "?";

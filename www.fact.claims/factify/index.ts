@@ -1,6 +1,7 @@
 export { fingerprint } from "./utils/id";
 export type {  JSONSchema, JSONSchemaProperty, inferJSONSchema, SurveyJSObject, SurveyJSPage, SurveyJSQuestion } from "./graph/Survey"
-export { JSONToGraph } from "./graph/JSONToGraph"
+export { LDToGraph } from "./graph/LDToGraph"
+export { ClaimsToLD } from "./graph/ClaimsToLD"
 export type { NodeEdgeService} from "./service/NodeEdgeService";
 export { loadSettings } from "./utils/settings";
 

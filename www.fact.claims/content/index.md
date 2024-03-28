@@ -1,7 +1,7 @@
 ---
 layout: home
 links:
-- to: "/web/self"
+- to: "/map/self"
   title: live demo
 - to: "https://github.com/fact-claims/fact.claims/"
   title: source code
@@ -16,7 +16,7 @@ links:
 
 We believe AI needs to trained on curated, `trustable` data so it is `grounded` and trustworthy:
 
-- **You can help [AI agents](/howto/crawling) to find, verify and collaborate on [your facts](/web/self)**
+- **You can help [AI agents](/howto/crawling) to find, verify and collaborate on [your facts](/map/self)**
 - **Join in ... fact claims are easy to create, tamper-proof, decentralized and [forever free](/claim/)** .
 
 Are you are launching a product, creating content, running a business or publishing research ...?

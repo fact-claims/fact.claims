@@ -19,7 +19,7 @@
 import { ref, defineProps, defineEmits, computed, watch } from 'vue';
 import * as vNG from 'v-network-graph';
 import { ForceLayout } from 'v-network-graph/lib/force-layout';
-import { JSONToGraph } from '~/factify';
+import { LDToGraph } from '~/factify';
 
 const props = defineProps({
     nodes: { type: Object as () => Record<string, vNG.Node>, required: true },
@@ -54,6 +54,7 @@ const configs = vNG.defineConfigs({
                     .force('charge', d3.forceManyBody())
                     .force('collide', d3.forceCollide(50).strength(0.2))
                     .force('center', d3.forceCenter().strength(0.05))
+                    .force('y', d3.forceY(0))
                     .alphaMin(0.001);
             },
         }),
@@ -87,7 +88,7 @@ const configs = vNG.defineConfigs({
             color: '#000000',
             margin: 2,
             direction: 'south',
-            text: (node: any) => JSONToGraph.label(node),
+            text: (node: any) => LDToGraph.label(node),
         },
         normal: {
             type: node => node["@type"] ? "rect" : "circle",

@@ -18,7 +18,7 @@
       "@type": ["skos:ConceptScheme", "schema:Organization", "prov:Organization"],
       "rdf:label": "fact.claims",
       "schema:name": "fact.claims",
-      "rdf:comment": "A knowledge graph for AI",
+      "rdf:comment": "Tools to help AI builders to find, publish and curate trustable knowledge.",
       "skos:prefLabel": "fact.claims",
       "owl:sameAs": "https://www.fact.claims/",
       "schema:license": {
@@ -35,7 +35,6 @@
         {"@id": "https://smarttrust.ai/v0/self#DAO"},
         {"@id": "https://smarttrust.ai/v0/self#Notarized"}
       ],
-      "prov:wasAssociatedWith": {"@id": "https://smarttrust.ai/v0/self#"},
       "prov:wasGeneratedBy": {"@id": "https://smarttrust.ai/v0/self#"}
     },
     {
@@ -69,6 +68,60 @@
         {"@id": "http://licensebuttons.net/l/by-sa/4.0/88x31.png"}
       ],
       "owl:sameAs": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#TrustworthyAI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Trustworthy AI",
+      "skos:definition": "AI trained on curated, trustable data, grounded and reliable, contributing to trustworthy outcomes."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#ReliableAI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Reliable AI",
+      "skos:definition": "AI agents capable of finding, verifying, and collaborating on facts, ensuring grounded and reliable information."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#TransparentAI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Transparent AI",
+      "skos:definition": "AI with transparent fact claims, easily created, tamper-proof, decentralized, and freely accessible."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#AccountableAI",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Accountable AI",
+      "skos:definition": "AI accountable for the reliability and longevity of published claims, contributing to transparent and credible knowledge."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#IPFS",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "IPFS",
+      "skos:definition": "InterPlanetary File System (IPFS) for storing forever, with a tamper-proof fingerprint, ensuring reliable verification of facts."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#LinkedData",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Linked Data",
+      "skos:definition": "Data associated with unique actions or entities, sourced through established connections, ensuring traceability and reliability."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#Claim",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Claim",
+      "skos:definition": "Specific facts associated with unique actions or entities, traceable through established connections, and published online for reference."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#DAO",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "DAO",
+      "skos:definition": "Decentralized Autonomous Organization (DAO) ensuring a traceable chain of custody, trusted, and signed by blockchain trustees."
+    },
+    {
+      "@id": "https://smarttrust.ai/v0/self#Notarized",
+      "@type": "skos:Concept",
+      "skos:prefLabel": "Notarized",
+      "skos:definition": "Fact claims notarized with a traceable chain of custody, trusted, and signed by blockchain trustees, ensuring credibility and authenticity."
     }
   ]
 }

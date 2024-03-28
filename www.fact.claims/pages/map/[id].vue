@@ -3,8 +3,8 @@
     <div class="w-1/6 prose">
       <site-tool-menu></site-tool-menu>
     </div>
-    <div class="w-1/3">
-      <fact-maps :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode"></fact-maps>
+    <div class="w-1/3 ">
+      <fact-maps :nodes="nodes" :edges="edges" @selectNode="onSelectNode" @hoverNode="onHoverNode" class="factmap"</fact-maps>
     </div>
 
     <div class="w-1/2 prose ">
@@ -50,6 +50,9 @@ const onHoverNode = (node: any) => {
 </script>
 
 <style>
+.factmap {
+  min-height: 750px;
+}
 .fact-box a {
   color: #008800;
 }

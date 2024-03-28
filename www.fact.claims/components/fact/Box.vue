@@ -1,6 +1,6 @@
 <template>
     <div  class="border rounded prose p-4 mr-4">
-        <h3 class="">{{ LDToGraph.label(node) }}</h3>
+        <h3 class="">{{ LDToGraph.label(node,64) }}</h3>
       <div v-for="(value, key) in node" :key="key" class="flex pt-2">
         <div class="w-1/4"><b>{{ key }}</b></div>
         <div class="w-3/4" v-html="format(value)"></div>

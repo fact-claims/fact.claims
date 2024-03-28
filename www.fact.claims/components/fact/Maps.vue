@@ -53,8 +53,8 @@ const configs = vNG.defineConfigs({
                     .force('edge', forceLink.distance(100))
                     .force('charge', d3.forceManyBody())
                     .force('collide', d3.forceCollide(50).strength(0.2))
-                    .force('center', d3.forceCenter().strength(0.05))
-                    .force('y', d3.forceY(0))
+                    // .force('center', d3.forceCenter().strength(0.05))
+                    // .force('y', d3.forceY(0))
                     .alphaMin(0.001);
             },
         }),

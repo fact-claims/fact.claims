@@ -15,12 +15,12 @@
   "@graph": [
     {
       "@id": "https://fact.claims/",
-      "@type": ["skos:ConceptScheme", "schema:Organization", "prov:Organization"],
+      "@type": ["skos:ConceptScheme", "schema:Organization", "prov:Organization", "schema:WebPage"],
       "rdf:label": "fact.claims",
       "schema:name": "fact.claims",
-      "rdf:comment": "Tools to help AI builders to find, publish and curate trustable knowledge.",
+      "rdf:comment": "Help AI to discover, publish, research and curate trustworthy knowledge.",
       "skos:prefLabel": "fact.claims",
-      "owl:sameAs": "https://www.fact.claims/",
+      "rdfs:seeAlso": "https://www.fact.claims/",
       "schema:license": {
         "@id": "http://creativecommons.org/licenses/by-sa/4.0/"
       },
@@ -35,6 +35,14 @@
         {"@id": "https://smarttrust.ai/v0/self#DAO"},
         {"@id": "https://smarttrust.ai/v0/self#Notarized"}
       ],
+      "prov:wasGeneratedBy": {"@id": "https://smarttrust.ai/v0/self#"}
+    },
+    {
+      "@id": "https://www.fact.claims/",
+      "@type": ["schema:WebPage"],
+      "schema:name": "fact.claims website",
+      "rdfs:seeAlso": "https://fact.claims/",
+      "prov:wasAssociatedWith": {"@id": "https://fact.claims/"},
       "prov:wasGeneratedBy": {"@id": "https://smarttrust.ai/v0/self#"}
     },
     {

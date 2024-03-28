@@ -13,9 +13,7 @@
       <h2>Fact Map</h2>
       <fact-maps :nodes="nodes" :edges="edges" class="factmap"></fact-maps>
       <h2>JSON-LD</h2>
-      <pre>
-        {{ claimed }}
-      </pre>
+      <pre>{{ claimed }}</pre>
     </div>
   </div>
 

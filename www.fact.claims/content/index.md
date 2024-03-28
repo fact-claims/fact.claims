@@ -14,7 +14,7 @@ links:
 ---
 # Trustworthy AI needs facts
 
-We believe AI needs to trained on curated, `trustable` data so it is `grounded` and trustworthy:
+We believe AI needs to trained on curated, `trustable` data so it is `grounded` in a shared reality:
 
 We help you and your AI to discover, publish, research and curate trustworthy knowledge.
 

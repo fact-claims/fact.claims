@@ -1,4 +1,4 @@
-title: Website Claim
+title: WebPage Claim
 description: Tell us a little about your site
 logoPosition: right
 meta:
@@ -6,14 +6,20 @@ meta:
 openai:
   endpoint: /api/
 template:
-  "@type": ["schema:WebPage"]
-  "schema:name": "{{schema:name}}"
-  "schema:description": "{{schema:description}}"
-  "schema:url": "{{schema:url}}"
-  "schema:image": "{{schema:image}}"
-  "schema:address": "{{schema:address}}"
-  "schema:telephone": "{{schema:telephone}}"
-  "schema:email": "{{schema:email}}"
+  "@type": ["fact:Claim"]
+  "schema:name": "A WebPage Claim"
+  "prov:wasAssociatedWith":
+  - "@type": ["schema:WebPage"]
+    "@id": "{{schema:url}}"
+    "schema:name": "{{schema:name}}"
+    "schema:description": "{{schema:description}}"
+    "schema:url": "{{schema:url}}"
+    "schema:image": "{{schema:image}}"
+  "schema:contactPoint":
+  - "@type": ["schema:ContactPoint"]
+    "schema:address": "{{schema:address}}"
+    "schema:telephone": "{{schema:telephone}}"
+    "schema:email": "{{schema:email}}"
 pages:
   - name: "website"
     elements:
@@ -43,8 +49,7 @@ pages:
             text: "The URL for your logo (image format: jpg, png, etc.)"
       - type: "text"
         name: "schema:keywords"
-        title: "What are the main keywords that describe your website?"
-        description: "Please separate keywords with commas."
+        title: "Please describe your website "
       - type: "email"
         name: "schema:author"
         title: "The email of the webmaster (will be redacted)?"

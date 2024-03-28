@@ -9,7 +9,7 @@
         </div>
       </client-only>
     </div>
-    <div class="w-1/4 prose pr-2">
+    <div class="w-1/4 prose pr-2" v-if="nodes && edges">
       <h2>Fact Map</h2>
       <fact-maps :nodes="nodes" :edges="edges" class="factmap"></fact-maps>
       <h2>JSON-LD</h2>

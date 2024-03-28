@@ -25,12 +25,12 @@ function isCompleted(wizard: any) {
 </script>
 <template>
   <ContentDoc/>
-  <flow-tiles>
+  <!-- <flow-tiles>
     <ContentList :query="query" v-slot="{ list }">
       <div v-for="card in list" v-bind:key="card._path">
         <CardSummary  :key="card._path" :card="card" :enabled="!isCompleted(card)"></CardSummary>
       </div>
   </ContentList>
 
-</flow-tiles>
+</flow-tiles> -->
 </template>

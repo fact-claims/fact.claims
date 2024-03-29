@@ -9,13 +9,13 @@ If our future AI are trained on this - we can expect increasingly lower-quality 
 Ensuring the integrity and trustworthiness of our AI systems is important:
 
 
-- **To learn more:** start with our [white paper](./www/content/paper/index.md) then [learn the basics](./www/content/howto/begin.md).
+- **To learn more:** start with our [white paper](https://fact.claims/paper/) then [learn the basics](https://fact.claims/howto/begin).
 
-- **For the more technical:** read the [RFC](./www/content/rfc/draft.md) and our [raw facts](./www/fact.claims).
+- **For the more technical:** read the [RFC](https://fact.claims/rfc/draft) and our [raw facts](./www/fact.claims).
 
 ### For content owners
 
-- Publishing your own [fact claims](./www/content/howto/fact.claims.md) allows intelligent systems to discover your expertise, offerings and license terms. 
+- Publishing your own [fact claims](https://fact.claims/howto/fact.claims) allows intelligent systems to discover your expertise, offerings and license terms. 
 
 
 ### For developers, researchers and crawlers
@@ -26,8 +26,8 @@ Ensuring the integrity and trustworthiness of our AI systems is important:
 ### Online Examples:
 
 - [fact.claims website](https://fact.claims/)
-- [fact.claims builder](https://fact.claims/build/)
-- [fact.claims explorer](https://fact.claims/explore/)
+- [claims creation wizard](https://fact.claims/claim/)
+- [fact map demo](https://fact.claims/map/self)
 
 ### Fact Architecture:
 
@@ -43,36 +43,31 @@ Ensuring the integrity and trustworthiness of our AI systems is important:
 
 ### Explore Further:
 
-- #### [Trustworthy AI](./www/content/trust/index.md)
+- #### [Trustworthy AI](https://fact.claims/trust/)
   Learn about building AI based on facts, trust and integrity.
 
-- #### [White Paper](./www/content/paper/index.md)
+- #### [White Paper](https://fact.claims/paper/)
   Access our comprehensive white paper on trustworthy AI and fact claims.
 
-- #### [RFC v0.4 DRAFT](./www/content/rfc/draft.md)
+- #### [RFC v0.4 DRAFT](https://fact.claims/rfc/draft)
   Review the latest version of the Request for Comments (RFC) for our project.
 
-- #### [How-to Guides](./www/content/howto/index.md)
+- #### [How-to Guides](https://fact.claims/howto/)
   Dive into practical guides for managing and publishing fact claims.
 
-- #### [Learn the basics](./www/content/howto/begin.md)
+- #### [Learn the basics](https://fact.claims/howto/begin)
   Get started with the basics of fact claims and their importance.
 
-- #### [Publish your first facts](./www/content/howto/fact.claims.md)
+- #### [Write your first facts claims](https://fact.claims/howto/fact.claims)
   Step-by-step instructions to publish your own fact claims.
 
-- #### [Curating and crawling](./www/content/howto/crawling.md)
+- #### [Curating and crawling](https://fact.claims/howto/crawling)
   Learn about curating and crawling data to ensure trustworthy fact claims.
 
-- #### [Querying facts with SPARQL](./www/content/howto/sparql.md)
+- #### [Querying facts with SPARQL](https://fact.claims/howto/sparql)
   Learn how to query with SPARQL to retrieve the facts you need.
 
-- #### [SEO for AI](./www/content/howto/seo.md)
+- #### [SEO for AI](https://fact.claims/howto/seo)
   Learn how to repurpose existing SEO rich snippets as `fact.claims`.
 
-- #### [Worked Example](./www/fact.claims)
-  Explore a worked example to better understand fact claims in action.
-
-- #### [Live Website](https://fact.claims/)
-  Visit the live website, which is the `www` folder rendered as a single page app.
 

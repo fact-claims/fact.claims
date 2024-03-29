@@ -28,6 +28,11 @@ export class LDToGraph {
         const edgeId = `${pid}_${key}_${nid}`;
         this.edges[edgeId] = { source: pid, target: nid, label: key };
         console.log("map.edge: %o --> %o => %o", pid, key, nid);
+      } else if (typeof item == "string") {
+        const edgeId = `${pid}_${key}_${item}`;
+        this.edges[edgeId] = { source: pid, target: item, label: key };
+        console.log("map.link: %o --> %o => %o", pid, key, item);
+        this.nodes[item] = this.nodes[item] || { "@id": item };
       }
     });
   }
@@ -78,12 +83,8 @@ export class LDToGraph {
     return found ? found[0] : uri;
   }
 
-  public static label(node: Record<string, any>, max = 24): string {
-    let label: string = node['skos:prefLabel'] || node['schema:name'] || node['rdf:label'] || node['rdf:value'] || LDToGraph.localname(node['@id'])    
-    const isURI = label.indexOf("://");
-    if (isURI>1) {
-      label = label.substring(isURI+3)
-    }
-    return label.length>24?label.substring(0,Math.max(max,20)):label;
+  public static label(node: Record<string, any>, max = 32): string {
+    let label: string = node.name || node['skos:prefLabel'] || node['schema:name'] || node['rdf:label'] || node['rdf:value'] || LDToGraph.localname(node['@id'])    
+    return label.length>24?label.substring(0,Math.max(max,16)):label;
   }
 }

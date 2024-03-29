@@ -11,9 +11,9 @@ import 'survey-core/modern.min.css';
 
 export default {
   props: {
-    singleton: {
-      type: Boolean,
-      default: true,
+    name: {
+      type: String,
+      required: false,
     },
     claim: {
       type: Object,
@@ -29,49 +29,35 @@ export default {
     const completed = ref(false);
 
     const loadSurvey = async () => {
+      if (!process.client) return;
       try {
         const { Survey } = await import('survey-knockout-ui');
         const survey = new Survey(props.claim);
 
-        // Survey.applyTheme("defaultV2");
+        survey.data = props.modelValue || {};
+
         survey.sendResultOnPageNext = true;
         survey.showCompletedPage = false;
-        console.log("claim.survey: %s -> %o", survey, props.claim);
+        console.log("wizard.survey: %o -> %o --> %o", survey, props.claim, props.modelValue);
 
-        const checkpoint_id = props.claim._id;
-        let checkpoint = null;
-
-        if (process.client) {
-          checkpoint = localStorage.getItem(checkpoint_id) || null;
-          if (checkpoint) {
-            checkpoint = JSON.parse(checkpoint);
-            completed.value = !!checkpoint?.meta?.isCompleted && props.singleton;
-            syncModelValue(checkpoint.data);
-            console.log("claim.recovered: %s -> %o", checkpoint_id, completed.value);
-
-            if (completed.value) {
-              survey.mode = 'display';
-              // survey.showNavigationButtons = false;
-              // survey.showProgressBar = 'top';
-              context.emit('completed', checkpoint);
-            }
-          }
-        }
+      //   completed.value = !!props.claim?.$?.isCompleted;
+      //   if (completed.value) {
+      //       survey.mode = 'display';
+      //       // survey.showNavigationButtons = false;
+      //       // survey.showProgressBar = 'top';
+      //       context.emit('completed', survey);
+      //  }
 
         survey.render(surveyContainer.value);
         survey.onComplete.add((sender) => {
-          const checkpoint = { id: checkpoint_id, meta: props.claim, data: sender.data };
-          completed.value = checkpoint.meta.isCompleted = true;
-          localStorage.setItem(checkpoint_id, JSON.stringify(checkpoint));
-          context.emit('completed', checkpoint);
+          // completed.value = sender.data.$.isCompleted = true;
+          context.emit('completed', sender);
         });
         survey.onValueChanged.add((sender) => {
-          const checkpoint = { id: checkpoint_id, meta: props.claim, data: sender.data };
-          localStorage.setItem(checkpoint_id, JSON.stringify(checkpoint));
-          context.emit('updated', checkpoint);
+          context.emit('updated', sender);
         });
       } catch (error) {
-        console.error('claim.wizard.error: %o -> %o', props, error);
+        console.error('wizard.wizard.error: %o -> %o', props, error);
       }
     };
 

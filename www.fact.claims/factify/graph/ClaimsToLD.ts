@@ -39,6 +39,13 @@ import Handlebars from 'handlebars';
 
 export class ClaimsToLD {
 
+    static {
+        Handlebars.registerHelper("$", (context: any, options: any) => {
+            console.log("claim.tags: %o --> %o --> %o", context, Array.isArray(context), options);
+            return JSON.stringify(context);
+        })
+    }
+
     public static toLDObject(graph: any[], data: any, entity: any, k: string, v: any) {
         if (v == null || v == "") return null;
         if (Array.isArray(v)) {
@@ -49,22 +56,27 @@ export class ClaimsToLD {
                 if (a) fresh.push(a);
             })
             return fresh;
-        } else if (typeof v === 'object') {
+        } else if (typeof v === 'object' && v["@value"] === undefined) {
             const id = v["@id"];
             console.log("claim.id: %o => %o", id, data);
-            const innerEntity = id ? { "@id": Handlebars.compile(id)(data) } : {} as Record<string, any>;
+            const innerEntity = id ? { "@id": Handlebars.compile(id)(data) || data["@id"] || "urn:fact.claims:missing" } : {} as Record<string, any>;
             Object.entries(v).forEach(([innerK, innerV]) => {
                 if (innerK !== "@id" && innerV) {
                     console.log("claim.k.v: %o -> %o => %o", k, innerK, innerV);
-                    innerEntity[innerK] = this.toLDObject(graph, data, innerEntity, innerK, innerV);
+                    let a = this.toLDObject(graph, data, innerEntity, innerK, innerV);
+                    if (a!= null) innerEntity[innerK] = a;
                 }
             });
             return innerEntity;
         } else if (v) {
-            console.log("claim.V: %o => %o", k, v);
             const renderedValue = Handlebars.compile(v)(data);
             if (renderedValue) {
-                return ClaimsToLD.value(renderedValue);
+                console.log("claim.V: %o => %o --> %o", k, v, renderedValue);
+                try {
+                    return ClaimsToLD.value(JSON.parse(renderedValue));
+                } catch(e) {
+                    return ClaimsToLD.value(renderedValue);
+                }
             }
         }
         return null;
@@ -80,15 +92,15 @@ export class ClaimsToLD {
 
         graph.push(entity); 
         Object.entries(template).forEach(([k, v]) => {
-            entity[k] = this.toLDObject(graph, data, entity, k, v);
+            let a = this.toLDObject(graph, data, entity, k, v);
+            if (a!= null) entity[k] = a;
         });
 
         return json;
     }
 
     public static value(v: any) {
-        if (typeof v === "string" || Array.isArray(v)) return v;
         if (typeof v === "object" && v["@value"]) return v["@value"];
-        return null;
+        return v;
     }
 }

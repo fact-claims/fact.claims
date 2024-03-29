@@ -1,18 +1,11 @@
 <template>
-    <div class="h-screen w-full">
-        <v-network-graph ref="graph" :nodes="nodes" :edges="edges" :layouts="layouts || {}" :configs="configs"
-            v-model:selected-nodes="selectedNodes" v-model:selected-edges="selectedEdges"
-            :event-handlers="eventHandlers">
-            <template #edge-label="{ edge, ...slotProps }">
-                <v-edge-label :text="edge.label" align="center" vertical-align="above" v-bind="slotProps" />
-            </template>
-        </v-network-graph>
-
-        <div v-if="targetNodeId" ref="tooltip" class="tooltip" :style="{ ...tooltipPos, opacity: tooltipOpacity }">
-            <div>{{ nodes[targetNodeId]?.name || "" }}</div>
-        </div>
-
-    </div>
+    <v-network-graph ref="graph" :nodes="nodes" :edges="edges" :configs="configs"
+        v-model:selected-nodes="selectedNodes" v-model:selected-edges="selectedEdges"
+        :event-handlers="eventHandlers" class="w-full h-full">
+        <template #edge-label="{ edge, ...slotProps }">
+            <v-edge-label :text="edge.label" align="center" vertical-align="above" v-bind="slotProps" />
+        </template>
+    </v-network-graph>
 </template>
 
 <script setup lang="ts">
@@ -31,7 +24,7 @@ const emit = defineEmits<{
 }>()
 
 const graph = ref();
-const layouts = ref();
+// const layouts = ref();
 const tooltipPos = ref({ left: '0px', top: '0px' });
 const selectedNodes = ref<string[]>([]);
 const selectedEdges = ref<string[]>([]);
@@ -50,10 +43,10 @@ const configs = vNG.defineConfigs({
                 const forceLink = d3.forceLink(edges).id((d: any) => d.id);
                 return d3
                     .forceSimulation(nodes)
-                    .force('edge', forceLink.distance(100))
+                    .force('edge', forceLink.distance(2))
                     .force('charge', d3.forceManyBody())
-                    .force('collide', d3.forceCollide(50).strength(0.2))
-                    // .force('center', d3.forceCenter().strength(0.05))
+                    .force('collide', d3.forceCollide(2).strength(0.1))
+                    .force('center', d3.forceCenter().strength(0.1))
                     // .force('y', d3.forceY(0))
                     .alphaMin(0.001);
             },
@@ -120,29 +113,5 @@ const eventHandlers = {
     },
 };
 
-const targetNodePos = computed(() => {
-    if (!targetNodeId.value) return { x: 0, y: 0 };
-    // console.log('targetNodePos: %o -> %o', layouts.value, targetNodeId.value);
-    return targetNodeId.value ? layouts.value?.nodes[targetNodeId.value] : { x: 0, y: 0 };
-});
-
-watch(
-    [targetNodePos, tooltipOpacity],
-    () => {
-        if (!graph.value || !tooltip.value || !targetNodePos.value) return;
-        console.log("targetNodePos: %o", targetNodePos.value);
-        if (!targetNodePos.value) return;
-
-        // translate coordinates: SVG -> DOM
-        const domPoint = graph.value.translateFromSvgToDomCoordinates(targetNodePos.value);
-        // calculates top-left position of the tooltip.
-        tooltipPos.value = {
-            left: domPoint.x - tooltip.value.offsetWidth / 2 + 'px',
-            top: domPoint.y - NODE_RADIUS - tooltip.value.offsetHeight - 10 + 'px',
-        };
-    },
-    { deep: true }
-);
-
-console.log('fact.maps: %o -> %o', props, layouts);
+console.log('fact.maps: %o', props);
 </script>

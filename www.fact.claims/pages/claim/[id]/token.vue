@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex pt-4">
     <div class="w-1/2 prose h-full">
-      <ContentDoc class="border rounded shadow m-2 p-4" path="/claim/done/ipfs"></ContentDoc>
+      <ContentDoc class="border rounded shadow m-2 p-4" path="/claim/done/token"></ContentDoc>
     </div>
     <div class="w-1/2 pr-2 factmap" v-if="nodes && edges">
       <fact-maps :nodes="nodes" :edges="edges"  v-if="nodes && edges"></fact-maps>

@@ -9,14 +9,13 @@ They transcend mere descriptions, evolving into dynamic fact maps that not only 
 
 At the heart of each fact.claim lies a wealth of information meticulously curated to paint a vivid picture of the entity it represents. 
 
-
 1. **Trustworthy AI Needs Facts:**
    - Emphasizes the importance of training AI on curated, trustworthy data to ensure it is grounded in a shared reality.
    - Highlights the role of the business in facilitating the discovery, publication, research, and curation of trustworthy knowledge for AI.
 
-2. **Assistance in AI Interaction:**
-   - Encourages business owners to assist AI agents in finding, verifying, and collaborating on facts related to their business operations.
-   - Provides resources and guidance on how to enable AI to interact effectively with the curated knowledge.
+2. **Custom AI:**
+   - Promoted owners have a dedicate AI agent helping their customers to find facts, products and services.
+   - Provides resources and guidance on how to enable AI to interact effectively with your curated knowledge.
 
 3. **Easy Creation of Fact Claims:**
    - Promotes the ease of creating fact claims, which are tamper-proof, decentralized, and available free of charge indefinitely.

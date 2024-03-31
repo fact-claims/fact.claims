@@ -1,9 +1,11 @@
 ---
 layout: page
 ---
-# Leveraging Fact Claims for Business Owners
+# Understanding Fact Claims
 
 Fact claims are structured pieces of information that represent knowledge about a business, product, service, or any other entity. 
+
+Distinguishing themselves from  data, facts embody a network of interconnected meanings - a digital map for your forest of facts.
 
 They are composed of three key components: the subject, tag, and object, which collectively provide context and meaning to the information.
 

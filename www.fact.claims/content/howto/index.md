@@ -3,7 +3,7 @@ layout: page
 ---
 # Guides and Tutorials:
 
-**Learn how fact.claims work and why to buil them **
+**Learn how fact.claims work and why to buil them**
 
 Ensuring the integrity and trustworthiness of fact claims is essential in any data ecosystem. 
 

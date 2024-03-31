@@ -25,17 +25,31 @@ template:
     "schema:telephone": "{{schema:telephone}}"
     "schema:email": "{{schema:email}}"
 pages:
-  - name: "website"
+  - name: "publishing"
     elements:
-      - type: "text"
-        name: "schema:name"
-        title: "What is your website name?"
-        isRequired: true
-      - type: "tagbox"
-        name: "schema:license"
-        title: "Select a license"
+      - type: "radiogroup"
+        name: "publisher"
+        title: "How will you publish you claims ?"
         isRequired: true
         choices:
+          - value: "demo"
+            text: "Demo / Don't publish"
+            description: "Woot"
+          - value: "dev"
+            text: "Developer / Self hosting"
+          - value: "ipfs"
+            text: "Tamper-proof / Grounded"
+          - value: "notary"
+            text: "Notarized / Verifiable"
+          - value: "token"
+            text: "Monetized / Featured / Promoted"
+      - type: "tagbox"
+        name: "schema:license"
+        title: "Select a license for your claims"
+        isRequired: true
+        choices:
+          - value: https://wiki.creativecommons.org/wiki/public_domain
+            text: "Public Domain"
           - value: "https://creativecommons.org/licenses/by/4.0/"
             text: "Creative Commons Attribution 4.0 International"
           - value: "https://creativecommons.org/licenses/by-sa/4.0/"
@@ -48,6 +62,12 @@ pages:
             text: "Creative Commons Attribution-NoDerivatives 4.0 International"
           - value: "https://creativecommons.org/licenses/by-nc-nd/4.0/"
             text: "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
+  - name: "describe"
+    elements:
+      - type: "text"
+        name: "schema:name"
+        title: "What is your website name?"
+        isRequired: true
       - type: "textarea"
         name: "schema:description"
         title: "Please provide a brief description of your website."

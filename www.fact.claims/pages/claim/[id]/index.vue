@@ -41,8 +41,9 @@ onMounted( () => {
 
 const doCompleted = async (sender: any) => {
   doUpdated(sender);
-  console.log("claim.doCompleted: %o", sender.data);
-  router.push("/claim/"+params.id+"/done")
+  const publisher = sender.data?.publisher || "demo";
+  console.log("claim.doCompleted: %o -> %o", publisher, sender.data);
+  router.push("/claim/"+params.id+"/"+publisher)
 }
 
 const doUpdated = (sender: any) => {

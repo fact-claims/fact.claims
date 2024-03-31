@@ -1,13 +1,10 @@
 <template>
   <div class="w-full flex pt-4">
-    <div class="w-3/4 prose h-full">
-      <!-- <ContentDoc class="border rounded shadow m-2 p-4"></ContentDoc> -->
-      <h2>Fact Map</h2>
-      <fact-maps :nodes="nodes" :edges="edges"  v-if="nodes && edges"></fact-maps>
+    <div class="w-1/2 prose h-full">
+      <ContentDoc class="border rounded shadow m-2 p-4" path="/claim/done/ipfs"></ContentDoc>
     </div>
-    <div class="w-1/4 prose pr-2" v-if="nodes && edges">
-      <h2>JSON-LD</h2>
-      <pre class="w-full">{{ jsonld }}</pre>
+    <div class="w-1/2 pr-2 factmap" v-if="nodes && edges">
+      <fact-maps :nodes="nodes" :edges="edges"  v-if="nodes && edges"></fact-maps>
     </div>
   </div>
 </template>
@@ -44,5 +41,7 @@ onMounted(async () => {
 </script>
 
 <style>
-/* Your styles here */
+.factmap {
+  max-height: 50%;
+}
 </style>

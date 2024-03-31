@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wizard">
     <slot v-if="completed"></slot>
     <div v-if="!completed" ref="surveyContainer"></div>
   </div>
@@ -73,3 +73,8 @@ export default {
   },
 };
 </script>
+<style>
+.wizard .sv-tagbox__item {
+  border: none !important; 
+}
+</style>

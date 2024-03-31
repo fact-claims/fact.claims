@@ -3,13 +3,17 @@ layout: page
 ---
 # Guides and Tutorials:
 
-**Learn how fact.claims work, how to build and find them,.**
+**Learn how fact.claims work and why to buil them **
 
 Ensuring the integrity and trustworthiness of fact claims is essential in any data ecosystem. 
 
 - [Learn the basics](/howto/begin)
 
 - [Claim your facts](/claim)
+
+- [Promote your facts ](/howto/feature)
+
+**Learn to build, publish, find and learn from them,.**
 
 - [Designing a Fact Finder](/howto/crawling)
 

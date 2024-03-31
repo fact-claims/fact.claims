@@ -19,6 +19,8 @@ const props = defineProps({
     edges: { type: Object as () => Record<string, vNG.Edge>, required: true },
 })
 const emit = defineEmits<{
+    selectEdges: [node: Record<string, any>]
+    selectNodes: [node: Record<string, any>]
     selectNode: [node: Record<string, any>]
     hoverNode: [node: Record<string, any> | null]
 }>()
@@ -47,7 +49,7 @@ const configs = vNG.defineConfigs({
                     .force('charge', d3.forceManyBody())
                     .force('collide', d3.forceCollide(2).strength(0.1))
                     .force('center', d3.forceCenter().strength(0.1))
-                    // .force('y', d3.forceY(0))
+                    .force('y', d3.forceY(0).strength(0.1))
                     .alphaMin(0.001);
             },
         }),
@@ -93,7 +95,7 @@ const configs = vNG.defineConfigs({
 
 const eventHandlers = {
     '*': (type: string, event: any) => {
-        // console.log("web.click: %o -> %o", type, event);
+        console.log("web.click: %o -> %o", type, event);
     },
     'node:pointerover': ({ node: nid }: { node: string }) => {
         targetNodeId.value = nid;
@@ -106,10 +108,15 @@ const eventHandlers = {
         tooltipOpacity.value = 0; // hide
         emit('hoverNode', null);
     },
-    'node:click': ({ node: nid }: { node: string }) => {
+    'node:select': ({ node: nid }: { node: string }) => {
         const node = props.nodes[nid];
         console.log('web.click.node: %o -> %o', nid, node);
         emit('selectNode', node);
+        emit('selectNodes', selectedNodes);
+    },
+    'edge:select': ({ edge: eid }: { edge: string }) => {
+        console.log('web.click.edge: %o -> %o', eid, selectedEdges);
+        emit('selectEdges', selectedEdges);
     },
 };
 

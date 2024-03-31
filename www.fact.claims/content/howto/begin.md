@@ -1,91 +1,30 @@
 ---
 layout: page
 ---
-# Make & trust all kinds of claims 
+# Leveraging Fact Claims for Business Owners
 
-RDF is a framework for representing information in the form of statements - our `fact claims`. 
+Fact claims are structured pieces of information that represent knowledge about a business, product, service, or any other entity. 
 
-Each statement consists of three components - `subject`,`tag,` and `object`.
+They are composed of three key components: the subject, tag, and object, which collectively provide context and meaning to the information.
 
-We use URLs to uniquely identify resources and the relationships between them. 
+## Why Should Non-Technical Business Owners Care?
 
-### Let's make a simple claim:
+1. **Trustworthy AI Training:** Fact claims provide curated, trustworthy data that can be used to train AI systems. By ensuring that AI is grounded in accurate information, businesses can enhance the reliability and effectiveness of AI-powered solutions.
 
-It becomes easier to read if we work on an example:
+2. **Improved Decision-Making:** Access to reliable, curated data through fact claims enables business owners to make informed decisions. Whether it's launching a new product, crafting marketing strategies, or analyzing market trends, fact claims provide valuable insights for decision-making.
 
-```turtle
-    <https://fact.claims/> a fact:Claim .
-```
+3. **Enhanced Collaboration:** Fact claims serve as a common language for sharing information and collaborating with partners, stakeholders, and AI systems. Business owners can easily exchange structured data, ensuring consistency and accuracy in communication.
 
-- Formally our statement says that `https://fact.claims/` is `a` kind of `fact:Claim`. 
+## How to Leverage Fact Claims:
 
+1. **Discovering Fact Claims:** Start by exploring existing fact claims related to your business, industry, or area of interest. Platforms like fact.claims provide repositories of structured data that can be searched and accessed.
 
-- Subject: `<https://fact.claims/>`
-- Tag: `a` (short for "is a kind of")
-- Object: `fact:Claim`  - something called a `Claim` is defined in the `fact:` vocabulary)
+2. **Creating Fact Claims:** Once you understand the concept of fact claims, consider creating your own to represent key aspects of your business, such as products, services, or company information. This can be done using online tools or platforms that support the creation and publishing of fact claims.
 
-### Now, Let's enrich our statements to be more descriptive:
+3. **Publishing and Sharing:** Once created, publish your fact claims to make them accessible to others. Share them with partners, customers, and AI systems to facilitate collaboration and knowledge exchange.
 
-We can tag our subject with both links and literals, like this:
+4. **Collaborating with AI:** Utilize fact claims to train AI systems, improve data quality, and enhance the performance of AI-powered applications. By providing reliable, structured data, business owners can optimize AI-driven processes and solutions.
 
-```turtle
-<https://fact.claims/>
+## Conclusion:
 
-    a schema:Organization, prov:Organization, fact:Claim ;
-
-    rdf:label "fact.claims";
-    schema:name "fact.claims" ;
-    skos:prefLabel "fact.claims";
-
-    rdf:comment "The fact.claims project builds tools for fact-based AI.";
-    owl:sameAs <https://www.fact.claims/>.
-```
-
-### Let's break it down:
-
-- We always start with a subject resource, like`<https://fact.claims/>`
-- Then we add some tags to assign more meaning - to tell it's story so to speak:
-  - We claim to be`a` `schema:Organization` and a `prov:Organization`.
-- We added some human-readable labels - using a few common vocabularies for compatibility: 
-  - `rdf:label`, `schema:name`, and `skos:prefLabel` are well-known properties.
-  - `rdf:comment` provides a longer description of the subject.
-  - `owl:sameAs` indicating that it is an alias of another resource.
-
-### Using short tags instead of URLs:
-
-The simplest vocabulary is really just a URL prefix that ensure terms are globally unique.
-
-A short tag uses a prefix (we use `fact:`) to stand-in for the URL namespace.
-
-In our example, `fact:` is expanded into a full URL when the RDF is parsed only if we declare it as prefix.
-
-```
-  @prefix fact: <https://fact.claims/v0/fact#> .
-```
-
-For our implementation, we created and hosted an RDF resource named [/v0/fact](/v0/fact.ttl) that describes our terms. 
-
-So `fact:Claim` becomes `<https://fact.claims/v0/fact#Claim>`, a fully qualified URL that can, but need not, be resolvable.
-
-For production use cases, it's best practice to define a formal vocabulary using RDFS notation ([W3C standard](https://www.w3.org/TR/rdf12-schema/)).
-
-Our vocabulary is retrievable from [https://fact.claims/v0/fact](https://fact.claims/v0/fact) and our claims from [https://fact.claims/fact.claims](https://fact.claims/fact.claims). 
-
-This allows any agent to make sense of our (or your) terms by following links to their definitions.
-
-### And that's it (mostly)! 
-
-- [Claim your facts](/claim)
-
-- [Fact Augmented Generation](/howto/fag)
-
-- [Curating and crawling](/howto/crawling)
-
-- [SEO for AI](/howto/seo)
-
-- [Querying facts with SPARQL](/howto/sparql)
-
-- [White Paper](/paper/)
-
-- [RFC v0.4 DRAFT](/rfc/draft)
-
+Fact claims offer a powerful way for non-technical business owners to harness the potential of structured data and enhance their operations in the digital age. By leveraging fact claims, businesses can improve decision-making, foster collaboration, and build trust in their digital interactions. Start exploring fact claims today to unlock new opportunities for growth and innovation in your business.

@@ -9,11 +9,13 @@ Ensuring the integrity and trustworthiness of fact claims is essential in any da
 
 - [Learn the basics](/howto/begin)
 
-- [Claim your facts](/claim)
-
 - [Promote or monetize your facts ](/howto/feature)
 
+- [Claim your facts](/claim)
+
 **Learn to build, publish, find and learn from them,.**
+
+- [Technica Tutorial](/howto/tutorial)
 
 - [Designing a Fact Finder](/howto/crawling)
 

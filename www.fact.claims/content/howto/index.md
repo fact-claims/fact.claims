@@ -11,7 +11,7 @@ Ensuring the integrity and trustworthiness of fact claims is essential in any da
 
 - [Claim your facts](/claim)
 
-- [Promote your facts ](/howto/feature)
+- [Promote or monetize your facts ](/howto/feature)
 
 **Learn to build, publish, find and learn from them,.**
 

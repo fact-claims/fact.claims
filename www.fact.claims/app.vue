@@ -16,6 +16,7 @@
 
 .prose h2 {
     margin-top: 1em;
+    color: #003300;
 }
 .prose a {
     color: #006600;

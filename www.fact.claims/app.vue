@@ -14,11 +14,12 @@
     color: #003300;
 }
 
-.prose h2 {
-    margin-top: 1em;
-    color: #003300;
-}
 .prose a {
     color: #006600;
 }
+.prose h2 a {
+    margin-top: 1em;
+    color: #004400;
+}
+
 </style>
